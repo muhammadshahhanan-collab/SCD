@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCD Smart Sensing Lab - Climate and Development</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./images/Logo.jpg" type="image/jpeg" />
+    <link rel="stylesheet" href="SCD.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#home">
+          <img
+            src="./images/logo.jpg"
+            alt="Smart Sensing Lab Logo"
+            height="40"
+            class="me-2"
+            style="border-radius: 50%; background-color: white"
+          />
+          SCD Smart sensing Lab
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="Home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#objectives">Objectives</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Projects.html">Research</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Home.html#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section id="team" class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Our Team</h2>
+          <p>
+            Meet the experts driving innovation in smart sensing technologies
+          </p>
+        </div>
+        <hr />
+
+        <div class="container">
+          <div class="section-title">
+            <h4><b>Professors</b></h4>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 mb-4">
+            <div class="team-member">
+              <div class="team-avatar">
+              <a href="https://www.linkedin.com/in/sawaid-abbas-38624b21/"><img
+                  src="./images/Sawaid.jfif"
+                  alt="Dr. Sawaid Abbas"
+                  class="img-fluid rounded-circle"
+                />
+              </div>
+              <h4>Dr. Sawaid Abbas</h4>
+              </a> 
+              <p class="text-muted">Assistant Professor & Lead Researcher</p>
+              <p>
+                Leading expert in Earth Observation and Data Science for climate
+                resilience. Developing sustainable solutions that harmonize
+                technological innovation with nature.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="container">
+          <div class="section-title">
+            <h4><b>Researchers</b></h4>
+          </div>
+
+          <!-- Filter Buttons -->
+          <div class="filter-buttons">
+            <button class="filter-btn active" onclick="filterTeam('all')">
+              All
+            </button>
+            <button class="filter-btn" onclick="filterTeam('phd')">
+              PhD Candidates
+            </button>
+            <button class="filter-btn" onclick="filterTeam('assistant')">
+              Research Asst
+            </button>
+            <button class="filter-btn" onclick="filterTeam('student')">
+              Students
+            </button>
+          </div>
+        </div>
+          <!--PHD & Associates-->
+        <div class="row" id="researchers-container">
+          <div class="col-lg-4 mb-4 team-card" data-category="phd">
+            <div class="team-member">
+              <div class="team-avatar">
+                <a href="https://www.linkedin.com/in/zohaib-gis06/"><img
+                  src="./images/zohaib.jfif"
+                  alt="Zohaib"
+                  class="img-fluid rounded-circle"
+                />
+              </div>
+              <h4>Zohaib</h4>
+              </a>
+              <p class="text-muted">
+                Research Associate & PhD Candidate, Hong Kong
+              </p>
+              <p>
+                GIS/Remote Sensing researcher with expertise in Google Earth
+                Engine and ML-driven geospatial analysis.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mb-4 team-card" data-category="phd">
+            <div class="team-member">
+              <div class="team-avatar">
+               <a href=""> <img
+                  src="./images/Uzair.JPG"
+                  alt="Uzair"
+                  class="img-fluid rounded-circle"
+                />
+              </div>
+              <h4>Muhammad Uzair Mehmood</h4>
+              </a>
+              <p class="text-muted">
+                Research Associate & PhD Candidate, Hong Kong
+              </p>
+              <p>
+                Blue carbon and coastal wetlands specialist dedicated to quantifying climate solutions through integrated terrestrial laser scanning, remote sensing, and surveying..
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mb-4 team-card" data-category="phd">
+            <div class="team-member">
+              <div class="team-avatar">
+              <a href="https://www.linkedin.com/in/muhammad-umar-92017822a/"> <img
+                  src="./images/Umar.jfif"
+                  alt="Umar"
+                  class="img-fluid rounded-circle"
+                />
+              </div>
+              <h4>Muhammad Umar</h4>
+            </a>
+              <p class="text-muted">
+                Research Associate & PhD Candidate, Hong Kong
+              </p>
+              <p>
+                Expert in coastal zone analysis using Remote Sensing, GIS
+                technologies, and AI for ecosystem research and innovation.
+              </p>
+            </div>
+          </div>
+          
+          <hr>
+            <!--Assistants-->
+          <div class="col-lg-4 mb-4 team-card" data-category="assistant">
+            <div class="team-member">
+              <div class="team-avatar">
+               <a href="https://www.linkedin.com/in/abu-talha-manzoor/"><img
+                  src="./images/Talha.jfif"
+                  alt="Abu Talha Manzoor"
+                  class="img-fluid rounded-circle"
+                />
+              </div>
+              <h4>Abu Talha Manzoor</h4>
+              </a>
+              <p class="text-muted">
+                Research Assistant & Master's Candidate, China
+              </p>
+              <p>
+                Environmental researcher focusing on drought impacts and
+                vegetation dynamics via satellite data and ML models.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mb-4 team-card" data-category="assistant">
+            <div class="team-member">
+              <div class="team-avatar">
+                <a href="www.linkedin.com/in/muhammad-shah-hanan-bb8494366"><img
+                  src="./images/Hanan.jfif"
+                  alt="Hanan"
+                  class="img-fluid rounded-circle"
+                />
+              </div>
+              <h4>Muhammad Shah Hanan</h4>
+              </a>
+              <p class="text-muted">Research Assistant</p>
+              <p>
+                Spatial data analyst developing cartographic products and
+                automated workflows using Python and Google Earth Engine.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mb-4 team-card" data-category="assistant">
+            <div class="team-member">
+              <div class="team-avatar">
+               <a href="https://www.linkedin.com/in/syedaunabbas/"><img
+                  src="./images/on.jfif"
+                  alt="Aun"
+                  class="img-fluid rounded-circle"
+                />
+              </div>
+              <h4>Syed Aun Abbas</h4>
+              </a>
+              <p class="text-muted">Research Assistant</p>
+              <p>
+                GIS/Remote Sensing researcher with expertise in Land Use Land
+                Cover, Heatwaves , Land Surface Temperature and Vegetation
+                Phenology analysis.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mb-4 team-card" data-category="assistant">
+            <div class="team-member">
+              <div class="team-avatar">
+               <a href="https://www.linkedin.com/in/nawaihabib/"><img
+                  src="./images/nawai.png"
+                  alt="Nawai"
+                  class="img-fluid rounded-circle"
+                />
+              </div>
+              <h4>Nawai Habib</h4>
+              </a>
+              <p class="text-muted">Research Assistant</p>
+              <p>
+                Environmental geospatial specialist dedicated to advancing
+                climate science through innovative remote sensing applications.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mb-4 team-card" data-category="assistant">
+            <div class="team-member">
+              <div class="team-avatar">
+              <a href="https://www.linkedin.com/in/fiza-ashraf-500a31294/"><img
+                  src="./images/Fiza.jpeg"
+                  alt="Fizza"
+                  class="img-fluid rounded-circle"
+                />
+              </div>
+              <h4>Fiza Ashraf</h4>
+              </a>
+              <p class="text-muted">Research Assistant</p>
+              <p>Spatial Data Specialist advancing climate research and environmental management through cutting-edge geospatial technologies.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mb-4 team-card" data-category="assistant">
+            <div class="team-member">
+              <div class="team-avatar">
+              <a href="https://www.linkedin.com/in/raja-usama-03b060243/"><img
+                  src="./images/Raja_Usama.jpg"
+                  alt="Usama"
+                  class="img-fluid rounded-circle"
+                />
+              </div>
+              <h4>Raja Usama</h4>
+              </a> 
+              <p class="text-muted">Research Assistant</p>
+              <p>GIS and remote sensing.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mb-4 team-card" data-category="assistant">
+            <div class="team-member">
+              <div class="team-avatar">
+               <a href="https://www.linkedin.com/in/muhammadwaqasgeo/"><img
+                  src="./images/waqas.jfif"
+                  alt="Waqas"
+                  class="img-fluid rounded-circle"
+                />
+              </div>
+              <h4>Muhammad Waqas</h4>
+              </a> 
+              <p class="text-muted">Research Assistant</p>
+              <p>
+                Geologist specializing in remote sensing and GIS analysis, adept
+                at integrating spatial data to unravel geological complexities.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mb-4 team-card" data-category="assistant">
+            <div class="team-member">
+              <div class="team-avatar">
+               <a href="https://www.linkedin.com/in/amna-yaseen-1a832837a/"><img
+                  src="./images/Amna.jpeg"
+                  alt="Amna"
+                  class="img-fluid rounded-circle"
+                />
+              </div>
+              <h4>Amna Yassen</h4>
+              </a> 
+              <p class="text-muted">Research Assistant</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mb-4 team-card" data-category="assistant">
+            <div class="team-member">
+              <div class="team-avatar">
+               <a href="https://www.linkedin.com/in/raihafatimasheikh/"><img
+                  src="./images/Raiha.jpeg"
+                  alt="Raiha"
+                  class="img-fluid rounded-circle"
+                />
+              </div>
+              <h4>Raiha Fatima Shaikh</h4>
+              </a> 
+              <p class="text-muted">Research Assistant</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mb-4 team-card" data-category="assistant">
+            <div class="team-member">
+              <div class="team-avatar">
+               <a href="https://www.linkedin.com/in/muhammad-farhan-khalil-gis/"><img
+                  src="./images/Farhan.jpg"
+                  alt="Farhan Khalil"
+                  class="img-fluid rounded-circle"
+                />
+              </div>
+              <h4>Muhammad Farhan Khalil</h4>
+              </a> 
+              <p class="text-muted">Research Assistant</p>
+            </div>
+          </div>
+
+         
+          <hr>
+
+          <!--Students-->
+
+          <div class="col-lg-4 mb-4 team-card" data-category="student">
+            <div class="team-member">
+              <div class="team-avatar">
+               <a href="https://www.linkedin.com/in/hooria2002/"><img
+                  src="./images/Hooria.jpg"
+                  alt="Hooria"
+                  class="img-fluid rounded-circle"
+                />
+              </div>
+              <h4>Hooria Zainab</h4>
+              </a> 
+              <p class="text-muted">Research Student</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mb-4 team-card" data-category="student">
+            <div class="team-member">
+              <div class="team-avatar">
+              <a href="https://www.linkedin.com/in/dure-najaf-6008a236b/"><img
+                  src="./images/dur e.jpg"
+                  alt="Dure Najaf"
+                  class="img-fluid rounded-circle"
+                />
+              </div>
+              <h4>Dure Najaf</h4>
+              </a> 
+              <p class="text-muted">Research Student</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mb-4 team-card" data-category="student">
+            <div class="team-member">
+              <div class="team-avatar">
+              <a href="https://www.linkedin.com/in/hamidkasuri/"><img
+                  src="./images/Hamid.jpg"
+                  alt="Hamid"
+                  class="img-fluid rounded-circle"
+                />
+              </div>
+              <h4>Hamid Kasuri</h4>
+              </a> 
+              <p class="text-muted">Research Student</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mb-4 team-card" data-category="student">
+            <div class="team-member">
+              <div class="team-avatar">
+              <a href="https://www.linkedin.com/in/raja-tashfeen-95b022281/"><img
+                  src="./images/tashfeen.jpg"
+                  alt="Tashfeen"
+                  class="img-fluid rounded-circle"
+                />
+              </div>
+              <h4>Raja Tashfeen</h4>
+              </a> 
+              <p class="text-muted">Research Student</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mb-4 team-card" data-category="student">
+            <div class="team-member">
+              <div class="team-avatar">
+              <a href="https://www.linkedin.com/in/mati-ur-rehman-590226315/"><img
+                  src="./images/Matti.jpg"
+                  alt="Mati"
+                  class="img-fluid rounded-circle"
+                />
+              </div>
+              <h4>Mati ur Rehman</h4>
+              </a>  
+              <p class="text-muted">Research Student</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mb-4 team-card" data-category="student">
+            <div class="team-member">
+              <div class="team-avatar">
+              <a href="https://www.linkedin.com/in/hareem-asad-39ba26356/"><img
+                  src="./images/Hareem.jpg"
+                  alt="Hareem"
+                  class="img-fluid rounded-circle"
+                />
+              </div>
+              <h4>Hareem Asad</h4>
+              </a>  
+              <p class="text-muted">Research Student</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="SCD.js"></script>
+
+    <script>
+      function filterTeam(category) {
+        const cards = document.querySelectorAll(".team-card");
+        const buttons = document.querySelectorAll(".filter-btn");
+
+        // Remove active class from all buttons
+        buttons.forEach((btn) => btn.classList.remove("active"));
+
+        // Add active class to clicked button
+        event.target.classList.add("active");
+
+        // Filter cards
+        cards.forEach((card) => {
+          if (category === "all") {
+            card.style.display = "block";
+          } else if (card.dataset.category === category) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
