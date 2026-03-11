@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCD Smart Sensing Lab - Our Team</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link rel="icon" href="./images/Logo.jpg" type="image/jpeg" />
+    <link rel="stylesheet" href="SCD.css" />
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="Home.html">
+          <img src="./images/logo.jpg" alt="Smart Sensing Lab Logo" height="40" class="me-2"
+            style="border-radius: 50%; background-color: white" />
+          SCD Smart sensing Lab
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="Home.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="Home.html#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="Home.html#objectives">Objectives</a></li>
+            <li class="nav-item"><a class="nav-link" href="Projects.html">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="Research.html">Research</a></li>
+            <li class="nav-item"><a class="nav-link" href="Home.html#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Team Section -->
+    <section id="team" class="section">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Our Team</h2>
+          <p>Meet the experts driving innovation in smart sensing technologies</p>
+        </div>
+
+        <hr />
+
+        <!-- Professors -->
+        <div class="container mb-4">
+          <div class="section-title">
+            <h4><b>Professors</b></h4>
+          </div>
+        </div>
+        <div class="row" id="professors-container">
+          <!-- Loaded from team_data.json -->
+          <div class="text-center py-4"><div class="loading"></div></div>
+        </div>
+
+        <hr />
+
+        <!-- Researchers -->
+        <div class="container mb-3">
+          <div class="section-title">
+            <h4><b>Researchers</b></h4>
+          </div>
+
+          <!-- Filter Buttons -->
+          <div class="filter-buttons">
+            <button class="filter-btn active" onclick="filterTeam('all', event)">All</button>
+            <button class="filter-btn" onclick="filterTeam('phd', event)">PhD Candidates</button>
+            <button class="filter-btn" onclick="filterTeam('assistant', event)">Research Asst</button>
+            <button class="filter-btn" onclick="filterTeam('student', event)">Students</button>
+          </div>
+        </div>
+
+        <div class="row" id="researchers-container">
+          <!-- Loaded from team_data.json -->
+          <div class="text-center py-4"><div class="loading"></div></div>
+        </div>
+
+      </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="SCD.js"></script>
+
+    <script>
+      // ─── Build a single professor card ───────────────────────────────────────      // --- Build a head professor card (full width) -----------------------------------------------
+      function buildProfessorHeadCard(person) {
+        const link = person.linkedin
+          ? `href="${person.linkedin}" target="_blank"`
+          : `href="#"`;
+        return `
+          <div class="col-12 mb-4">
+            <div class="team-member">
+              <div class="team-avatar">
+                <a ${link}>
+                  <img src="${person.photo}" alt="${person.name}"
+                    class="img-fluid rounded-circle"
+                    onerror="this.src='./images/people.jpg'" />
+                </a>
+              </div>
+              <a ${link} style="text-decoration:none">
+                <h4>${person.name}</h4>
+              </a>
+              <p class="text-muted">${person.role}</p>
+              <p>${person.bio}</p>
+            </div>
+          </div>`;
+      }
+
+      function buildProfessorCard(person) {
+        const link = person.linkedin
+          ? `href="${person.linkedin}" target="_blank"`
+          : `href="#"`;
+        return `
+          <div class="col-md-6 col-lg-6 mb-4">
+            <div class="team-member">
+              <div class="team-avatar">
+                <a ${link}>
+                  <img src="${person.photo}" alt="${person.name}"
+                    class="img-fluid rounded-circle"
+                    onerror="this.src='./images/people.jpg'" />
+                </a>
+              </div>
+              <a ${link} style="text-decoration:none">
+                <h4>${person.name}</h4>
+              </a>
+              <p class="text-muted">${person.role}</p>
+              <p>${person.bio}</p>
+            </div>
+          </div>`;
+      }
+
+      // ─── Build a single researcher card ──────────────────────────────────────
+      function buildResearcherCard(person) {
+        const link = person.linkedin
+          ? `href="${person.linkedin}" target="_blank"`
+          : `href="#"`;
+        return `
+          <div class="col-lg-4 mb-4 team-card" data-category="${person.category}">
+            <div class="team-member">
+              <div class="team-avatar">
+                <a ${link}>
+                  <img src="${person.photo}" alt="${person.name}"
+                    class="img-fluid rounded-circle"
+                    onerror="this.src='./images/people.jpg'" />
+                </a>
+              </div>
+              <a ${link} style="text-decoration:none">
+                <h4>${person.name}</h4>
+              </a>
+              <p class="text-muted">${person.role}</p>
+              <p>${person.bio || ''}</p>
+            </div>
+          </div>`;
+      }
+
+      // ─── Filter function ──────────────────────────────────────────────────────
+      function filterTeam(category, event) {
+        const cards = document.querySelectorAll('.team-card');
+        const buttons = document.querySelectorAll('.filter-btn');
+        buttons.forEach(btn => btn.classList.remove('active'));
+        if (event && event.target) event.target.classList.add('active');
+
+        cards.forEach(card => {
+          const show = category === 'all' || card.dataset.category === category;
+          card.style.display = show ? 'block' : 'none';
+        });
+      }
+
+      // ─── Load team from JSON ──────────────────────────────────────────────────
+      fetch('team_data.json')
+        .then(res => {
+          if (!res.ok) throw new Error('Could not load team_data.json');
+          return res.json();
+        })
+        .then(data => {          // Professors
+          const profContainer = document.getElementById('professors-container');
+          if (data.professors && data.professors.length > 0) {
+            const [head, ...others] = data.professors;
+            const headHtml = head ? buildProfessorHeadCard(head) : '';
+            const othersHtml = others.map(buildProfessorCard).join('');
+            profContainer.innerHTML = headHtml + othersHtml;
+          } else {profContainer.innerHTML = '<p class="text-center text-muted">No professors listed yet.</p>';
+          }
+
+          // Researchers
+          const resContainer = document.getElementById('researchers-container');
+          if (data.researchers && data.researchers.length > 0) {
+            resContainer.innerHTML = data.researchers.map(buildResearcherCard).join('');
+          } else {
+            resContainer.innerHTML = '<p class="text-center text-muted">No researchers listed yet.</p>';
+          }
+        })
+        .catch(err => {
+          console.error(err);
+          document.getElementById('professors-container').innerHTML =
+            '<p class="text-center text-danger">Error loading team data. Make sure team_data.json is in the same folder.</p>';
+          document.getElementById('researchers-container').innerHTML = '';
+        });
+    </script>
+
+  </body>
+</html>
+

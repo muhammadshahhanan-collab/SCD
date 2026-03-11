@@ -1,0 +1,170 @@
+{
+  "professors": [
+    {
+      "name": "Dr. Sawaid Abbas",
+      "photo": "./images/Sawaid.jfif",
+      "role": "Assistant Professor & Lead Researcher",
+      "bio": "Leading expert in Earth Observation and Data Science for climate resilience. Developing sustainable solutions that harmonize technological innovation with nature.",
+      "linkedin": "https://www.linkedin.com/in/sawaid-abbas-38624b21/"
+    },
+    {
+      "name": "Janet NICHOL",
+      "photo": "./images/Janet.jpg",
+      "role": "Assistant Professor",
+      "bio": "Applied Geographer, specialising in Remote Sensing, Geo-Informatics and Environmental Management.",
+      "linkedin": "http://www.lsgi.polyu.edu.hk/RSRG/resources/people/JN.html"
+    },
+    {
+      "name": "Dr. Muhammad Usman",
+      "photo": "https://media.licdn.com/dms/image/v2/D4E35AQHuFm10i-5Gqw/profile-framedphoto-shrink_200_200/B4EZzcnFk7JMAY-/0/1773227760300?e=1773849600&v=beta&t=tR62IhX8HDnafO0gEe1PtqZ5B7liVDbHS46cS-BKXtg",
+      "role": "Assistant Professor",
+      "bio": "Remote Sensing, Vegetation Monitoring, Coastal Ecosystem, Earth Observation.",
+      "linkedin": "https://www.linkedin.com/in/sawaid-abbas-38624b21/"
+    },
+    {
+      "name": "Dr. Samawia Rizwan",
+      "photo": "https://media.licdn.com/dms/image/v2/D4D03AQE_TkzYlbdhig/profile-displayphoto-shrink_200_200/B4DZZsJlRiHwAY-/0/1745571174826?e=1775088000&v=beta&t=FsBUPwb3NgLz6GXH3jFG_KOGs_MCBK_JwmtX3bFyuSs",
+      "role": "Assistant Professor",
+      "bio": "Assistant Professor at the Centre for Geographical Information Systems, University of the Punjab, Lahore, Pakistan.",
+      "linkedin": "https://www.linkedin.com/in/samawia-rizwan-874a9144/"
+    }
+  ],
+  "researchers": [
+    {
+      "name": "Zohaib",
+      "photo": "./images/zohaib.jfif",
+      "role": "Research Associate & PhD Candidate, Hong Kong",
+      "bio": "GIS/Remote Sensing researcher with expertise in Google Earth Engine and ML-driven geospatial analysis.",
+      "linkedin": "https://www.linkedin.com/in/zohaib-gis06/",
+      "category": "phd"
+    },
+    {
+      "name": "Muhammad Uzair Mehmood",
+      "photo": "./images/Uzair.JPG",
+      "role": "Research Associate & PhD Candidate, Hong Kong",
+      "bio": "Blue carbon and coastal wetlands specialist dedicated to quantifying climate solutions through integrated terrestrial laser scanning, remote sensing, and surveying.",
+      "linkedin": "",
+      "category": "phd"
+    },
+    {
+      "name": "Muhammad Umar",
+      "photo": "./images/Umar.jfif",
+      "role": "Research Associate & PhD Candidate, Hong Kong",
+      "bio": "Expert in coastal zone analysis using Remote Sensing, GIS technologies, and AI for ecosystem research and innovation.",
+      "linkedin": "https://www.linkedin.com/in/muhammad-umar-92017822a/",
+      "category": "phd"
+    },
+    {
+      "name": "Abu Talha Manzoor",
+      "photo": "./images/Talha.jfif",
+      "role": "Research Assistant & Master's Candidate, China",
+      "bio": "Environmental researcher focusing on drought impacts and vegetation dynamics via satellite data and ML models.",
+      "linkedin": "https://www.linkedin.com/in/abu-talha-manzoor/",
+      "category": "assistant"
+    },
+    {
+      "name": "Muhammad Shah Hanan",
+      "photo": "./images/Hanan.jfif",
+      "role": "Research Assistant",
+      "bio": "Geospatial researcher applying remote sensing and GIS for environmental monitoring and climate studies.",
+      "linkedin": "https://www.linkedin.com/in/muhammad-shah-hanan-bb8494366",
+      "category": "assistant"
+    },
+    {
+      "name": "Fiza Ashraf",
+      "photo": "./images/Fiza.jpeg",
+      "role": "Research Assistant",
+      "bio": "Spatial Data Specialist advancing climate research and environmental management through cutting-edge geospatial technologies.",
+      "linkedin": "",
+      "category": "assistant"
+    },
+    {
+      "name": "Raja Usama",
+      "photo": "./images/Raja_Usama.jpg",
+      "role": "Research Assistant",
+      "bio": "GIS and remote sensing specialist contributing to environmental monitoring research.",
+      "linkedin": "https://www.linkedin.com/in/raja-usama-03b060243/",
+      "category": "assistant"
+    },
+    {
+      "name": "Muhammad Waqas",
+      "photo": "./images/waqas.jfif",
+      "role": "Research Assistant",
+      "bio": "Geologist specializing in remote sensing and GIS analysis, adept at integrating spatial data to unravel geological complexities.",
+      "linkedin": "https://www.linkedin.com/in/muhammadwaqasgeo/",
+      "category": "assistant"
+    },
+    {
+      "name": "Amna Yassen",
+      "photo": "./images/Amna.jpeg",
+      "role": "Research Assistant",
+      "bio": "Geospatial analyst with expertise in Geospatial Analytics and Spatial Intelligence..",
+      "linkedin": "https://www.linkedin.com/in/amna-yaseen-1a832837a/",
+      "category": "assistant"
+    },
+    {
+      "name": "Raiha Fatima Shaikh",
+      "photo": "./images/Raiha.jpeg",
+      "role": "Research Assistant",
+      "bio": "Research Assistant working on spatial data science and remote sensing applications.",
+      "linkedin": "https://www.linkedin.com/in/raihafatimasheikh/",
+      "category": "assistant"
+    },
+    {
+      "name": "Muhammad Farhan Khalil",
+      "photo": "./images/Farhan.jpg",
+      "role": "Research Assistant",
+      "bio": "Research Assistant specializing in GIS and geospatial data analysis for climate and environmental studies.",
+      "linkedin": "https://www.linkedin.com/in/muhammad-farhan-khalil-gis/",
+      "category": "assistant"
+    },
+    {
+      "name": "Hooria Zainab",
+      "photo": "./images/Hooria.jpg",
+      "role": "Research Student",
+      "bio": "Research student developing skills in remote sensing and geospatial analysis for climate applications.",
+      "linkedin": "https://www.linkedin.com/in/hooria2002/",
+      "category": "student"
+    },
+    {
+      "name": "Dure Najaf",
+      "photo": "./images/dur e.jpg",
+      "role": "Research Student",
+      "bio": "Research student focusing on GIS and earth observation for environmental research.",
+      "linkedin": "https://www.linkedin.com/in/dure-najaf-6008a236b/",
+      "category": "student"
+    },
+    {
+      "name": "Hamid Kasuri",
+      "photo": "./images/Hamid.jpg",
+      "role": "Research Student",
+      "bio": "Research student engaged in spatial data science and climate monitoring projects.",
+      "linkedin": "https://www.linkedin.com/in/hamidkasuri/",
+      "category": "student"
+    },
+    {
+      "name": "Raja Tashfeen",
+      "photo": "./images/tashfeen.jpg",
+      "role": "Research Student",
+      "bio": "Research student contributing to geospatial analysis and smart sensing research.",
+      "linkedin": "https://www.linkedin.com/in/raja-tashfeen-95b022281/",
+      "category": "student"
+    },
+    {
+      "name": "Mati ur Rehman",
+      "photo": "./images/Matti.jpg",
+      "role": "Research Student",
+      "bio": "Research student working on satellite data analysis and environmental monitoring.",
+      "linkedin": "https://www.linkedin.com/in/mati-ur-rehman-590226315/",
+      "category": "student"
+    },
+    {
+      "name": "Hareem Asad",
+      "photo": "./images/Hareem.jpg",
+      "role": "Research Student",
+      "bio": "Research student exploring remote sensing applications in climate and ecosystem studies.",
+      "linkedin": "https://www.linkedin.com/in/hareem-asad-39ba26356/",
+      "category": "student"
+    }
+  ]
+}
