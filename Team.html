@@ -1,36 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SCD Smart Sensing Lab - Our Team</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
     <link rel="icon" href="./images/Logo.jpg" type="image/jpeg" />
     <link rel="stylesheet" href="SCD.css" />
   </head>
   <body>
-
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
         <a class="navbar-brand" href="Home.html">
-          <img src="./images/logo.jpg" alt="Smart Sensing Lab Logo" height="40" class="me-2"
-            style="border-radius: 50%; background-color: white" />
+          <img
+            src="./images/logo.jpg"
+            alt="Smart Sensing Lab Logo"
+            height="40"
+            class="me-2"
+            style="border-radius: 50%; background-color: white"
+          />
           SCD Smart sensing Lab
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="Home.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="Home.html#about">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="Home.html#objectives">Objectives</a></li>
-            <li class="nav-item"><a class="nav-link" href="Projects.html">Projects</a></li>
-            <li class="nav-item"><a class="nav-link" href="Research.html">Research</a></li>
-            <li class="nav-item"><a class="nav-link" href="Home.html#contact">Contact</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="Home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Home.html#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Home.html#objectives">Objectives</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Research.html">Research</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Home.html#contact">Contact</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -39,18 +68,21 @@
     <!-- Team Section -->
     <section id="team" class="section">
       <div class="container">
-
         <div class="section-title">
           <h2>Our Team</h2>
-          <p>Meet the experts driving innovation in smart sensing technologies</p>
+          <p>
+            Meet the experts driving innovation in smart sensing technologies
+          </p>
         </div>
 
-        <hr />
+        <hr class="team-section-divider" />
 
         <!-- Professors -->
         <div class="container mb-4">
-          <div class="section-title">
-            <h4><b>Professors</b></h4>
+          <div class="text-center mb-2">
+            <span class="team-section-label"
+              ><i class="fas fa-chalkboard-teacher me-1"></i>Professors</span
+            >
           </div>
         </div>
         <div class="row" id="professors-container">
@@ -58,20 +90,33 @@
           <div class="text-center py-4"><div class="loading"></div></div>
         </div>
 
-        <hr />
+        <hr class="team-section-divider" />
 
         <!-- Researchers -->
         <div class="container mb-3">
-          <div class="section-title">
-            <h4><b>Researchers</b></h4>
+          <div class="text-center mb-2">
+            <span class="team-section-label"
+              ><i class="fas fa-flask me-1"></i>Researchers</span
+            >
           </div>
 
           <!-- Filter Buttons -->
           <div class="filter-buttons">
-            <button class="filter-btn active" onclick="filterTeam('all', event)">All</button>
-            <button class="filter-btn" onclick="filterTeam('phd', event)">PhD Candidates</button>
-            <button class="filter-btn" onclick="filterTeam('assistant', event)">Research Asst</button>
-            <button class="filter-btn" onclick="filterTeam('student', event)">Students</button>
+            <button
+              class="filter-btn active"
+              onclick="filterTeam('all', event)"
+            >
+              All
+            </button>
+            <button class="filter-btn" onclick="filterTeam('phd', event)">
+              PhD Candidates
+            </button>
+            <button class="filter-btn" onclick="filterTeam('assistant', event)">
+              Research Asst
+            </button>
+            <button class="filter-btn" onclick="filterTeam('student', event)">
+              Students
+            </button>
           </div>
         </div>
 
@@ -79,7 +124,6 @@
           <!-- Loaded from team_data.json -->
           <div class="text-center py-4"><div class="loading"></div></div>
         </div>
-
       </div>
     </section>
 
@@ -114,97 +158,148 @@
       }
 
       function buildProfessorCard(person) {
-        const link = person.linkedin
-          ? `href="${person.linkedin}" target="_blank"`
-          : `href="#"`;
+        const url = person.linkedin || "#";
+        const tgt = person.linkedin ? 'target="_blank"' : "";
         return `
-          <div class="col-md-6 col-lg-6 mb-4">
-            <div class="team-member">
-              <div class="team-avatar">
-                <a ${link}>
+          <div class="col-md-6 mb-4 d-flex">
+            <div class="prof-card w-100">
+              <div class="prof-card-body">
+                <p class="prof-role">${person.role}</p>
+                <h4><a href="${url}" ${tgt} style="text-decoration:none;color:inherit;">${person.name}</a></h4>
+                <p class="prof-bio">${person.bio || ""}</p>
+              </div>
+              <div class="prof-card-photo">
+                <a href="${url}" ${tgt}>
                   <img src="${person.photo}" alt="${person.name}"
-                    class="img-fluid rounded-circle"
                     onerror="this.src='./images/people.jpg'" />
                 </a>
               </div>
-              <a ${link} style="text-decoration:none">
-                <h4>${person.name}</h4>
-              </a>
-              <p class="text-muted">${person.role}</p>
-              <p>${person.bio}</p>
             </div>
           </div>`;
       }
 
       // ─── Build a single researcher card ──────────────────────────────────────
       function buildResearcherCard(person) {
-        const link = person.linkedin
-          ? `href="${person.linkedin}" target="_blank"`
-          : `href="#"`;
+        const url = person.linkedin || "#";
+        const tgt = person.linkedin ? 'target="_blank"' : "";
+        // ⚠️ NO d-flex on the outer col — it breaks display:none toggling in the filter
         return `
-          <div class="col-lg-4 mb-4 team-card" data-category="${person.category}">
-            <div class="team-member">
-              <div class="team-avatar">
-                <a ${link}>
+          <div class="col-md-6 mb-4 team-card" data-category="${(person.category || "").trim().toLowerCase()}">
+            <div class="researcher-card">
+              <div class="researcher-card-body">
+                <p class="researcher-role">${person.role}</p>
+                <h4><a href="${url}" ${tgt} style="text-decoration:none;color:inherit;">${person.name}</a></h4>
+                <p class="researcher-bio">${person.bio || ""}</p>
+              </div>
+              <div class="researcher-card-photo">
+                <a href="${url}" ${tgt}>
                   <img src="${person.photo}" alt="${person.name}"
-                    class="img-fluid rounded-circle"
                     onerror="this.src='./images/people.jpg'" />
                 </a>
               </div>
-              <a ${link} style="text-decoration:none">
-                <h4>${person.name}</h4>
-              </a>
-              <p class="text-muted">${person.role}</p>
-              <p>${person.bio || ''}</p>
             </div>
           </div>`;
       }
 
       // ─── Filter function ──────────────────────────────────────────────────────
       function filterTeam(category, event) {
-        const cards = document.querySelectorAll('.team-card');
-        const buttons = document.querySelectorAll('.filter-btn');
-        buttons.forEach(btn => btn.classList.remove('active'));
-        if (event && event.target) event.target.classList.add('active');
+        const cards = document.querySelectorAll(".team-card");
+        const buttons = document.querySelectorAll(".filter-btn");
+        buttons.forEach((btn) => btn.classList.remove("active"));
+        if (event && event.target) event.target.classList.add("active");
 
-        cards.forEach(card => {
-          const show = category === 'all' || card.dataset.category === category;
-          card.style.display = show ? 'block' : 'none';
+        cards.forEach((card) => {
+          const cardCat = (card.dataset.category || "").trim().toLowerCase();
+          const show = category === "all" || cardCat === category;
+          // Use "" (not "block"/"flex") so natural CSS display is restored
+          card.style.display = show ? "" : "none";
         });
       }
 
       // ─── Load team from JSON ──────────────────────────────────────────────────
-      fetch('team_data.json')
-        .then(res => {
-          if (!res.ok) throw new Error('Could not load team_data.json');
+      fetch("team_data.json")
+        .then((res) => {
+          if (!res.ok) throw new Error("Could not load team_data.json");
           return res.json();
         })
-        .then(data => {          // Professors
-          const profContainer = document.getElementById('professors-container');
+        .then((data) => {
+          // Professors
+          const profContainer = document.getElementById("professors-container");
           if (data.professors && data.professors.length > 0) {
             const [head, ...others] = data.professors;
-            const headHtml = head ? buildProfessorHeadCard(head) : '';
-            const othersHtml = others.map(buildProfessorCard).join('');
+            const headHtml = head ? buildProfessorHeadCard(head) : "";
+            const othersHtml = others.map(buildProfessorCard).join("");
             profContainer.innerHTML = headHtml + othersHtml;
-          } else {profContainer.innerHTML = '<p class="text-center text-muted">No professors listed yet.</p>';
+          } else {
+            profContainer.innerHTML =
+              '<p class="text-center text-muted">No professors listed yet.</p>';
           }
 
           // Researchers
-          const resContainer = document.getElementById('researchers-container');
+          const resContainer = document.getElementById("researchers-container");
           if (data.researchers && data.researchers.length > 0) {
-            resContainer.innerHTML = data.researchers.map(buildResearcherCard).join('');
+            resContainer.innerHTML = data.researchers
+              .map(buildResearcherCard)
+              .join("");
           } else {
-            resContainer.innerHTML = '<p class="text-center text-muted">No researchers listed yet.</p>';
+            resContainer.innerHTML =
+              '<p class="text-center text-muted">No researchers listed yet.</p>';
           }
         })
-        .catch(err => {
+        .catch((err) => {
           console.error(err);
-          document.getElementById('professors-container').innerHTML =
+          document.getElementById("professors-container").innerHTML =
             '<p class="text-center text-danger">Error loading team data. Make sure team_data.json is in the same folder.</p>';
-          document.getElementById('researchers-container').innerHTML = '';
+          document.getElementById("researchers-container").innerHTML = "";
+        });
+      // ✅ Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // ✅ Reset scroll to top when page loads
+      window.onload = function () {
+        // Check if URL has a hash (#about, #projects, etc.)
+        if (!window.location.hash) {
+          // No hash → means page loaded normally → scroll to top
+          window.scrollTo(0, 0);
+        }
+        // If hash exists, let browser handle the scroll naturally
+      };
+
+      // ✅ Navbar background effect on scroll
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+          navbar.style.background =
+            "linear-gradient(135deg, rgba(44, 82, 130, 0.95), rgba(56, 161, 105, 0.95))";
+          navbar.style.backdropFilter = "blur(10px)";
+        } else {
+          //navbar.style.background = "transparent";
+          navbar.style.backdropFilter = "none";
+        }
+      });
+
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+
+          // Auto-update year AFTER footer is loaded
+          const yearSpan = document.getElementById("currentYear");
+          if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+          }
         });
     </script>
-
   </body>
 </html>
-
