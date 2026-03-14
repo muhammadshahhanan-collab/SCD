@@ -49,7 +49,7 @@ window.onload = function () {
   window.addEventListener("scroll", handleScroll, { passive: true });
 })();
 
-// ✅ Footer loader
+// ✅ Footer loader — loads footer.html into the page and updates the year
 fetch("footer.html")
   .then((r) => r.text())
   .then((data) => {
@@ -78,6 +78,7 @@ fetch("footer.html")
     });
   }
 
+  
   // IntersectionObserver — tracks the most-visible section
   const ratioMap = new Map();
 
