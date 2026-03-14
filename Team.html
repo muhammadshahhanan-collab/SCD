@@ -133,26 +133,28 @@
     <script src="SCD.js"></script>
 
     <script>
-      // ─── Build a single professor card ───────────────────────────────────────      // --- Build a head professor card (full width) -----------------------------------------------
+      // ─── Build professor cards ────────────────────────────────────────────────
       function buildProfessorHeadCard(person) {
-        const link = person.linkedin
-          ? `href="${person.linkedin}" target="_blank"`
-          : `href="#"`;
+        const url = person.linkedin || "#";
+        const tgt = person.linkedin ? 'target="_blank"' : "";
+        const institutionHtml = person.institution
+          ? `<p class="prof-institution">${person.institution}</p>`
+          : "";
         return `
-          <div class="col-12 mb-4">
-            <div class="team-member">
-              <div class="team-avatar">
-                <a ${link}>
+          <div class="col-12 mb-4 d-flex">
+            <div class="prof-card w-100">
+              <div class="prof-card-body">
+                <p class="prof-role">${person.role}</p>
+                ${institutionHtml}
+                <h4><a href="${url}" ${tgt} style="text-decoration:none;color:inherit;">${person.name}</a></h4>
+                <p class="prof-bio">${person.bio || ""}</p>
+              </div>
+              <div class="prof-card-photo">
+                <a href="${url}" ${tgt}>
                   <img src="${person.photo}" alt="${person.name}"
-                    class="img-fluid rounded-circle"
                     onerror="this.src='./images/people.jpg'" />
                 </a>
               </div>
-              <a ${link} style="text-decoration:none">
-                <h4>${person.name}</h4>
-              </a>
-              <p class="text-muted">${person.role}</p>
-              <p>${person.bio}</p>
             </div>
           </div>`;
       }
@@ -160,11 +162,15 @@
       function buildProfessorCard(person) {
         const url = person.linkedin || "#";
         const tgt = person.linkedin ? 'target="_blank"' : "";
+        const institutionHtml = person.institution
+          ? `<p class="prof-institution">${person.institution}</p>`
+          : "";
         return `
           <div class="col-md-6 mb-4 d-flex">
             <div class="prof-card w-100">
               <div class="prof-card-body">
                 <p class="prof-role">${person.role}</p>
+                ${institutionHtml}
                 <h4><a href="${url}" ${tgt} style="text-decoration:none;color:inherit;">${person.name}</a></h4>
                 <p class="prof-bio">${person.bio || ""}</p>
               </div>
@@ -182,12 +188,16 @@
       function buildResearcherCard(person) {
         const url = person.linkedin || "#";
         const tgt = person.linkedin ? 'target="_blank"' : "";
+        const institutionHtml = person.institution
+          ? `<p class="researcher-institution">${person.institution}</p>`
+          : "";
         // ⚠️ NO d-flex on the outer col — it breaks display:none toggling in the filter
         return `
           <div class="col-md-6 mb-4 team-card" data-category="${(person.category || "").trim().toLowerCase()}">
             <div class="researcher-card">
               <div class="researcher-card-body">
                 <p class="researcher-role">${person.role}</p>
+                ${institutionHtml}
                 <h4><a href="${url}" ${tgt} style="text-decoration:none;color:inherit;">${person.name}</a></h4>
                 <p class="researcher-bio">${person.bio || ""}</p>
               </div>

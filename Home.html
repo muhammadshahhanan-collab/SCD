@@ -98,7 +98,7 @@
       <div class="container">
         <div class="section-title">
           <h2>Recent Work</h2>
-          <p>Publications, projects, and highlights from our lab</p>
+          <p>Publications, projects, and highlights from our Research Group</p>
         </div>
 
         <div class="rw-carousel-wrap">
@@ -157,57 +157,151 @@
     </section>
 
     <!-- Key Areas -->
-    <section id="objectives" class="section bg-light">
-      <div class="container">
-        <div class="section-title">
-          <h2>Key Areas</h2>
-          <p>Key focus areas guiding our research and development activities</p>
+    <section id="objectives" class="section ka-section">
+      <div class="container-fluid px-0">
+        <div class="container">
+          <div class="section-title">
+            <h2>Key Areas</h2>
+            <p>
+              Key focus areas guiding our research and development activities
+            </p>
+          </div>
         </div>
-        <div class="row">
-          <div class="col-lg-4 mb-4">
-            <div class="card">
-              <div class="card-header text-center">
-                <i class="fas fa-globe-americas fa-2x mb-3"></i>
-                <h4>Smart Sensing &amp; Earth Observation</h4>
+
+        <!-- Interactive Hex Network -->
+        <div class="ka-wrapper">
+          <!-- Left: 3 domain pillars -->
+          <div class="ka-pillars" id="ka-pillars">
+            <div class="ka-pillar" data-domain="sensing">
+              <div class="ka-pillar-hex">
+                <i class="fas fa-satellite-dish"></i>
+                <span>Smart Sensing<br />&amp; Earth Observation</span>
               </div>
-              <div class="card-body">
-                <p>
-                  Develop advanced sensor networks for real-time climate
-                  parameter monitoring including temperature, humidity, air
-                  quality, and weather patterns.
-                </p>
+            </div>
+            <div class="ka-pillar" data-domain="spatial">
+              <div class="ka-pillar-hex">
+                <i class="fas fa-brain"></i>
+                <span>Spatial Analytics<br />&amp; Geo-AI</span>
+              </div>
+            </div>
+            <div class="ka-pillar" data-domain="data">
+              <div class="ka-pillar-hex">
+                <i class="fas fa-cloud"></i>
+                <span>Big Data<br />&amp; Cloud Computing</span>
               </div>
             </div>
           </div>
-          <div class="col-lg-4 mb-4">
-            <div class="card">
-              <div class="card-header text-center">
-                <i class="fas fa-chart-area fa-2x mb-3"></i>
-                <h4>Spatial Analytics &amp; Geo-AI</h4>
+
+          <!-- Centre: SVG overlay + honeycomb cluster -->
+          <div class="ka-center-wrap">
+            <svg class="ka-connectors" id="ka-svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="ka-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#2c5282" stop-opacity="0.9" />
+                  <stop offset="100%" stop-color="#ed8936" stop-opacity="0.9" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <div class="ka-cluster" id="ka-cluster">
+              <div class="ka-hex-row">
+                <div
+                  class="ka-node"
+                  data-domains="sensing,spatial"
+                  data-id="env"
+                >
+                  <div class="ka-node-inner">
+                    <i class="fas fa-leaf"></i>
+                    <span>Environmental<br />Monitoring</span>
+                  </div>
+                </div>
+                <div
+                  class="ka-node"
+                  data-domains="sensing,data"
+                  data-id="cities"
+                >
+                  <div class="ka-node-inner">
+                    <i class="fas fa-city"></i>
+                    <span>Smart<br />Cities</span>
+                  </div>
+                </div>
               </div>
-              <div class="card-body">
-                <p>
-                  Create environmentally friendly sensing technologies that
-                  contribute to sustainable development goals and climate change
-                  mitigation efforts.
-                </p>
+              <div class="ka-hex-row ka-hex-row--offset">
+                <div class="ka-node" data-domains="spatial,data" data-id="eco">
+                  <div class="ka-node-inner">
+                    <i class="fas fa-seedling"></i>
+                    <span>Ecosystem<br />Research</span>
+                  </div>
+                </div>
+                <div
+                  class="ka-node"
+                  data-domains="sensing,spatial,data"
+                  data-id="geoai"
+                >
+                  <div class="ka-node-inner">
+                    <i class="fas fa-robot"></i>
+                    <span>Geo-AI &amp;<br />Deep Learning</span>
+                  </div>
+                </div>
+                <div
+                  class="ka-node"
+                  data-domains="sensing,data"
+                  data-id="climate"
+                >
+                  <div class="ka-node-inner">
+                    <i class="fas fa-temperature-high"></i>
+                    <span>Climate<br />Informatics</span>
+                  </div>
+                </div>
+              </div>
+              <div class="ka-hex-row">
+                <div class="ka-node" data-domains="spatial,data" data-id="nat">
+                  <div class="ka-node-inner">
+                    <i class="fas fa-mountain"></i>
+                    <span>Natural<br />Resources</span>
+                  </div>
+                </div>
+                <div
+                  class="ka-node"
+                  data-domains="sensing,spatial"
+                  data-id="ei"
+                >
+                  <div class="ka-node-inner">
+                    <i class="fas fa-microchip"></i>
+                    <span>Environmental<br />Informatics</span>
+                  </div>
+                </div>
+              </div>
+              <div class="ka-hex-row ka-hex-row--offset">
+                <div class="ka-node" data-domains="spatial,data" data-id="si">
+                  <div class="ka-node-inner">
+                    <i class="fas fa-globe"></i>
+                    <span>Spatial<br />Intelligence</span>
+                  </div>
+                </div>
+                <div
+                  class="ka-node"
+                  data-domains="sensing,data"
+                  data-id="sustain"
+                >
+                  <div class="ka-node-inner">
+                    <i class="fas fa-recycle"></i>
+                    <span>Sustainable<br />Development</span>
+                  </div>
+                </div>
               </div>
             </div>
+            <!-- /.ka-cluster -->
           </div>
-          <div class="col-lg-4 mb-4">
-            <div class="card">
-              <div class="card-header text-center">
-                <i class="fas fa-database fa-2x mb-3"></i>
-                <h4>Big Data &amp; Cloud Computing</h4>
-              </div>
-              <div class="card-body">
-                <p>
-                  Implement AI and machine learning algorithms to analyze sensor
-                  data and provide actionable insights for decision-making
-                  processes.
-                </p>
-              </div>
-            </div>
+          <!-- /.ka-center-wrap -->
+
+          <!-- Detail panel -->
+          <div class="ka-detail" id="ka-detail">
+            <div class="ka-detail-icon" id="ka-detail-icon"></div>
+            <h3 id="ka-detail-title">Select a node</h3>
+            <p id="ka-detail-desc">
+              Click any hexagon to explore that research area.
+            </p>
+            <div class="ka-detail-tags" id="ka-detail-tags"></div>
           </div>
         </div>
       </div>
@@ -276,5 +370,261 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="SCD.js"></script>
     <script src="home-slideshow.js"></script>
+
+    <script>
+      // ── Key Areas Interactive Hex Network ──────────────────────────────────────
+      const kaData = {
+        env: {
+          title: "Environmental Monitoring",
+          icon: "fa-leaf",
+          color: "#38a169",
+          desc: "Real-time satellite and sensor-based monitoring of air quality, land cover, vegetation health, and environmental stress indicators using Earth Observation data.",
+          tags: ["Remote Sensing", "IoT Sensors", "Air Quality", "Land Cover"],
+        },
+        cities: {
+          title: "Smart Cities",
+          icon: "fa-city",
+          color: "#2c5282",
+          desc: "Integrating geospatial data, IoT infrastructure, and cloud analytics to drive intelligent urban planning, mobility, and climate-resilient city design.",
+          tags: ["Urban Analytics", "IoT", "Digital Twin", "Mobility"],
+        },
+        eco: {
+          title: "Ecosystem Research",
+          icon: "fa-seedling",
+          color: "#38a169",
+          desc: "Mapping and quantifying terrestrial and coastal ecosystems — mangroves, wetlands, and forests — using multi-source satellite imagery and field measurements.",
+          tags: ["Blue Carbon", "Mangroves", "Wetlands", "LiDAR"],
+        },
+        geoai: {
+          title: "Geo-AI & Deep Learning",
+          icon: "fa-robot",
+          color: "#ed8936",
+          desc: "Applying convolutional neural networks, transformers, and ML pipelines to geospatial raster and vector data for automated feature extraction and prediction.",
+          tags: [
+            "CNN",
+            "ML Pipelines",
+            "Google Earth Engine",
+            "Transfer Learning",
+          ],
+        },
+        climate: {
+          title: "Climate Informatics",
+          icon: "fa-temperature-high",
+          color: "#e53e3e",
+          desc: "Analysing long-term climate datasets, drought indices, and precipitation trends using statistical and machine-learning methods for climate adaptation strategies.",
+          tags: ["Drought Monitoring", "NDVI", "Climate Models", "Time Series"],
+        },
+        nat: {
+          title: "Natural Resources",
+          icon: "fa-mountain",
+          color: "#2c5282",
+          desc: "Sustainable management of forests, water bodies, minerals, and land using multi-temporal satellite data, GIS modelling, and geospatial intelligence.",
+          tags: ["Water Resources", "Forest Cover", "Land Use", "GIS"],
+        },
+        ei: {
+          title: "Environmental Informatics",
+          icon: "fa-microchip",
+          color: "#38a169",
+          desc: "Combining environmental science with informatics to design data pipelines, spatial databases, and decision-support systems for ecosystem and climate management.",
+          tags: [
+            "Spatial DB",
+            "Data Pipeline",
+            "Decision Support",
+            "Modelling",
+          ],
+        },
+        si: {
+          title: "Spatial Intelligence",
+          icon: "fa-globe",
+          color: "#2c5282",
+          desc: "Deriving actionable intelligence from geographic data using advanced spatial statistics, network analysis, and geovisualisation for research and policy.",
+          tags: [
+            "Spatial Stats",
+            "Geovisualisation",
+            "Network Analysis",
+            "Mapping",
+          ],
+        },
+        sustain: {
+          title: "Sustainable Development",
+          icon: "fa-recycle",
+          color: "#38a169",
+          desc: "Aligning research outputs with UN SDGs by delivering scalable geospatial tools and evidence-based insights for development planning and climate resilience.",
+          tags: ["SDGs", "Climate Resilience", "Policy", "Capacity Building"],
+        },
+      };
+
+      let activeNode = null;
+      let activePillar = null;
+
+      const nodes = document.querySelectorAll(".ka-node");
+      const pillars = document.querySelectorAll(".ka-pillar");
+      const detail = document.getElementById("ka-detail");
+      const svg = document.getElementById("ka-svg");
+
+      function setDetail(id) {
+        const d = kaData[id];
+        if (!d) return;
+        document.getElementById("ka-detail-icon").innerHTML =
+          `<i class="fas ${d.icon}" style="color:${d.color}"></i>`;
+        document.getElementById("ka-detail-title").textContent = d.title;
+        document.getElementById("ka-detail-desc").textContent = d.desc;
+        const tagsEl = document.getElementById("ka-detail-tags");
+        tagsEl.innerHTML = d.tags
+          .map((t) => `<span class="ka-tag">${t}</span>`)
+          .join("");
+        detail.classList.add("ka-detail--active");
+      }
+
+      function clearHighlights() {
+        nodes.forEach((n) =>
+          n.classList.remove("ka-node--active", "ka-node--dim"),
+        );
+        pillars.forEach((p) =>
+          p.classList.remove("ka-pillar--active", "ka-pillar--dim"),
+        );
+        drawLines([]);
+      }
+
+      nodes.forEach((node) => {
+        node.addEventListener("click", () => {
+          const id = node.dataset.id;
+          if (activeNode === id) {
+            activeNode = null;
+            clearHighlights();
+            detail.classList.remove("ka-detail--active");
+            return;
+          }
+          activeNode = id;
+          activePillar = null;
+          const nodeDomains = node.dataset.domains.split(",");
+          nodes.forEach((n) => {
+            const overlap = n.dataset.domains
+              .split(",")
+              .some((d) => nodeDomains.includes(d));
+            n.classList.toggle("ka-node--active", n === node);
+            n.classList.toggle("ka-node--dim", n !== node && !overlap);
+          });
+          pillars.forEach((p) => {
+            const active = nodeDomains.includes(p.dataset.domain);
+            p.classList.toggle("ka-pillar--active", active);
+            p.classList.toggle("ka-pillar--dim", !active);
+          });
+          setDetail(id);
+          drawLines(nodeDomains, node);
+        });
+      });
+
+      pillars.forEach((pillar) => {
+        pillar.addEventListener("click", () => {
+          const dom = pillar.dataset.domain;
+          if (activePillar === dom) {
+            activePillar = null;
+            clearHighlights();
+            detail.classList.remove("ka-detail--active");
+            return;
+          }
+          activePillar = dom;
+          activeNode = null;
+          pillar.classList.add("ka-pillar--active");
+          pillars.forEach(
+            (p) => p !== pillar && p.classList.add("ka-pillar--dim"),
+          );
+          const connected = [];
+          nodes.forEach((n) => {
+            const doms = n.dataset.domains.split(",");
+            const match = doms.includes(dom);
+            n.classList.toggle("ka-node--active", match);
+            n.classList.toggle("ka-node--dim", !match);
+            if (match) connected.push(n);
+          });
+          drawLines([dom], null, pillar, connected);
+          // Show pillar info in detail
+          const labels = {
+            sensing: "Smart Sensing & Earth Observation",
+            spatial: "Spatial Analytics & Geo-AI",
+            data: "Big Data & Cloud Computing",
+          };
+          const icons = {
+            sensing: "fa-satellite-dish",
+            spatial: "fa-brain",
+            data: "fa-cloud",
+          };
+          document.getElementById("ka-detail-icon").innerHTML =
+            `<i class="fas ${icons[dom]}" style="color:#ed8936"></i>`;
+          document.getElementById("ka-detail-title").textContent = labels[dom];
+          document.getElementById("ka-detail-desc").textContent =
+            `Showing all research areas connected to ${labels[dom]}. Click any highlighted hexagon for details.`;
+          document.getElementById("ka-detail-tags").innerHTML = "";
+          detail.classList.add("ka-detail--active");
+        });
+      });
+
+      // ── SVG connector lines ────────────────────────────────────────────────────
+      function drawLines(
+        domains,
+        activeNodeEl,
+        activePillarEl,
+        connectedNodes,
+      ) {
+        svg.innerHTML = "";
+        const svgRect = svg.getBoundingClientRect();
+        if (svgRect.width === 0) return;
+
+        const targets = connectedNodes || (activeNodeEl ? [activeNodeEl] : []);
+        const sources = activePillarEl
+          ? [activePillarEl]
+          : [...pillars].filter((p) => domains.includes(p.dataset.domain));
+
+        sources.forEach((src) => {
+          const srcRect = src.getBoundingClientRect();
+          const x1 = srcRect.right - svgRect.left;
+          const y1 = (srcRect.top + srcRect.bottom) / 2 - svgRect.top;
+
+          targets.forEach((tgt) => {
+            const tgtRect = tgt.getBoundingClientRect();
+            const x2 = tgtRect.left - svgRect.left;
+            const y2 = (tgtRect.top + tgtRect.bottom) / 2 - svgRect.top;
+            const cx = (x1 + x2) / 2;
+
+            const path = document.createElementNS(
+              "http://www.w3.org/2000/svg",
+              "path",
+            );
+            path.setAttribute(
+              "d",
+              `M${x1},${y1} C${cx},${y1} ${cx},${y2} ${x2},${y2}`,
+            );
+            path.setAttribute("class", "ka-line");
+            svg.appendChild(path);
+          });
+        });
+      }
+
+      // Redraw on resize
+      let resizeTimer;
+      window.addEventListener("resize", () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          if (activeNode || activePillar) {
+            const node = activeNode
+              ? document.querySelector(`.ka-node[data-id="${activeNode}"]`)
+              : null;
+            const domains = node
+              ? node.dataset.domains.split(",")
+              : [activePillar];
+            const srcPillar = activePillar
+              ? document.querySelector(
+                  `.ka-pillar[data-domain="${activePillar}"]`,
+                )
+              : null;
+            const connected = [...nodes].filter((n) =>
+              n.classList.contains("ka-node--active"),
+            );
+            drawLines(domains, node, srcPillar, srcPillar ? connected : null);
+          }
+        }, 150);
+      });
+    </script>
   </body>
 </html>
