@@ -16,51 +16,67 @@
     <link rel="stylesheet" href="SCD.css" />
   </head>
   <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-      <div class="container-fluid px-4">
-        <a class="navbar-brand" href="#home">
-          <img
-            src="./images/logo.jpg"
-            alt="Smart Sensing Lab Logo"
-            height="40"
-            class="me-2"
-            style="border-radius: 50%; background-color: white"
-          />
-          Smart Sensing for Climate &amp; Development
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="Home.html">Home</a>
+    <!-- Floating Pill Navbar -->
+    <header class="site-header">
+      <div class="site-header__pill" id="siteHeaderPill">
+        <nav class="nav nav--pill">
+          <a class="nav__brand" href="#home">
+            <img
+              src="./images/logo.jpg"
+              alt="Smart Sensing Lab Logo"
+              height="36"
+              class="nav__brand-img"
+            />
+            <span class="nav__brand-text">Smart Sensing for Climate &amp; Development</span>
+          </a>
+          <ul class="nav-pill" id="mainNav">
+            <li>
+              <a class="nav-pill-link" href="#home" data-section="home">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
+            <li>
+              <a class="nav-pill-link" href="#recent-work" data-section="recent-work">Recent Work</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#objectives">Objectives</a>
+            <li>
+              <a class="nav-pill-link" href="#about" data-section="about">About</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Projects.html">Projects</a>
+            <li>
+              <a class="nav-pill-link" href="#objectives" data-section="objectives">What We Do</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
+          </ul>
+          <a href="Projects.html" class="nav__cta">Explore Our Work</a>
+          <button
+            class="nav__toggle"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+        </nav>
+        <div class="nav__links collapse" id="navbarNav">
+          <ul class="nav-pill nav-pill--mobile">
+            <li>
+              <a class="nav-pill-link" href="#home" data-section="home">Home</a>
+            </li>
+            <li>
+              <a class="nav-pill-link" href="#recent-work" data-section="recent-work">Recent Work</a>
+            </li>
+            <li>
+              <a class="nav-pill-link" href="#about" data-section="about">About</a>
+            </li>
+            <li>
+              <a class="nav-pill-link" href="#objectives" data-section="objectives">What We Do</a>
+            </li>
+            <li>
+              <a class="nav-pill-link nav-pill-link--cta" href="Projects.html">Explore Our Work</a>
             </li>
           </ul>
         </div>
       </div>
-    </nav>
+    </header>
 
     <!-- Hero -->
     <section id="home" class="hero">
@@ -161,7 +177,7 @@
       <div class="container-fluid px-0">
         <div class="container">
           <div class="section-title">
-            <h2>Key Areas</h2>
+            <h2>What We Do</h2>
             <p>
               Key focus areas guiding our research and development activities
             </p>
@@ -299,7 +315,7 @@
             <div class="ka-detail-icon" id="ka-detail-icon"></div>
             <h3 id="ka-detail-title">Select a node</h3>
             <p id="ka-detail-desc">
-              Click any hexagon to explore that research area.
+              Click any topic to explore that research area.
             </p>
             <div class="ka-detail-tags" id="ka-detail-tags"></div>
           </div>
