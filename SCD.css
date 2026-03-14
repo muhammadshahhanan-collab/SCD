@@ -290,10 +290,24 @@ body:has(.site-header) {
     .site-header .nav__toggle {
         display: inline-flex;
         margin-left: auto;
+        position: relative;
+        z-index: 100;
     }
 
     .site-header .nav {
         justify-content: space-between;
+    }
+
+    .site-header__pill {
+        overflow: visible;
+    }
+
+    .site-header .nav__links {
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 0;
+        right: 0;
+        z-index: 50;
     }
 
     .site-header .nav__links.collapse.show {
@@ -317,7 +331,8 @@ body:has(.site-header) {
     .site-header .nav-pill--mobile {
         flex-direction: column;
         gap: 0.5rem;
-        padding: 1rem 0;
+        padding: 1rem 1.25rem;
+        align-items: stretch;
     }
 
     .site-header .nav-pill--mobile .nav-pill-link {
@@ -445,7 +460,7 @@ body:has(.site-header) {
         margin-top: 10px;
     }
 
-    .fa-satellite-dish {
+    .hero .fa-satellite-dish {
         font-size: 5rem !important;
         margin-top: 16px;
     }
@@ -1023,6 +1038,7 @@ body:has(.site-header) {
     line-height: 1.6;
     display: -webkit-box;
     -webkit-line-clamp: 3;
+    line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -1121,6 +1137,7 @@ body:has(.site-header) {
     line-height: 1.55;
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -1928,16 +1945,7 @@ html {
   .rw-card-body h3 {
     font-size: 1.15rem;
   }
-}ze: 1.5rem;
-    
-    .card-actions {
-        flex-direction: column;
-    }
-    
-    .article-content {
-        padding: 20px;
-    }
-
+}
 
 /* Add this to your existing media query section */
 @media (max-width: 576px) {
@@ -2430,7 +2438,6 @@ html {
   .rw-card-body h3 {
     font-size: 1.15rem;
   }
-}px;
 }
 
 .research-actions .btn-sm {
@@ -2552,6 +2559,7 @@ html {
     line-height: 1.6;
     display: -webkit-box;
     -webkit-line-clamp: 3;
+    line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -2649,6 +2657,7 @@ html {
     line-height: 1.55;
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -3456,16 +3465,7 @@ html {
   .rw-card-body h3 {
     font-size: 1.15rem;
   }
-}ze: 1.5rem;
-
-    .card-actions {
-        flex-direction: column;
-    }
-    
-    .article-content {
-        padding: 20px;
-    }
-
+}
 
 /* Add this to your existing media query section */
 @media (max-width: 576px) {
@@ -4019,11 +4019,11 @@ html {
   --pillar-w:   clamp(100px, 10vw, 150px);
   --pillar-h:   clamp(56px, 5.5vw, 80px);
   --pillar-i:   clamp(1rem, 1.2vw, 1.4rem);
-  --pillar-fs:  clamp(0.55rem, 0.6vw, 0.7rem);
+  --pillar-fs:  clamp(0.65rem, 0.75vw, 0.85rem);
   --node-w:     clamp(100px, 10vw, 140px);
   --node-h:     clamp(72px, 7vw, 96px);
   --node-i:     clamp(0.9rem, 1.1vw, 1.25rem);
-  --node-fs:    clamp(0.52rem, 0.6vw, 0.7rem);
+  --node-fs:    clamp(0.62rem, 0.75vw, 0.82rem);
   --row-gap:    clamp(8px, 1vw, 14px);
   --col-gap:    clamp(8px, 1vw, 14px);
   --wrapper-gap: clamp(20px, 2.5vw, 36px);
@@ -4114,7 +4114,7 @@ html {
 .ka-hex-row {
   display: contents;
 }
-.ka-hex-row--offset { /* no offset for rectangular grid */ }
+.ka-hex-row--offset { position: relative; /* no offset for rectangular grid */ }
 
 /* ── Individual application nodes ── */
 .ka-node {
@@ -4229,10 +4229,10 @@ html {
     --pillar-w:   110px;
     --pillar-h:   64px;
     --pillar-i:   1rem;
-    --pillar-fs:  0.58rem;
+    --pillar-fs:  0.68rem;
     --node-h:     68px;
     --node-i:     0.9rem;
-    --node-fs:    0.54rem;
+    --node-fs:    0.64rem;
     --row-gap:    8px;
     --col-gap:    8px;
     --wrapper-gap: 16px;
@@ -4251,21 +4251,34 @@ html {
     align-items: center;
     --node-h:     64px;
     --node-i:     0.85rem;
-    --node-fs:    0.5rem;
+    --node-fs:    0.6rem;
     --row-gap:    8px;
     --col-gap:    8px;
     --pillar-w:   100px;
     --pillar-h:   56px;
     --pillar-i:   0.95rem;
-    --pillar-fs:  0.55rem;
+    --pillar-fs:  0.65rem;
   }
   .ka-cluster { grid-template-columns: repeat(2, 1fr); }
   .ka-pillars {
+    display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
     gap: 10px;
     width: 100%;
+    justify-content: stretch;
+  }
+  .ka-pillar {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+  .ka-pillar-hex {
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    min-height: var(--pillar-h);
+  }
+  .ka-pillar--active .ka-pillar-hex {
+    transform: translateX(6px);
   }
   .ka-center-wrap { width: 100%; }
   .ka-detail {
@@ -4285,13 +4298,13 @@ html {
     padding: 0 12px;
     --node-h:     58px;
     --node-i:     0.75rem;
-    --node-fs:    0.46rem;
+    --node-fs:    0.54rem;
     --row-gap:    6px;
     --col-gap:    6px;
     --pillar-w:   88px;
     --pillar-h:   50px;
     --pillar-i:   0.85rem;
-    --pillar-fs:  0.48rem;
+    --pillar-fs:  0.56rem;
   }
   .ka-cluster { grid-template-columns: repeat(2, 1fr); }
   .ka-pillars { gap: 8px; }
@@ -4306,13 +4319,13 @@ html {
   .ka-wrapper {
     --node-h:     52px;
     --node-i:     0.7rem;
-    --node-fs:    0.42rem;
+    --node-fs:    0.5rem;
     --row-gap:    5px;
     --col-gap:    5px;
     --pillar-w:   76px;
     --pillar-h:   44px;
     --pillar-i:   0.75rem;
-    --pillar-fs:  0.44rem;
+    --pillar-fs:  0.52rem;
   }
   .ka-cluster { grid-template-columns: 1fr; }
 }
