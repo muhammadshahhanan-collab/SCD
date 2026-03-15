@@ -1006,7 +1006,9 @@ body:has(.site-header) {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 8px;
+    text-align: center;
 }
 
 .prof-card-body .prof-role {
@@ -1110,7 +1112,9 @@ body:has(.site-header) {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 6px;
+    text-align: center;
 }
 
 .researcher-card-body .researcher-role {
@@ -2527,7 +2531,9 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 8px;
+    text-align: center;
 }
 
 .prof-card-body .prof-role {
@@ -2630,7 +2636,9 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 6px;
+    text-align: center;
 }
 
 .researcher-card-body .researcher-role {
@@ -4328,4 +4336,135 @@ html {
     --pillar-fs:  0.52rem;
   }
   .ka-cluster { grid-template-columns: 1fr; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   VIEW BIO LINK & BIO MODAL (Team page)
+   ═══════════════════════════════════════════════════════════════════ */
+.view-bio-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 6px;
+  transition: color 0.2s;
+}
+.view-bio-link:hover {
+  color: var(--secondary-color);
+}
+#bioModal .modal-dialog {
+  max-height: calc(100vh - 2rem);
+  margin: 1rem auto;
+}
+#bioModal .modal-content {
+  max-height: calc(100vh - 2rem);
+}
+#bioModal .modal-body {
+  overflow-y: auto;
+  max-height: calc(100vh - 8rem);
+}
+.bio-modal-content {
+  border-radius: 16px;
+  border: none;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+.bio-modal-layout {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+.bio-modal-photo {
+  flex-shrink: 0;
+  width: 140px;
+  height: 140px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #eef2f9, #e8f5ee);
+}
+.bio-modal-photo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.2s;
+}
+.bio-modal-photo a[href]:not([href="#"]):hover {
+  opacity: 0.9;
+}
+.bio-modal-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+.bio-modal-info {
+  flex: 1;
+  min-width: 0;
+}
+.bio-modal-info h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--dark-color);
+}
+.bio-modal-role {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+}
+.bio-modal-institution {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #64748b;
+}
+.bio-modal-bio {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #475569;
+}
+.bio-modal-links .btn { font-size: 0.8rem; }
+.bio-modal-detail { font-size: 0.88rem; color: #475569; border-top: 1px solid #e2e8f0; padding-top: 1rem; }
+.bio-detail-label { font-weight: 700; color: #334155; margin: 0.75rem 0 0.25rem; }
+.bio-detail-label:first-child { margin-top: 0; }
+.bio-detail-category, .bio-detail-awards { margin: 0.25rem 0; }
+.bio-detail-list { margin: 0 0 0 1rem; padding-left: 1rem; }
+.bio-detail-list li { margin-bottom: 0.35rem; }
+.bio-detail-list a { color: var(--primary-color); text-decoration: none; }
+.bio-detail-list a:hover { text-decoration: underline; }
+@media (max-width: 768px) {
+  #bioModal .modal-dialog {
+    margin: 0.5rem auto;
+    max-width: calc(100vw - 1rem);
+  }
+  .bio-modal-layout {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .bio-modal-photo {
+    width: 120px;
+    height: 120px;
+  }
+  .bio-modal-info h3 {
+    font-size: 1.15rem;
+  }
+  .bio-modal-bio,
+  .bio-modal-detail {
+    font-size: 0.88rem;
+  }
+}
+@media (max-width: 480px) {
+  #bioModal .modal-dialog {
+    margin: 0.25rem auto;
+    max-width: calc(100vw - 0.5rem);
+  }
+  .bio-modal-photo {
+    width: 100px;
+    height: 100px;
+  }
+  .bio-modal-info h3 {
+    font-size: 1.05rem;
+  }
 }

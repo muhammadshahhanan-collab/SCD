@@ -1,0 +1,65 @@
+{
+  "sawaid_abbas": {
+    "google_scholar": "https://scholar.google.com/citations?user=EXAMPLE",
+    "orcid": "https://orcid.org/0000-0000-0000-0000",
+    "science_direct": "https://www.sciencedirect.com/science/article/example",
+    "journal": "https://example-journal.com/author/sawaid-abbas",
+    "awards": [
+      "Best Researcher Award 2023",
+      "Excellence in Earth Observation"
+    ],
+    "publications": [
+      {
+        "title": "Earth Observation for Climate Resilience",
+        "year": "2024",
+        "journal": "Remote Sensing of Environment",
+        "url": "https://example.com/paper1"
+      },
+      {
+        "title": "Data Science in Geospatial Analysis",
+        "year": "2023",
+        "journal": "ISPRS Journal",
+        "url": ""
+      }
+    ],
+    "book_chapters": [
+      {
+        "title": "Smart Sensing for Sustainable Development",
+        "year": "2023",
+        "book": "Advances in Geospatial Technology",
+        "url": "https://example.com/chapter1"
+      }
+    ],
+    "publication_category": "Earth Observation, Remote Sensing, Data Science"
+  },
+  "janet_nichol": {
+    "google_scholar": "",
+    "orcid": "",
+    "science_direct": "",
+    "journal": "",
+    "awards": [],
+    "publications": [],
+    "book_chapters": [],
+    "publication_category": "Remote Sensing, Geo-Informatics"
+  },
+  "muhammad_usman": {
+    "google_scholar": "",
+    "orcid": "",
+    "science_direct": "",
+    "journal": "",
+    "awards": [],
+    "publications": [],
+    "book_chapters": [],
+    "publication_category": "Vegetation Monitoring, Coastal Ecosystem"
+  },
+  "samawia_rizwan": {
+    "google_scholar": "",
+    "orcid": "",
+    "science_direct": "",
+    "journal": "",
+    "awards": [],
+    "publications": [],
+    "book_chapters": [],
+    "publication_category": "Geographical Information Systems"
+  }
+}
