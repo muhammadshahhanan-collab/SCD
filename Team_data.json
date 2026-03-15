@@ -1,191 +1,228 @@
 {
     "professors": [
         {
+            "id": "sawaid_abbas",
             "name": "Dr. Sawaid Abbas",
-            "photo": "./images/Sawaid.jfif",
             "role": "Assistant Professor & Lead Researcher",
+            "institution": "University of the Punjab, Lahore",
+            "photo": "./images/Sawaid.jfif",
             "bio": "Leading expert in Earth Observation and Data Science for climate resilience. Developing sustainable solutions that harmonize technological innovation with nature.",
             "linkedin": "https://www.linkedin.com/in/sawaid-abbas-38624b21/",
-            "institution": "University of the Punjab, Lahore"
+            "section": "professor"
         },
         {
+            "id": "janet_nichol",
             "name": "Janet NICHOL",
-            "photo": "./images/Janet.jpg",
             "role": "Assistant Professor",
+            "institution": "The Hong Kong Polytechnic University",
+            "photo": "./images/Janet.jpg",
             "bio": "Applied Geographer, specialising in Remote Sensing, Geo-Informatics and Environmental Management.",
             "linkedin": "http://www.lsgi.polyu.edu.hk/RSRG/resources/people/JN.html",
-            "institution": "The Hong Kong Polytechnic University"
+            "section": "professor"
         },
         {
+            "id": "muhammad_usman",
             "name": "Dr. Muhammad Usman",
-            "photo": "https://media.licdn.com/dms/image/v2/D4E35AQHuFm10i-5Gqw/profile-framedphoto-shrink_200_200/B4EZzcnFk7JMAY-/0/1773227760300?e=1773849600&v=beta&t=tR62IhX8HDnafO0gEe1PtqZ5B7liVDbHS46cS-BKXtg",
             "role": "Assistant Professor",
+            "institution": "University of the Punjab, Lahore",
+            "photo": "https://media.licdn.com/dms/image/v2/D4E35AQHuFm10i-5Gqw/profile-framedphoto-shrink_200_200/B4EZzcnFk7JMAY-/0/1773227760300?e=1773849600&v=beta&t=tR62IhX8HDnafO0gEe1PtqZ5B7liVDbHS46cS-BKXtg",
             "bio": "Remote Sensing, Vegetation Monitoring, Coastal Ecosystem, Earth Observation.",
             "linkedin": "https://www.linkedin.com/in/sawaid-abbas-38624b21/",
-            "institution": "University of the Punjab, Lahore"
+            "section": "professor"
         },
         {
+            "id": "samawia_rizwan",
             "name": "Dr. Samawia Rizwan",
-            "photo": "https://media.licdn.com/dms/image/v2/D4D03AQE_TkzYlbdhig/profile-displayphoto-shrink_200_200/B4DZZsJlRiHwAY-/0/1745571174826?e=1775088000&v=beta&t=FsBUPwb3NgLz6GXH3jFG_KOGs_MCBK_JwmtX3bFyuSs",
             "role": "Assistant Professor",
+            "institution": "University of the Punjab, Lahore",
+            "photo": "https://media.licdn.com/dms/image/v2/D4D03AQE_TkzYlbdhig/profile-displayphoto-shrink_200_200/B4DZZsJlRiHwAY-/0/1745571174826?e=1775088000&v=beta&t=FsBUPwb3NgLz6GXH3jFG_KOGs_MCBK_JwmtX3bFyuSs",
             "bio": "Assistant Professor at the Centre for Geographical Information Systems, University of the Punjab, Lahore, Pakistan.",
             "linkedin": "https://www.linkedin.com/in/samawia-rizwan-874a9144/",
-            "institution": "University of the Punjab, Lahore"
+            "section": "professor"
+        }
+    ],
+    "advisors": [
+        {
+            "id": "majid_nazir",
+            "name": "Dr. Majid Nazir",
+            "role": "Assistant Professor & Lead Researcher",
+            "institution": "University of the Punjab, Lahore",
+            "photo": "./images/Sawaid.jfif",
+            "bio": "Leading expert in Earth Observation and Data Science for climate resilience. Developing sustainable solutions that harmonize technological innovation with nature.",
+            "linkedin": "https://www.linkedin.com/in/sawaid-abbas-38624b21/",
+            "section": "professor"
         }
     ],
     "researchers": [
         {
+            "id": "zohaib",
             "name": "Zohaib",
-            "photo": "./images/zohaib.jfif",
             "role": "Research Associate & PhD Candidate",
+            "institution": "University of the Punjab, Lahore | The Hong Kong Polytechnic University",
+            "photo": "./images/zohaib.jfif",
             "bio": "GIS/Remote Sensing researcher with expertise in Google Earth Engine and ML-driven geospatial analysis.",
             "linkedin": "https://www.linkedin.com/in/zohaib-gis06/",
-            "category": "phd",
-            "institution": "University of the Punjab, Lahore | The Hong Kong Polytechnic University"
+            "category": "phd"
         },
         {
+            "id": "muhammad_uzair_mehmood",
             "name": "Muhammad Uzair Mehmood",
-            "photo": "./images/Uzair.JPG",
             "role": "Research Associate & PhD Candidate",
+            "institution": "University of the Punjab, Lahore | The Hong Kong Polytechnic University",
+            "photo": "./images/Uzair.JPG",
             "bio": "Blue carbon and coastal wetlands specialist dedicated to quantifying climate solutions through integrated terrestrial laser scanning, remote sensing, and surveying.",
             "linkedin": "",
-            "category": "phd",
-            "institution": "University of the Punjab, Lahore | The Hong Kong Polytechnic University"
+            "category": "phd"
         },
         {
+            "id": "muhammad_umar",
             "name": "Muhammad Umar",
-            "photo": "./images/Umar.jfif",
             "role": "Research Associate & PhD Candidate",
+            "institution": "University of the Punjab, Lahore | The Hong Kong Polytechnic University",
+            "photo": "./images/Umar.jfif",
             "bio": "Expert in coastal zone analysis using Remote Sensing, GIS technologies, and AI for ecosystem research and innovation.",
             "linkedin": "https://www.linkedin.com/in/muhammad-umar-92017822a/",
-            "category": "phd",
-            "institution": "University of the Punjab, Lahore | The Hong Kong Polytechnic University"
+            "category": "phd"
         },
         {
+            "id": "abu_talha_manzoor",
             "name": "Abu Talha Manzoor",
-            "photo": "./images/Talha.jfif",
             "role": "Research Assistant & Masters Candidate",
+            "institution": "University of the Punjab, Lahore | University of Chinese academy of sciences, Beijing",
+            "photo": "./images/Talha.jfif",
             "bio": "Environmental researcher focusing on drought impacts and vegetation dynamics via satellite data and ML models.",
             "linkedin": "https://www.linkedin.com/in/abu-talha-manzoor/",
-            "category": "assistant",
-            "institution": "University of the Punjab, Lahore | University of Chinese academy of sciences, Beijing"
+            "category": "assistant"
         },
         {
+            "id": "muhammad_shah_hanan",
             "name": "Muhammad Shah Hanan",
-            "photo": "./images/Hanan.jfif",
             "role": "Research Assistant",
+            "institution": "University of the Punjab, Lahore",
+            "photo": "./images/Hanan.jfif",
             "bio": "Geospatial researcher applying remote sensing and GIS for environmental monitoring and climate studies.",
             "linkedin": "https://www.linkedin.com/in/muhammad-shah-hanan-bb8494366",
-            "category": "assistant",
-            "institution": "University of the Punjab, Lahore"
+            "category": "assistant"
         },
         {
+            "id": "fiza_ashraf",
             "name": "Fiza Ashraf",
-            "photo": "./images/Fiza.jpeg",
             "role": "Research Assistant",
+            "institution": "University of the Punjab, Lahore",
+            "photo": "./images/Fiza.jpeg",
             "bio": "Spatial Data Specialist advancing climate research and environmental management through cutting-edge geospatial technologies.",
             "linkedin": "",
-            "category": "assistant",
-            "institution": "University of the Punjab, Lahore"
+            "category": "assistant"
         },
         {
+            "id": "raja_usama",
             "name": "Raja Usama",
-            "photo": "./images/Raja_Usama.jpg",
             "role": "Research Assistant",
+            "institution": "University of the Punjab, Lahore",
+            "photo": "./images/Raja_Usama.jpg",
             "bio": "GIS and remote sensing specialist contributing to environmental monitoring research.",
             "linkedin": "https://www.linkedin.com/in/raja-usama-03b060243/",
-            "category": "assistant",
-            "institution": "University of the Punjab, Lahore"
+            "category": "assistant"
         },
         {
+            "id": "muhammad_waqas",
             "name": "Muhammad Waqas",
-            "photo": "./images/waqas.jfif",
             "role": "Research Assistant & Masters Candidate",
+            "institution": "University of the Punjab, Lahore | University of the Engineering and Technology, Lahore",
+            "photo": "./images/waqas.jfif",
             "bio": "Geologist specializing in remote sensing and GIS analysis, adept at integrating spatial data to unravel geological complexities.",
             "linkedin": "https://www.linkedin.com/in/muhammadwaqasgeo/",
-            "category": "assistant",
-            "institution": "University of the Punjab, Lahore | University of the Engineering and Technology, Lahore"
+            "category": "assistant"
         },
         {
+            "id": "amna_yassen",
             "name": "Amna Yassen",
-            "photo": "./images/Amna.jpeg",
             "role": "Research Assistant",
+            "institution": "University of the Punjab, Lahore",
+            "photo": "./images/Amna.jpeg",
             "bio": "Geospatial analyst with expertise in Geospatial Analytics and Spatial Intelligence..",
             "linkedin": "https://www.linkedin.com/in/amna-yaseen-1a832837a/",
-            "category": "assistant",
-            "institution": "University of the Punjab, Lahore"
+            "category": "assistant"
         },
         {
+            "id": "raiha_fatima_shaikh",
             "name": "Raiha Fatima Shaikh",
-            "photo": "./images/Raiha.jpeg",
             "role": "Research Assistant",
+            "institution": "University of the Punjab, Lahore",
+            "photo": "./images/Raiha.jpeg",
             "bio": "Research Assistant working on spatial data science and remote sensing applications.",
             "linkedin": "https://www.linkedin.com/in/raihafatimasheikh/",
-            "category": "assistant",
-            "institution": "University of the Punjab, Lahore"
+            "category": "assistant"
         },
         {
+            "id": "muhammad_farhan_khalil",
             "name": "Muhammad Farhan Khalil",
-            "photo": "./images/Farhan.jpg",
             "role": "Research Assistant",
+            "institution": "University of the Punjab, Lahore",
+            "photo": "./images/Farhan.jpg",
             "bio": "Research Assistant specializing in GIS and geospatial data analysis for climate and environmental studies.",
             "linkedin": "https://www.linkedin.com/in/muhammad-farhan-khalil-gis/",
-            "category": "assistant",
-            "institution": "University of the Punjab, Lahore"
+            "category": "assistant"
         },
         {
+            "id": "hooria_zainab",
             "name": "Hooria Zainab",
-            "photo": "./images/Hooria.jpg",
             "role": "Research Student",
+            "institution": "University of the Punjab, Lahore",
+            "photo": "./images/Hooria.jpg",
             "bio": "Research student developing skills in remote sensing and geospatial analysis for climate applications.",
             "linkedin": "https://www.linkedin.com/in/hooria2002/",
-            "category": "student",
-            "institution": "University of the Punjab, Lahore"
+            "category": "student"
         },
         {
+            "id": "dure_najaf",
             "name": "Dure Najaf",
-            "photo": "./images/dur e.jpg",
             "role": "Research Student",
+            "institution": "University of the Punjab, Lahore",
+            "photo": "./images/dur e.jpg",
             "bio": "Research student focusing on GIS and earth observation for environmental research.",
             "linkedin": "https://www.linkedin.com/in/dure-najaf-6008a236b/",
-            "category": "student",
-            "institution": "University of the Punjab, Lahore"
+            "category": "student"
         },
         {
+            "id": "hamid_kasuri",
             "name": "Hamid Kasuri",
-            "photo": "./images/Hamid.jpg",
             "role": "Research Student",
+            "institution": "University of the Punjab, Lahore",
+            "photo": "./images/Hamid.jpg",
             "bio": "Research student engaged in spatial data science and climate monitoring projects.",
             "linkedin": "https://www.linkedin.com/in/hamidkasuri/",
-            "category": "student",
-            "institution": "University of the Punjab, Lahore"
+            "category": "student"
         },
         {
+            "id": "raja_tashfeen",
             "name": "Raja Tashfeen",
-            "photo": "./images/tashfeen.jpg",
             "role": "Research Student",
+            "institution": "University of the Punjab, Lahore",
+            "photo": "./images/tashfeen.jpg",
             "bio": "Research student contributing to geospatial analysis and smart sensing research.",
             "linkedin": "https://www.linkedin.com/in/raja-tashfeen-95b022281/",
-            "category": "student",
-            "institution": "University of the Punjab, Lahore"
+            "category": "student"
         },
         {
+            "id": "mati_ur_rehman",
             "name": "Mati ur Rehman",
-            "photo": "./images/Matti.jpg",
             "role": "Research Student",
+            "institution": "University of the Punjab, Lahore",
+            "photo": "./images/Matti.jpg",
             "bio": "Research student working on satellite data analysis and environmental monitoring.",
             "linkedin": "https://www.linkedin.com/in/mati-ur-rehman-590226315/",
-            "category": "student",
-            "institution": "University of the Punjab, Lahore"
+            "category": "student"
         },
         {
+            "id": "hareem_asad",
             "name": "Hareem Asad",
-            "photo": "./images/Hareem.jpg",
             "role": "Research Student",
+            "institution": "University of the Punjab, Lahore",
+            "photo": "./images/Hareem.jpg",
             "bio": "Research student exploring remote sensing applications in climate and ecosystem studies.",
             "linkedin": "https://www.linkedin.com/in/hareem-asad-39ba26356/",
-            "category": "student",
-            "institution": "University of the Punjab, Lahore"
+            "category": "student"
         }
     ]
 }

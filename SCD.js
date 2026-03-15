@@ -1,10 +1,13 @@
-// ✅ Smooth scrolling for navigation links
+// ✅ Smooth scrolling for navigation links (only for in-page anchors like #about)
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    const href = this.getAttribute("href");
+    if (href && href.startsWith("#") && href.length > 1) {
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     }
     // Close mobile menu when link is clicked
     const collapseEl = document.getElementById("navbarNav");

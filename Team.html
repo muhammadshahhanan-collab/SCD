@@ -16,54 +16,40 @@
     <link rel="stylesheet" href="SCD.css" />
   </head>
   <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="Home.html">
-          <img
-            src="./images/logo.jpg"
-            alt="Smart Sensing Lab Logo"
-            height="40"
-            class="me-2"
-            style="border-radius: 50%; background-color: white"
-          />
-          SCD Smart sensing Lab
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="Home.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Home.html#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Home.html#objectives">Objectives</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Projects.html">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Research.html">Research</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Home.html#contact">Contact</a>
-            </li>
+    <!-- Floating Pill Navbar -->
+    <header class="site-header">
+      <div class="site-header__pill" id="siteHeaderPill">
+        <nav class="nav nav--pill">
+          <a class="nav__brand" href="Home.html">
+            <img src="./images/logo.jpg" alt="Smart Sensing Lab Logo" height="36" class="nav__brand-img" />
+            <span class="nav__brand-text">Smart Sensing for Climate &amp; Development</span>
+          </a>
+          <ul class="nav-pill" id="mainNav">
+            <li><a class="nav-pill-link" href="Home.html">Home</a></li>
+            <li><a class="nav-pill-link" href="Home.html#about">About</a></li>
+            <li><a class="nav-pill-link" href="Home.html#objectives">Work</a></li>
+            <li><a class="nav-pill-link" href="Projects.html">Projects</a></li>
+            <li><a class="nav-pill-link" href="Research.html">Research</a></li>
+            <li><a class="nav-pill-link nav-active" href="Team.html">People</a></li>
+          </ul>
+          <a href="Projects.html" class="nav__cta" title="Explore Our Work">Explore</a>
+          <button class="nav__toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+          </button>
+        </nav>
+        <div class="nav__links collapse" id="navbarNav">
+          <ul class="nav-pill nav-pill--mobile">
+            <li><a class="nav-pill-link" href="Home.html">Home</a></li>
+            <li><a class="nav-pill-link" href="Home.html#about">About</a></li>
+            <li><a class="nav-pill-link" href="Home.html#objectives">Work</a></li>
+            <li><a class="nav-pill-link" href="Projects.html">Projects</a></li>
+            <li><a class="nav-pill-link" href="Research.html">Research</a></li>
+            <li><a class="nav-pill-link nav-active" href="Team.html">People</a></li>
+            <li><a class="nav-pill-link nav-pill-link--cta" href="Projects.html">Explore</a></li>
           </ul>
         </div>
       </div>
-    </nav>
+    </header>
 
     <!-- Team Section -->
     <section id="team" class="section">
@@ -88,6 +74,20 @@
         <div class="row" id="professors-container">
           <!-- Loaded from team_data.json -->
           <div class="text-center py-4"><div class="loading"></div></div>
+        </div>
+
+        <hr class="team-section-divider" />
+
+        <!-- Research Advisors -->
+        <div class="container mb-4" id="advisors-section-wrap">
+          <div class="text-center mb-2">
+            <span class="team-section-label"
+              ><i class="fas fa-user-tie me-1"></i>Research Advisors</span
+            >
+          </div>
+        </div>
+        <div class="row" id="advisors-container">
+          <!-- Loaded from team_data.json (advisors array) -->
         </div>
 
         <hr class="team-section-divider" />
@@ -127,14 +127,132 @@
       </div>
     </section>
 
+    <!-- Bio Modal -->
+    <div class="modal fade" id="bioModal" tabindex="-1" aria-labelledby="bioModalName" aria-modal="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+        <div class="modal-content bio-modal-content">
+          <div class="modal-header border-0 pb-0">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body pt-0">
+            <div class="bio-modal-layout">
+              <div class="bio-modal-photo">
+                <a id="bioModalPhotoLink" href="#" target="_blank" rel="noopener noreferrer">
+                  <img id="bioModalPhoto" src="" alt="" onerror="this.src='./images/people.jpg'" />
+                </a>
+              </div>
+              <div class="bio-modal-info">
+                <h3 id="bioModalName" class="mb-2"></h3>
+                <p id="bioModalRole" class="bio-modal-role mb-1"></p>
+                <p id="bioModalInstitution" class="bio-modal-institution mb-3"></p>
+                <p id="bioModalBio" class="bio-modal-bio mb-3"></p>
+                <div id="bioModalLinks" class="bio-modal-links mb-3"></div>
+                <a id="bioModalLinkedIn" href="#" target="_blank" class="btn btn-outline-primary btn-sm">
+                  <i class="fab fa-linkedin me-1"></i>View LinkedIn Profile
+                </a>
+                <div id="bioModalDetail" class="bio-modal-detail mt-3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div id="footer"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="SCD.js"></script>
 
     <script>
+      let teamDataCache = { professors: [], advisors: [], researchers: [] };
+      let bioDetailCache = {};
+
+      window.openBioModal = function (type, index) {
+        const key = type === "professor" ? "professors" : type === "advisor" ? "advisors" : "researchers";
+        const person = teamDataCache[key] && teamDataCache[key][index];
+        if (person) showBioModal(person);
+        return false;
+      };
+
+      function showBioModal(person) {
+        document.getElementById("bioModalPhoto").src = person.photo || "./images/people.jpg";
+        document.getElementById("bioModalPhoto").alt = person.name;
+        const photoLink = document.getElementById("bioModalPhotoLink");
+        if (person.linkedin) {
+          photoLink.href = person.linkedin;
+          photoLink.target = "_blank";
+          photoLink.rel = "noopener noreferrer";
+          photoLink.style.pointerEvents = "";
+          photoLink.style.cursor = "pointer";
+        } else {
+          photoLink.href = "#";
+          photoLink.style.pointerEvents = "none";
+          photoLink.style.cursor = "default";
+        }
+        document.getElementById("bioModalName").textContent = person.name;
+        document.getElementById("bioModalRole").textContent = person.role || "";
+        document.getElementById("bioModalInstitution").textContent = person.institution || "";
+        document.getElementById("bioModalInstitution").style.display = person.institution ? "" : "none";
+        document.getElementById("bioModalBio").textContent = person.bio || "";
+        const linkedInEl = document.getElementById("bioModalLinkedIn");
+        linkedInEl.href = person.linkedin || "#";
+        linkedInEl.style.display = person.linkedin ? "" : "none";
+
+        // Detailed bio (professors & advisors only) — from Team_bio_detail.json
+        const detail = person.id && bioDetailCache[person.id] ? bioDetailCache[person.id] : null;
+        const linksEl = document.getElementById("bioModalLinks");
+        const detailEl = document.getElementById("bioModalDetail");
+
+        if (detail) {
+          let linksHtml = "";
+          if (detail.google_scholar) linksHtml += `<a href="${detail.google_scholar}" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-sm me-1 mb-1"><i class="fas fa-graduation-cap me-1"></i>Google Scholar</a>`;
+          if (detail.orcid) linksHtml += `<a href="${detail.orcid}" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-sm me-1 mb-1"><i class="fab fa-orcid me-1"></i>ORCID</a>`;
+          if (detail.science_direct) linksHtml += `<a href="${detail.science_direct}" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-sm me-1 mb-1">Science Direct</a>`;
+          if (detail.journal) linksHtml += `<a href="${detail.journal}" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-sm me-1 mb-1">Journal</a>`;
+          linksEl.innerHTML = linksHtml;
+          linksEl.style.display = linksHtml ? "" : "none";
+
+          let detailHtml = "";
+          if (detail.publication_category) detailHtml += `<p class="bio-detail-category"><strong>Research areas:</strong> ${detail.publication_category}</p>`;
+          if (detail.awards && detail.awards.length) detailHtml += `<p class="bio-detail-awards"><strong>Awards:</strong> ${detail.awards.join("; ")}</p>`;
+          if (detail.publications && detail.publications.length) {
+            detailHtml += `<p class="bio-detail-label"><strong>Publications</strong></p><ul class="bio-detail-list">`;
+            detail.publications.forEach(p => {
+              const link = p.url ? `<a href="${p.url}" target="_blank" rel="noopener">${p.title}</a>` : p.title;
+              detailHtml += `<li>${link} (${p.year})${p.journal ? " — " + p.journal : ""}</li>`;
+            });
+            detailHtml += `</ul>`;
+          }
+          if (detail.book_chapters && detail.book_chapters.length) {
+            detailHtml += `<p class="bio-detail-label"><strong>Book Chapters</strong></p><ul class="bio-detail-list">`;
+            detail.book_chapters.forEach(b => {
+              const link = b.url ? `<a href="${b.url}" target="_blank" rel="noopener">${b.title}</a>` : b.title;
+              detailHtml += `<li>${link} (${b.year})${b.book ? " in " + b.book : ""}</li>`;
+            });
+            detailHtml += `</ul>`;
+          }
+          detailEl.innerHTML = detailHtml;
+          detailEl.style.display = detailHtml ? "" : "none";
+        } else {
+          linksEl.innerHTML = "";
+          linksEl.style.display = "none";
+          detailEl.innerHTML = "";
+          detailEl.style.display = "none";
+        }
+
+        const modal = new bootstrap.Modal(document.getElementById("bioModal"));
+        modal.show();
+      }
+
+      // Fix aria-hidden focus: move focus out of modal before it hides (avoids "Blocked aria-hidden" a11y warning)
+      document.getElementById("bioModal").addEventListener("hide.bs.modal", function () {
+        if (document.activeElement && this.contains(document.activeElement)) {
+          document.activeElement.blur();
+        }
+      });
+
       // ─── Build professor cards ────────────────────────────────────────────────
-      function buildProfessorHeadCard(person) {
+      function buildProfessorHeadCard(person, index) {
         const url = person.linkedin || "#";
         const tgt = person.linkedin ? 'target="_blank"' : "";
         const institutionHtml = person.institution
@@ -144,10 +262,11 @@
           <div class="col-12 mb-4 d-flex">
             <div class="prof-card w-100">
               <div class="prof-card-body">
+                <h4><a href="${url}" ${tgt} style="text-decoration:none;color:inherit;">${person.name}</a></h4>
                 <p class="prof-role">${person.role}</p>
                 ${institutionHtml}
-                <h4><a href="${url}" ${tgt} style="text-decoration:none;color:inherit;">${person.name}</a></h4>
                 <p class="prof-bio">${person.bio || ""}</p>
+                <a href="#" class="view-bio-link" onclick="return openBioModal('professor', ${index})"><i class="fas fa-user-circle me-1"></i>View Bio</a>
               </div>
               <div class="prof-card-photo">
                 <a href="${url}" ${tgt}>
@@ -159,7 +278,7 @@
           </div>`;
       }
 
-      function buildProfessorCard(person) {
+      function buildAdvisorCard(person, index) {
         const url = person.linkedin || "#";
         const tgt = person.linkedin ? 'target="_blank"' : "";
         const institutionHtml = person.institution
@@ -169,10 +288,37 @@
           <div class="col-md-6 mb-4 d-flex">
             <div class="prof-card w-100">
               <div class="prof-card-body">
+                <h4><a href="${url}" ${tgt} style="text-decoration:none;color:inherit;">${person.name}</a></h4>
                 <p class="prof-role">${person.role}</p>
                 ${institutionHtml}
-                <h4><a href="${url}" ${tgt} style="text-decoration:none;color:inherit;">${person.name}</a></h4>
                 <p class="prof-bio">${person.bio || ""}</p>
+                <a href="#" class="view-bio-link" onclick="return openBioModal('advisor', ${index})"><i class="fas fa-user-circle me-1"></i>View Bio</a>
+              </div>
+              <div class="prof-card-photo">
+                <a href="${url}" ${tgt}>
+                  <img src="${person.photo}" alt="${person.name}"
+                    onerror="this.src='./images/people.jpg'" />
+                </a>
+              </div>
+            </div>
+          </div>`;
+      }
+
+      function buildProfessorCard(person, index) {
+        const url = person.linkedin || "#";
+        const tgt = person.linkedin ? 'target="_blank"' : "";
+        const institutionHtml = person.institution
+          ? `<p class="prof-institution">${person.institution}</p>`
+          : "";
+        return `
+          <div class="col-md-6 mb-4 d-flex">
+            <div class="prof-card w-100">
+              <div class="prof-card-body">
+                <h4><a href="${url}" ${tgt} style="text-decoration:none;color:inherit;">${person.name}</a></h4>
+                <p class="prof-role">${person.role}</p>
+                ${institutionHtml}
+                <p class="prof-bio">${person.bio || ""}</p>
+                <a href="#" class="view-bio-link" onclick="return openBioModal('professor', ${index})"><i class="fas fa-user-circle me-1"></i>View Bio</a>
               </div>
               <div class="prof-card-photo">
                 <a href="${url}" ${tgt}>
@@ -185,7 +331,7 @@
       }
 
       // ─── Build a single researcher card ──────────────────────────────────────
-      function buildResearcherCard(person) {
+      function buildResearcherCard(person, index) {
         const url = person.linkedin || "#";
         const tgt = person.linkedin ? 'target="_blank"' : "";
         const institutionHtml = person.institution
@@ -196,10 +342,11 @@
           <div class="col-md-6 mb-4 team-card" data-category="${(person.category || "").trim().toLowerCase()}">
             <div class="researcher-card">
               <div class="researcher-card-body">
+                <h4><a href="${url}" ${tgt} style="text-decoration:none;color:inherit;">${person.name}</a></h4>
                 <p class="researcher-role">${person.role}</p>
                 ${institutionHtml}
-                <h4><a href="${url}" ${tgt} style="text-decoration:none;color:inherit;">${person.name}</a></h4>
                 <p class="researcher-bio">${person.bio || ""}</p>
+                <a href="#" class="view-bio-link" onclick="return openBioModal('researcher', ${index})"><i class="fas fa-user-circle me-1"></i>View Bio</a>
               </div>
               <div class="researcher-card-photo">
                 <a href="${url}" ${tgt}>
@@ -226,52 +373,67 @@
         });
       }
 
-      // ─── Load team from JSON ──────────────────────────────────────────────────
-      fetch("team_data.json")
-        .then((res) => {
-          if (!res.ok) throw new Error("Could not load team_data.json");
-          return res.json();
-        })
-        .then((data) => {
-          // Professors
-          const profContainer = document.getElementById("professors-container");
-          if (data.professors && data.professors.length > 0) {
-            const [head, ...others] = data.professors;
-            const headHtml = head ? buildProfessorHeadCard(head) : "";
-            const othersHtml = others.map(buildProfessorCard).join("");
-            profContainer.innerHTML = headHtml + othersHtml;
-          } else {
-            profContainer.innerHTML =
-              '<p class="text-center text-muted">No professors listed yet.</p>';
-          }
+      // ─── Load team data ───────────────────────────────────────────────────────
+      Promise.all([
+        fetch("Team_data.json").then(r => { if (!r.ok) throw new Error("Team_data.json"); return r.json(); }),
+        fetch("Team_bio_detail.json").then(r => r.ok ? r.json() : {}).catch(() => ({}))
+      ]).then(([data, bioDetail]) => {
+        bioDetailCache = bioDetail || {};
 
-          // Researchers
-          const resContainer = document.getElementById("researchers-container");
-          if (data.researchers && data.researchers.length > 0) {
-            resContainer.innerHTML = data.researchers
-              .map(buildResearcherCard)
-              .join("");
-          } else {
-            resContainer.innerHTML =
-              '<p class="text-center text-muted">No researchers listed yet.</p>';
-          }
-        })
+        // Professors (section === "professor")
+        const professors = (data.professors || []).filter(p => (p.section || "professor") === "professor");
+        teamDataCache.professors = professors;
+        const profContainer = document.getElementById("professors-container");
+        if (professors.length > 0) {
+          const [head, ...others] = professors;
+          const headHtml = head ? buildProfessorHeadCard(head, 0) : "";
+          const othersHtml = others.map((p, i) => buildProfessorCard(p, i + 1)).join("");
+          profContainer.innerHTML = headHtml + othersHtml;
+        } else {
+          profContainer.innerHTML = '<p class="text-center text-muted">No professors listed yet.</p>';
+        }
+
+        // Advisors (section === "advisor" in professors, or separate advisors array)
+        const advisors = (data.advisors || []).concat((data.professors || []).filter(p => p.section === "advisor"));
+        teamDataCache.advisors = advisors;
+        const advisorsWrap = document.getElementById("advisors-section-wrap");
+        const advisorsContainer = document.getElementById("advisors-container");
+        if (advisors.length > 0) {
+          advisorsWrap.style.display = "";
+          advisorsContainer.innerHTML = advisors.map((p, i) => buildAdvisorCard(p, i)).join("");
+        } else {
+          advisorsWrap.style.display = "none";
+          advisorsContainer.innerHTML = "";
+        }
+
+        // Researchers
+        teamDataCache.researchers = data.researchers || [];
+        const resContainer = document.getElementById("researchers-container");
+        if (teamDataCache.researchers.length > 0) {
+          resContainer.innerHTML = teamDataCache.researchers
+            .map((p, i) => buildResearcherCard(p, i))
+            .join("");
+        } else {
+          resContainer.innerHTML = '<p class="text-center text-muted">No researchers listed yet.</p>';
+        }
+      })
         .catch((err) => {
           console.error(err);
           document.getElementById("professors-container").innerHTML =
-            '<p class="text-center text-danger">Error loading team data. Make sure team_data.json is in the same folder.</p>';
+            '<p class="text-center text-danger">Error loading team data. Make sure Team_data.json is in the same folder.</p>';
+          document.getElementById("advisors-container").innerHTML = "";
           document.getElementById("researchers-container").innerHTML = "";
         });
-      // ✅ Smooth scrolling for navigation links
+      // ✅ Smooth scrolling for navigation links (only for in-page anchors like #about)
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute("href"));
-          if (target) {
-            target.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
+          const href = this.getAttribute("href");
+          if (href && href.startsWith("#") && href.length > 1) {
+            const target = document.querySelector(href);
+            if (target) {
+              e.preventDefault();
+              target.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
           }
         });
       });
@@ -285,19 +447,6 @@
         }
         // If hash exists, let browser handle the scroll naturally
       };
-
-      // ✅ Navbar background effect on scroll
-      window.addEventListener("scroll", function () {
-        const navbar = document.querySelector(".navbar");
-        if (window.scrollY > 50) {
-          navbar.style.background =
-            "linear-gradient(135deg, rgba(44, 82, 130, 0.95), rgba(56, 161, 105, 0.95))";
-          navbar.style.backdropFilter = "blur(10px)";
-        } else {
-          //navbar.style.background = "transparent";
-          navbar.style.backdropFilter = "none";
-        }
-      });
 
       fetch("footer.html")
         .then((response) => response.text())

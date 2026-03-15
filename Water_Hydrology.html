@@ -16,53 +16,40 @@
     <link rel="stylesheet" href="SCD.css" />
   </head>
   <body>
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#home">
-          <img
-            src="./images/logo.jpg"
-            alt="Smart Sensing Lab Logo"
-            height="40"
-            class="me-2"
-            style="border-radius: 50%; background-color: white"
-          />
-          SCD Smart sensing Lab
-        </a>
-
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="Home.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#objectives">Objectives</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Projects.html">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Research.html">Research</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
+    <!-- Floating Pill Navbar -->
+    <header class="site-header">
+      <div class="site-header__pill" id="siteHeaderPill">
+        <nav class="nav nav--pill">
+          <a class="nav__brand" href="Home.html">
+            <img src="./images/logo.jpg" alt="Smart Sensing Lab Logo" height="36" class="nav__brand-img" />
+            <span class="nav__brand-text">Smart Sensing for Climate &amp; Development</span>
+          </a>
+          <ul class="nav-pill" id="mainNav">
+            <li><a class="nav-pill-link" href="Home.html">Home</a></li>
+            <li><a class="nav-pill-link" href="Home.html#about">About</a></li>
+            <li><a class="nav-pill-link" href="Home.html#objectives">Work</a></li>
+            <li><a class="nav-pill-link nav-active" href="Projects.html">Projects</a></li>
+            <li><a class="nav-pill-link" href="Research.html">Research</a></li>
+            <li><a class="nav-pill-link" href="Team.html">People</a></li>
+          </ul>
+          <a href="Projects.html" class="nav__cta" title="Explore Our Work">Explore</a>
+          <button class="nav__toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+          </button>
+        </nav>
+        <div class="nav__links collapse" id="navbarNav">
+          <ul class="nav-pill nav-pill--mobile">
+            <li><a class="nav-pill-link" href="Home.html">Home</a></li>
+            <li><a class="nav-pill-link" href="Home.html#about">About</a></li>
+            <li><a class="nav-pill-link" href="Home.html#objectives">Work</a></li>
+            <li><a class="nav-pill-link nav-active" href="Projects.html">Projects</a></li>
+            <li><a class="nav-pill-link" href="Research.html">Research</a></li>
+            <li><a class="nav-pill-link" href="Team.html">People</a></li>
+            <li><a class="nav-pill-link nav-pill-link--cta" href="Projects.html">Explore</a></li>
           </ul>
         </div>
       </div>
-    </nav>
+    </header>
 
     <section id="projects" class="section">
       <div class="container">
