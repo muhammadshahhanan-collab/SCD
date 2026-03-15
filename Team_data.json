@@ -11,23 +11,13 @@
             "section": "professor"
         },
         {
-            "id": "janet_nichol",
-            "name": "Janet NICHOL",
-            "role": "Assistant Professor",
-            "institution": "The Hong Kong Polytechnic University",
-            "photo": "./images/Janet.jpg",
-            "bio": "Applied Geographer, specialising in Remote Sensing, Geo-Informatics and Environmental Management.",
-            "linkedin": "http://www.lsgi.polyu.edu.hk/RSRG/resources/people/JN.html",
-            "section": "professor"
-        },
-        {
             "id": "muhammad_usman",
             "name": "Dr. Muhammad Usman",
             "role": "Assistant Professor",
             "institution": "University of the Punjab, Lahore",
             "photo": "https://media.licdn.com/dms/image/v2/D4E35AQHuFm10i-5Gqw/profile-framedphoto-shrink_200_200/B4EZzcnFk7JMAY-/0/1773227760300?e=1773849600&v=beta&t=tR62IhX8HDnafO0gEe1PtqZ5B7liVDbHS46cS-BKXtg",
             "bio": "Remote Sensing, Vegetation Monitoring, Coastal Ecosystem, Earth Observation.",
-            "linkedin": "https://www.linkedin.com/in/sawaid-abbas-38624b21/",
+            "linkedin": "https://www.linkedin.com/in/muhammad-usman-phd-62b33467/",
             "section": "professor"
         },
         {
@@ -45,11 +35,21 @@
         {
             "id": "majid_nazir",
             "name": "Dr. Majid Nazir",
-            "role": "Assistant Professor & Lead Researcher",
-            "institution": "University of the Punjab, Lahore",
-            "photo": "./images/Sawaid.jfif",
-            "bio": "Leading expert in Earth Observation and Data Science for climate resilience. Developing sustainable solutions that harmonize technological innovation with nature.",
-            "linkedin": "https://www.linkedin.com/in/sawaid-abbas-38624b21/",
+            "role": "Assistant Professor",
+            "institution": "The Hong Kong Polytechnic University",
+            "photo": "https://media.licdn.com/dms/image/v2/D4D03AQEvhMA7czuNdw/profile-displayphoto-crop_800_800/B4DZuvzlrAI8AI-/0/1768181095755?e=1775088000&v=beta&t=0d--cMcGKgtj0otxbhpnno2N-ItZtwzyaMsMC2h8Rdw",
+            "bio": "Remote Sensing Scientist | H‑index 25 | 61 Journal Papers | Earth Observation & Environmental Analytics.",
+            "linkedin": "https://www.linkedin.com/in/majid-nazeer-29897914/",
+            "section": "professor"
+        },
+        {
+            "id": "janet_nichol",
+            "name": "Janet NICHOL",
+            "role": "Assistant Professor",
+            "institution": "The Hong Kong Polytechnic University",
+            "photo": "./images/Janet.jpg",
+            "bio": "Applied Geographer, specialising in Remote Sensing, Geo-Informatics and Environmental Management.",
+            "linkedin": "http://www.lsgi.polyu.edu.hk/RSRG/resources/people/JN.html",
             "section": "professor"
         }
     ],
@@ -103,7 +103,7 @@
             "name": "Muhammad Shah Hanan",
             "role": "Research Associate",
             "institution": "University of the Punjab, Lahore",
-            "photo": "./images/Hanan.jfif",
+            "photo": "./images/Shah.jpeg",
             "bio": "Geospatial researcher applying remote sensing and GIS for environmental monitoring and climate studies.",
             "linkedin": "https://www.linkedin.com/in/muhammad-shah-hanan-bb8494366",
             "category": "assistant",
@@ -111,17 +111,6 @@
         },
         {
             "id": "6",
-            "name": "Syed Aun Abbas",
-            "role": "Research Associate",
-            "institution": "University of the Punjab, Lahore",
-            "photo": "./images/on.jfif",
-            "bio": "Geospatial analyst with expertise in Geospatial Analytics and Spatial Intelligence..",
-            "linkedin": "https://www.linkedin.com/in/amna-yaseen-1a832837a/",
-            "category": "assistant",
-            "year": 2026
-        },
-        {
-            "id": "7",
             "name": "Nawai-e-habib",
             "role": "Research Associate",
             "institution": "University of the Punjab, Lahore",
@@ -131,6 +120,18 @@
             "category": "assistant",
             "year": 2026
         },
+        {
+            "id": "7",
+            "name": "Syed Aun Abbas",
+            "role": "Research Associate",
+            "institution": "University of the Punjab, Lahore",
+            "photo": "./images/on.jfif",
+            "bio": "Geospatial analyst with expertise in Geospatial Analytics and Spatial Intelligence..",
+            "linkedin": "https://www.linkedin.com/in/amna-yaseen-1a832837a/",
+            "category": "assistant",
+            "year": 2026
+        },
+        
         {
             "id": "8",
             "name": "Fiza Ashraf",
