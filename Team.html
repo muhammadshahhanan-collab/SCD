@@ -100,27 +100,23 @@
             >
           </div>
 
-          <!-- Filter Buttons -->
+          <!-- Filter Buttons: Year -->
+          <div class="filter-buttons mb-2">
+            <button class="filter-btn filter-btn-year active" data-year="all" onclick="filterByYear('all', event)">All Years</button>
+            <button class="filter-btn filter-btn-year" data-year="2026" onclick="filterByYear('2026', event)">2026</button>
+            <button class="filter-btn filter-btn-year" data-year="2025" onclick="filterByYear('2025', event)">2025</button>
+            <button class="filter-btn filter-btn-year" data-year="2024" onclick="filterByYear('2024', event)">2024</button>
+          </div>
+          <!-- Filter Buttons: Role -->
           <div class="filter-buttons">
-            <button
-              class="filter-btn active"
-              onclick="filterTeam('all', event)"
-            >
-              All
-            </button>
-            <button class="filter-btn" onclick="filterTeam('phd', event)">
-              PhD Candidates
-            </button>
-            <button class="filter-btn" onclick="filterTeam('assistant', event)">
-              Research Asst
-            </button>
-            <button class="filter-btn" onclick="filterTeam('student', event)">
-              Students
-            </button>
+            <button class="filter-btn active" onclick="filterTeam('all', event)">All</button>
+            <button class="filter-btn" onclick="filterTeam('phd', event)">PhD Candidates</button>
+            <button class="filter-btn" onclick="filterTeam('assistant', event)">Research Asst</button>
+            <button class="filter-btn" onclick="filterTeam('student', event)">Students</button>
           </div>
         </div>
 
-        <div class="row" id="researchers-container">
+        <div id="researchers-container">
           <!-- Loaded from team_data.json -->
           <div class="text-center py-4"><div class="loading"></div></div>
         </div>
@@ -137,9 +133,9 @@
           <div class="modal-body pt-0">
             <div class="bio-modal-layout">
               <div class="bio-modal-photo">
-                <a id="bioModalPhotoLink" href="#" target="_blank" rel="noopener noreferrer">
+                <div class="bio-modal-photo-wrap">
                   <img id="bioModalPhoto" src="" alt="" onerror="this.src='./images/people.jpg'" />
-                </a>
+                </div>
               </div>
               <div class="bio-modal-info">
                 <h3 id="bioModalName" class="mb-2"></h3>
@@ -177,18 +173,6 @@
       function showBioModal(person) {
         document.getElementById("bioModalPhoto").src = person.photo || "./images/people.jpg";
         document.getElementById("bioModalPhoto").alt = person.name;
-        const photoLink = document.getElementById("bioModalPhotoLink");
-        if (person.linkedin) {
-          photoLink.href = person.linkedin;
-          photoLink.target = "_blank";
-          photoLink.rel = "noopener noreferrer";
-          photoLink.style.pointerEvents = "";
-          photoLink.style.cursor = "pointer";
-        } else {
-          photoLink.href = "#";
-          photoLink.style.pointerEvents = "none";
-          photoLink.style.cursor = "default";
-        }
         document.getElementById("bioModalName").textContent = person.name;
         document.getElementById("bioModalRole").textContent = person.role || "";
         document.getElementById("bioModalInstitution").textContent = person.institution || "";
@@ -253,8 +237,6 @@
 
       // ─── Build professor cards ────────────────────────────────────────────────
       function buildProfessorHeadCard(person, index) {
-        const url = person.linkedin || "#";
-        const tgt = person.linkedin ? 'target="_blank"' : "";
         const institutionHtml = person.institution
           ? `<p class="prof-institution">${person.institution}</p>`
           : "";
@@ -262,25 +244,21 @@
           <div class="col-12 mb-4 d-flex">
             <div class="prof-card w-100">
               <div class="prof-card-body">
-                <h4><a href="${url}" ${tgt} style="text-decoration:none;color:inherit;">${person.name}</a></h4>
+                <h4>${person.name}</h4>
                 <p class="prof-role">${person.role}</p>
                 ${institutionHtml}
                 <p class="prof-bio">${person.bio || ""}</p>
                 <a href="#" class="view-bio-link" onclick="return openBioModal('professor', ${index})"><i class="fas fa-user-circle me-1"></i>View Bio</a>
               </div>
               <div class="prof-card-photo">
-                <a href="${url}" ${tgt}>
-                  <img src="${person.photo}" alt="${person.name}"
-                    onerror="this.src='./images/people.jpg'" />
-                </a>
+                <img src="${person.photo}" alt="${person.name}"
+                  onerror="this.src='./images/people.jpg'" />
               </div>
             </div>
           </div>`;
       }
 
       function buildAdvisorCard(person, index) {
-        const url = person.linkedin || "#";
-        const tgt = person.linkedin ? 'target="_blank"' : "";
         const institutionHtml = person.institution
           ? `<p class="prof-institution">${person.institution}</p>`
           : "";
@@ -288,25 +266,21 @@
           <div class="col-md-6 mb-4 d-flex">
             <div class="prof-card w-100">
               <div class="prof-card-body">
-                <h4><a href="${url}" ${tgt} style="text-decoration:none;color:inherit;">${person.name}</a></h4>
+                <h4>${person.name}</h4>
                 <p class="prof-role">${person.role}</p>
                 ${institutionHtml}
                 <p class="prof-bio">${person.bio || ""}</p>
                 <a href="#" class="view-bio-link" onclick="return openBioModal('advisor', ${index})"><i class="fas fa-user-circle me-1"></i>View Bio</a>
               </div>
               <div class="prof-card-photo">
-                <a href="${url}" ${tgt}>
-                  <img src="${person.photo}" alt="${person.name}"
-                    onerror="this.src='./images/people.jpg'" />
-                </a>
+                <img src="${person.photo}" alt="${person.name}"
+                  onerror="this.src='./images/people.jpg'" />
               </div>
             </div>
           </div>`;
       }
 
       function buildProfessorCard(person, index) {
-        const url = person.linkedin || "#";
-        const tgt = person.linkedin ? 'target="_blank"' : "";
         const institutionHtml = person.institution
           ? `<p class="prof-institution">${person.institution}</p>`
           : "";
@@ -314,17 +288,15 @@
           <div class="col-md-6 mb-4 d-flex">
             <div class="prof-card w-100">
               <div class="prof-card-body">
-                <h4><a href="${url}" ${tgt} style="text-decoration:none;color:inherit;">${person.name}</a></h4>
+                <h4>${person.name}</h4>
                 <p class="prof-role">${person.role}</p>
                 ${institutionHtml}
                 <p class="prof-bio">${person.bio || ""}</p>
                 <a href="#" class="view-bio-link" onclick="return openBioModal('professor', ${index})"><i class="fas fa-user-circle me-1"></i>View Bio</a>
               </div>
               <div class="prof-card-photo">
-                <a href="${url}" ${tgt}>
-                  <img src="${person.photo}" alt="${person.name}"
-                    onerror="this.src='./images/people.jpg'" />
-                </a>
+                <img src="${person.photo}" alt="${person.name}"
+                  onerror="this.src='./images/people.jpg'" />
               </div>
             </div>
           </div>`;
@@ -332,44 +304,66 @@
 
       // ─── Build a single researcher card ──────────────────────────────────────
       function buildResearcherCard(person, index) {
-        const url = person.linkedin || "#";
-        const tgt = person.linkedin ? 'target="_blank"' : "";
         const institutionHtml = person.institution
           ? `<p class="researcher-institution">${person.institution}</p>`
           : "";
+        const year = person.year || new Date().getFullYear();
         // ⚠️ NO d-flex on the outer col — it breaks display:none toggling in the filter
         return `
-          <div class="col-md-6 mb-4 team-card" data-category="${(person.category || "").trim().toLowerCase()}">
+          <div class="col-md-6 mb-4 team-card" data-category="${(person.category || "").trim().toLowerCase()}" data-year="${year}">
             <div class="researcher-card">
               <div class="researcher-card-body">
-                <h4><a href="${url}" ${tgt} style="text-decoration:none;color:inherit;">${person.name}</a></h4>
+                <h4>${person.name}</h4>
                 <p class="researcher-role">${person.role}</p>
                 ${institutionHtml}
                 <p class="researcher-bio">${person.bio || ""}</p>
                 <a href="#" class="view-bio-link" onclick="return openBioModal('researcher', ${index})"><i class="fas fa-user-circle me-1"></i>View Bio</a>
               </div>
               <div class="researcher-card-photo">
-                <a href="${url}" ${tgt}>
-                  <img src="${person.photo}" alt="${person.name}"
-                    onerror="this.src='./images/people.jpg'" />
-                </a>
+                <img src="${person.photo}" alt="${person.name}"
+                  onerror="this.src='./images/people.jpg'" />
               </div>
             </div>
           </div>`;
       }
 
-      // ─── Filter function ──────────────────────────────────────────────────────
-      function filterTeam(category, event) {
-        const cards = document.querySelectorAll(".team-card");
-        const buttons = document.querySelectorAll(".filter-btn");
-        buttons.forEach((btn) => btn.classList.remove("active"));
+      // ─── Filter functions ─────────────────────────────────────────────────────
+      let currentYearFilter = "all";
+      let currentCategoryFilter = "all";
+
+      function filterByYear(year, event) {
+        currentYearFilter = year;
+        document.querySelectorAll(".filter-btn-year").forEach((btn) => btn.classList.remove("active"));
         if (event && event.target) event.target.classList.add("active");
+        applyFilters();
+      }
+
+      function filterTeam(category, event) {
+        currentCategoryFilter = category;
+        document.querySelectorAll(".filter-buttons .filter-btn:not(.filter-btn-year)").forEach((btn) => btn.classList.remove("active"));
+        if (event && event.target) event.target.classList.add("active");
+        applyFilters();
+      }
+
+      function applyFilters() {
+        const yearSections = document.querySelectorAll(".researcher-year-section");
+        const cards = document.querySelectorAll(".team-card");
 
         cards.forEach((card) => {
           const cardCat = (card.dataset.category || "").trim().toLowerCase();
-          const show = category === "all" || cardCat === category;
-          // Use "" (not "block"/"flex") so natural CSS display is restored
+          const cardYear = card.dataset.year || "";
+          const yearMatch = currentYearFilter === "all" || cardYear === String(currentYearFilter);
+          const catMatch = currentCategoryFilter === "all" || cardCat === currentCategoryFilter;
+          const show = yearMatch && catMatch;
           card.style.display = show ? "" : "none";
+        });
+
+        yearSections.forEach((section) => {
+          const sectionYear = section.dataset.year || "";
+          const yearMatch = currentYearFilter === "all" || sectionYear === String(currentYearFilter);
+          const sectionCards = section.querySelectorAll(".team-card");
+          const hasVisible = Array.from(sectionCards).some((c) => c.style.display !== "none");
+          section.style.display = yearMatch && hasVisible ? "" : "none";
         });
       }
 
@@ -406,13 +400,31 @@
           advisorsContainer.innerHTML = "";
         }
 
-        // Researchers
+        // Researchers — grouped by year (descending: 2026, 2025, 2024)
         teamDataCache.researchers = data.researchers || [];
         const resContainer = document.getElementById("researchers-container");
         if (teamDataCache.researchers.length > 0) {
-          resContainer.innerHTML = teamDataCache.researchers
-            .map((p, i) => buildResearcherCard(p, i))
-            .join("");
+          const currentYear = new Date().getFullYear();
+          const byYear = {};
+          teamDataCache.researchers.forEach((p, i) => {
+            const y = p.year || currentYear;
+            if (!byYear[y]) byYear[y] = [];
+            byYear[y].push({ person: p, index: i });
+          });
+          const years = Object.keys(byYear).map(Number).sort((a, b) => b - a);
+          let html = "";
+          years.forEach((year) => {
+            const items = byYear[year];
+            const cardsHtml = items.map(({ person, index }) => buildResearcherCard(person, index)).join("");
+            html += `
+              <div class="researcher-year-section mb-4" data-year="${year}">
+                <div class="text-center mb-3">
+                  <span class="team-section-label"><i class="fas fa-calendar-alt me-1"></i>${year}</span>
+                </div>
+                <div class="row">${cardsHtml}</div>
+              </div>`;
+          });
+          resContainer.innerHTML = html;
         } else {
           resContainer.innerHTML = '<p class="text-center text-muted">No researchers listed yet.</p>';
         }
