@@ -1,0 +1,40 @@
+{
+  "collaborators": [
+    {
+      "name": "WWF",
+      "fullName": "World Wide Fund for Nature",
+      "lat": 46.4157,
+      "lng": 6.2778,
+      "location": "Gland, Switzerland",
+      "url": "https://www.worldwildlife.org/",
+      "logo": "./images/WWF.png"
+    },
+    {
+      "name": "Space4water",
+      "fullName": "Space4Water Portal (UN-SPIDER)",
+      "lat": 48.2339,
+      "lng": 16.4168,
+      "location": "Vienna, Austria",
+      "url": "https://space4water.org/",
+      "logo": "./images/space4water.png"
+    },
+    {
+      "name": "Kinnaird College",
+      "fullName": "Kinnaird College for Women",
+      "lat": 31.5204,
+      "lng": 74.3587,
+      "location": "Lahore, Pakistan",
+      "url": "https://www.kinnaird.edu.pk/",
+      "logo": "./images/kinnaird.jfif"
+    },
+    {
+      "name": "AIRCAS",
+      "fullName": "Aerospace Information Research Institute, Chinese Academy of Sciences",
+      "lat": 39.9042,
+      "lng": 116.4074,
+      "location": "Beijing, China",
+      "url": "http://www.aircas.ac.cn/",
+      "logo": "./images/Aircas.png"
+    }
+  ]
+}

@@ -32,7 +32,7 @@ const recentWork = [
       "Water Management",
     ],
     image: "./images/Agri_paper/Agri_intensification.png",
-    link: "https://link.springer.com/article/10.1007/s41748-024-00548-0",
+    link: "https://doi.org/10.1007/s41748-024-00548-0",
     linkLabel: "View Paper",
     extra: { label: "All Publications", href: "Research.html" },
   },

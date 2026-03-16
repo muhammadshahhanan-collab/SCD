@@ -14,6 +14,7 @@
     />
     <link rel="icon" href="./images/Logo.jpg" type="image/jpeg" />
     <link rel="stylesheet" href="SCD.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
   </head>
   <body>
     <!-- Floating Pill Navbar -->
@@ -195,145 +196,13 @@
 
 
     <!----------------------------------------Collaborations---------------------------->
-<section id="team" class="section">
+<section id="collaborators" class="section collaborators-section">
     <div class="container">
         <div class="section-title">
             <h2>Partnerships & Collaboration</h2>
+            <p>Our global partners and their locations</p>
         </div>
-
-        <div class="row justify-content-center text-center">
-            <div class="col-6 col-sm-4 col-lg-3 mb-4">
-                <div class="team-member">
-                    <div class="team-avatar">
-                        <div
-                            style="
-                                border-radius: 50%;
-                                width: 140px;
-                                height: 140px;
-                                background-color: white;
-                                border: 2px solid #ddd;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                overflow: hidden;
-                                margin: 0 auto;
-                            "
-                        >
-                            <img
-                                src="./images/WWF.png"
-                                alt="WWF"
-                                style="
-                                    width: 100%;
-                                    height: 100%;
-                                    object-fit: contain;
-                                    padding: 15px;
-                                "
-                            />
-                        </div>
-                    </div>
-                    <h4 style="margin-top: 15px; margin-bottom: 0;">WWF</h4>
-                </div>
-            </div>
-
-            <div class="col-6 col-sm-4 col-lg-3 mb-4">
-                <div class="team-member">
-                    <div class="team-avatar">
-                        <div
-                            style="
-                                border-radius: 50%;
-                                width: 140px;
-                                height: 140px;
-                                background-color: white;
-                                border: 2px solid #ddd;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                overflow: hidden;
-                                margin: 0 auto;
-                            "
-                        >
-                            <img
-                                src="./images/space4water.png"
-                                alt="Space4water"
-                                style="
-                                    width: 100%;
-                                    height: 100%;
-                                    object-fit: contain;
-                                    padding: 15px;
-                                "
-                            />
-                        </div>
-                    </div>
-                    <h4 style="margin-top: 15px; margin-bottom: 0;">Space4water</h4>
-                </div>
-            </div>
-
-            <div class="col-6 col-sm-4 col-lg-3 mb-4">
-                <div class="team-member">
-                    <div class="team-avatar">
-                        <div
-                            style="
-                                border-radius: 50%;
-                                width: 140px;
-                                height: 140px;
-                                background-color: white;
-                                border: 2px solid #ddd;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                overflow: hidden;
-                                margin: 0 auto;
-                            "
-                        >
-                            <img
-                                src="./images/kinnaird.jfif"
-                                alt="Kinnaird College"
-                                style="
-                                    width: 100%;
-                                    height: 100%;
-                                    object-fit: contain;
-                                    padding: 15px;
-                                "
-                            />
-                        </div>
-                    </div>
-                    <h4 style="margin-top: 15px; margin-bottom: 0;">Kinnaird College</h4>
-                </div>
-            </div>
-
-            <div class="col-6 col-sm-4 col-lg-3 mb-4">
-                <div class="team-member">
-                    <div class="team-avatar">
-                        <div
-                            style="
-                                border-radius: 50%;
-                                width: 140px;
-                                height: 140px;
-                                background-color: white;
-                                border: 2px solid #ddd;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                overflow: hidden;
-                                margin: 0 auto;
-                            "
-                        >
-                            <img
-                                src="./images/Aircas.png"
-                                alt="AIRCAS"
-                                style="
-                                    width: 100%;
-                                    height: 100%;
-                                    object-fit: contain;
-                                    padding: 15px;
-                                "
-                            />
-                        </div>
-                    </div>
-                    <h4 style="margin-top: 15px; margin-bottom: 0;">AIRCAS</h4>
-                </div>
-            </div>
-        </div>
+        <div id="collaboratorsMapContainer" class="collaborators-map"></div>
     </div>
 </section>
     <!-- Footer -->
@@ -348,6 +217,13 @@
         });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="SCD.js"></script>
+    <script src="collaborators-map.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (window.CollaboratorsMap) CollaboratorsMap.init("collaboratorsMapContainer");
+      });
+    </script>
   </body>
 </html>
