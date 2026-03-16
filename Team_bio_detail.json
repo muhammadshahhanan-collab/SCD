@@ -34,7 +34,17 @@
   },
   "janet_nichol": {
     "google_scholar": "",
-    "orcid": "",
+    "orcid": "https://orcid.org/0000-0000-0000-0000",
+    "science_direct": "",
+    "journal": "",
+    "awards": [],
+    "publications": [],
+    "book_chapters": [],
+    "publication_category": "Remote Sensing, Geo-Informatics"
+  },
+  "majid_nazir": {
+    "google_scholar": "",
+    "orcid": "https://orcid.org/0000-0000-0000-0000",
     "science_direct": "",
     "journal": "",
     "awards": [],
@@ -44,7 +54,7 @@
   },
   "muhammad_usman": {
     "google_scholar": "",
-    "orcid": "",
+    "orcid": "https://orcid.org/0000-0000-0000-0000",
     "science_direct": "",
     "journal": "",
     "awards": [],
@@ -54,7 +64,7 @@
   },
   "samawia_rizwan": {
     "google_scholar": "",
-    "orcid": "",
+    "orcid": "https://orcid.org/0000-0000-0000-0000",
     "science_direct": "",
     "journal": "",
     "awards": [],
