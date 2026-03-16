@@ -3,20 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SCD Smart Sensing Lab - Climate and Development</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      rel="stylesheet"
-    />
+    <title>SCD Smart Sensing Lab - Urban Heat & Smart Cities Papers</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
     <link rel="icon" href="./images/Logo.jpg" type="image/jpeg" />
     <link rel="stylesheet" href="SCD.css" />
   </head>
   <body>
-    <!-- Floating Pill Navbar -->
     <header class="site-header">
       <div class="site-header__pill" id="siteHeaderPill">
         <nav class="nav nav--pill">
@@ -28,8 +21,8 @@
             <li><a class="nav-pill-link" href="Home.html">Home</a></li>
             <li><a class="nav-pill-link" href="Home.html#about">About</a></li>
             <li><a class="nav-pill-link" href="Home.html#objectives">Work</a></li>
-            <li><a class="nav-pill-link nav-active" href="Projects.html">Projects</a></li>
-            <li><a class="nav-pill-link" href="Research.html">Research</a></li>
+            <li><a class="nav-pill-link" href="Projects.html">Projects</a></li>
+            <li><a class="nav-pill-link nav-active" href="Research.html">Research</a></li>
             <li><a class="nav-pill-link" href="Team.html">People</a></li>
           </ul>
           <a href="Projects.html" class="nav__cta" title="Explore Our Work">Explore</a>
@@ -42,8 +35,8 @@
             <li><a class="nav-pill-link" href="Home.html">Home</a></li>
             <li><a class="nav-pill-link" href="Home.html#about">About</a></li>
             <li><a class="nav-pill-link" href="Home.html#objectives">Work</a></li>
-            <li><a class="nav-pill-link nav-active" href="Projects.html">Projects</a></li>
-            <li><a class="nav-pill-link" href="Research.html">Research</a></li>
+            <li><a class="nav-pill-link" href="Projects.html">Projects</a></li>
+            <li><a class="nav-pill-link nav-active" href="Research.html">Research</a></li>
             <li><a class="nav-pill-link" href="Team.html">People</a></li>
             <li><a class="nav-pill-link nav-pill-link--cta" href="Projects.html">Explore</a></li>
           </ul>
@@ -53,77 +46,14 @@
 
     <section id="projects" class="section">
       <div class="container">
+        <a href="Research.html" class="back-to-research" title="Back to Research"><i class="fas fa-arrow-left"></i> Back to Research</a>
         <div class="section-title">
-          <h2>All Researches</h2>
+          <h2>Urban Heat & Smart Cities</h2>
+          <p>Publications in urban heat island mapping and smart city planning</p>
         </div>
-
-        <div class="row">
-          <div class="col-lg-3 mb-4">
-            <div class="project-card">
-              <div class="project-icon">
-                <img
-                  src="./images/Urban Heat/Urban Morphology.jpg"
-                  ;
-                  style
-                  width="253"
-                  ;
-                  height="200"
-                  alt="Paper"
-                />
-              </div>
-              <br />
-              <h4>
-                <a
-                  href="https://www.sciencedirect.com/science/article/pii/S2212095523001827"
-                  style="color: black"
-                  >Impacts of urban morphology on sensible heat flux and net
-                  radiation exchange.</a
-                >
-              </h4>
-              <p></p>
-              <div class="mt-3" style="margin-top: auto !important">
-                <span class="badge bg-success me-2">Published</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 mb-4">
-            <div class="project-card">
-              <div class="project-icon">
-                <img src="./images/Urban Heat/" alt="Paper" />
-              </div>
-              <br />
-              <h4>
-                <a href="" style="color: black"
-                  >Balancing Spectral Detail and Spatial Resolution... in
-                  Enhancing Urban Mapping Accuracy Using Machine Learning.</a
-                >
-              </h4>
-              <p></p>
-              <div class="mt-3" style="margin-top: auto !important">
-                <span class="badge bg-primary me-2">Under Review</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 mb-4">
-            <div class="project-card">
-              <div class="project-icon">
-                <img src="./images/Urban Heat/" alt="Paper" />
-              </div>
-              <br />
-              <h4>
-                <a href="" style="color: black"
-                  >Urban Land Cover Characterization using PRISMA Hyperspectral
-                  Imagery and Machine Learning Algorithms.</a
-                >
-              </h4>
-              <p></p>
-              <div class="mt-3" style="margin-top: auto !important">
-                <span class="badge bg-primary me-2">Under Review</span>
-              </div>
-            </div>
-          </div>
+        <div class="publications-layout">
+          <div class="publications-list" id="publicationsContainer"></div>
+          <div class="citations-chart" id="citationsChartContainer"></div>
         </div>
       </div>
     </section>
@@ -131,6 +61,22 @@
     <div id="footer"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script src="SCD.js"></script>
+    <script src="publications.js"></script>
+    <script>
+      const papers = [
+        { title: "Impacts of urban morphology on sensible heat flux and net radiation exchange.", url: "https://www.sciencedirect.com/science/article/pii/S2212095523001827", year: "2024", authors: "Authors to be added.", journal: "Journal to be added.", volume: "", pages: "", abstract: "Abstract to be added.", keywords: ["Urban Morphology", "Heat Flux", "Radiation", "Urban"], doi: "", status: "Published" },
+        { title: "Balancing Spectral Detail and Spatial Resolution in Enhancing Urban Mapping Accuracy Using Machine Learning.", url: "", year: "—", authors: "Authors to be added.", journal: "Journal to be added.", volume: "", pages: "", abstract: "Abstract to be added.", keywords: ["Spectral", "Spatial Resolution", "Urban Mapping", "Machine Learning"], doi: "", status: "Under Review" },
+        { title: "Urban Land Cover Characterization using PRISMA Hyperspectral Imagery and Machine Learning Algorithms.", url: "", year: "—", authors: "Authors to be added.", journal: "Journal to be added.", volume: "", pages: "", abstract: "Abstract to be added.", keywords: ["PRISMA", "Hyperspectral", "Land Cover", "Machine Learning"], doi: "", status: "Under Review" },
+      ];
+      document.addEventListener("DOMContentLoaded", () => {
+        Publications.renderCitationsChart(document.getElementById("citationsChartContainer"), papers);
+        Publications.render(document.getElementById("publicationsContainer"), papers);
+      });
+    </script>
+    <script>
+      fetch("footer.html").then((r) => r.text()).then((data) => { document.getElementById("footer").innerHTML = data; });
+    </script>
   </body>
 </html>

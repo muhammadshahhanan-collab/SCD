@@ -3,20 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SCD Smart Sensing Lab - Climate and Development</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      rel="stylesheet"
-    />
+    <title>SCD Smart Sensing Lab - Water & Hydrology Papers</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
     <link rel="icon" href="./images/Logo.jpg" type="image/jpeg" />
     <link rel="stylesheet" href="SCD.css" />
   </head>
   <body>
-    <!-- Floating Pill Navbar -->
     <header class="site-header">
       <div class="site-header__pill" id="siteHeaderPill">
         <nav class="nav nav--pill">
@@ -28,8 +21,8 @@
             <li><a class="nav-pill-link" href="Home.html">Home</a></li>
             <li><a class="nav-pill-link" href="Home.html#about">About</a></li>
             <li><a class="nav-pill-link" href="Home.html#objectives">Work</a></li>
-            <li><a class="nav-pill-link nav-active" href="Projects.html">Projects</a></li>
-            <li><a class="nav-pill-link" href="Research.html">Research</a></li>
+            <li><a class="nav-pill-link" href="Projects.html">Projects</a></li>
+            <li><a class="nav-pill-link nav-active" href="Research.html">Research</a></li>
             <li><a class="nav-pill-link" href="Team.html">People</a></li>
           </ul>
           <a href="Projects.html" class="nav__cta" title="Explore Our Work">Explore</a>
@@ -42,8 +35,8 @@
             <li><a class="nav-pill-link" href="Home.html">Home</a></li>
             <li><a class="nav-pill-link" href="Home.html#about">About</a></li>
             <li><a class="nav-pill-link" href="Home.html#objectives">Work</a></li>
-            <li><a class="nav-pill-link nav-active" href="Projects.html">Projects</a></li>
-            <li><a class="nav-pill-link" href="Research.html">Research</a></li>
+            <li><a class="nav-pill-link" href="Projects.html">Projects</a></li>
+            <li><a class="nav-pill-link nav-active" href="Research.html">Research</a></li>
             <li><a class="nav-pill-link" href="Team.html">People</a></li>
             <li><a class="nav-pill-link nav-pill-link--cta" href="Projects.html">Explore</a></li>
           </ul>
@@ -53,85 +46,14 @@
 
     <section id="projects" class="section">
       <div class="container">
+        <a href="Research.html" class="back-to-research" title="Back to Research"><i class="fas fa-arrow-left"></i> Back to Research</a>
         <div class="section-title">
-          <h2>All Researches</h2>
+          <h2>Water Resources & Hydrology</h2>
+          <p>Publications in water resource management and hydrology</p>
         </div>
-
-        <div class="row">
-          <div class="col-lg-3 mb-4">
-            <div class="project-card">
-              <div class="project-icon">
-                <img
-                  src="./images/Water_paper/Sinking_delta.jpg"
-                  ;
-                  style
-                  width="253"
-                  ;
-                  height="200"
-                  alt="Paper"
-                />
-              </div>
-              <br />
-              <h4>
-                <a
-                  href="https://www.sciencedirect.com/science/article/pii/S0048969723019757"
-                  style="color: black"
-                  >Sinking delta: Quantifying the impacts of saltwater intrusion
-                  in the Indus Delta of Pakistan.</a
-                >
-              </h4>
-              <p></p>
-              <div class="mt-3" style="margin-top: auto !important">
-                <span class="badge bg-success me-2">Published</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 mb-4">
-            <div class="project-card">
-              <div class="project-icon">
-                <img src="./images/Water_paper/" alt="Paper" />
-              </div>
-              <br />
-              <h4>
-                <a href="" style="color: black"
-                  >Identifying morphological hotspots in large rivers by
-                  optimizing image enhancement.</a
-                >
-              </h4>
-              <p></p>
-              <div class="mt-3" style="margin-top: auto !important">
-                <span class="badge bg-success me-2">Published</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 mb-4">
-            <div class="project-card">
-              <div class="project-icon">
-                <img
-                  src="./images/Water_paper/Marine.jpg"
-                  ;
-                  style
-                  width="253"
-                  ;
-                  height="200"
-                  alt="Paper"
-                />
-              </div>
-              <br />
-              <h4>
-                <a href="" style="color: black"
-                  >Marine plastic pollution detection and identification by
-                  using remote sensing-meta analysis.</a
-                >
-              </h4>
-              <p></p>
-              <div class="mt-3" style="margin-top: auto !important">
-                <span class="badge bg-success me-2">Published</span>
-              </div>
-            </div>
-          </div>
+        <div class="publications-layout">
+          <div class="publications-list" id="publicationsContainer"></div>
+          <div class="citations-chart" id="citationsChartContainer"></div>
         </div>
       </div>
     </section>
@@ -139,6 +61,63 @@
     <div id="footer"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script src="SCD.js"></script>
+    <script src="publications.js"></script>
+    <script>
+      const papers = [
+        {
+          title: "Sinking delta: Quantifying the impacts of saltwater intrusion in the Indus Delta of Pakistan.",
+          url: "https://doi.org/10.1016/j.scitotenv.2023.163356",
+          year: "2023",
+          authors: "Aeman, H., Shu, H., Abbas, S., Aisha, H. & Usman, M.",
+          journal: "Science of The Total Environment",
+          volume: "880",
+          pages: "163356",
+          citations: 23,
+          abstract: "This study quantifies the impacts of saltwater intrusion in the Indus Delta of Pakistan using remote sensing and geospatial techniques. The research examines shoreline changes, mangrove degradation, and hydrological dynamics to assess the extent and drivers of saltwater intrusion in this critical deltaic ecosystem.",
+          keywords: ["Indus Delta", "Saltwater Intrusion", "Hydrology", "Pakistan", "Remote Sensing", "Mangrove"],
+          doi: "10.1016/j.scitotenv.2023.163356",
+          status: "Published",
+        },
+        {
+          title: "Identifying morphological hotspots in large rivers by optimizing image enhancement.",
+          url: "https://doi.org/10.1080/2150704X.2023.2275550",
+          year: "2023",
+          authors: "Usman, M., Gul, A. A., Abbas, S., Rabbani, U. & Irteza, S. M.",
+          journal: "Remote Sensing Letters",
+          volume: "14",
+          pages: "1173-1185",
+          citations: 2,
+          abstract: "Limited access to observe in-situ sediment changes requires viable means for quantifying sediment transport in large rivers for effective management of changes in river channels. This study developed a remote sensing-based framework to identify erosion hotspots by magnifying sediment concentration from Sentinel-2 and Landsat-8/9 multispectral images of the Brahmaputra River and the Indus River. First, uncorrelated independent bands were produced to boost the spectral information using the Principal Component Analysis (PCA). The optimal band composite was then identified by applying the Optimum Index Factor (OIF) on the Principal Components (PCs). This approach determined a 3-PCs composite having the highest variance with the least correlation to highlight active morphological changes during flood times. The results of the study reaffirm the significance of the minor PCs (PC4, PC5 and PC6) to characterize the small variation in the data, whereas the main PCs depict the majority of the brightness values around means. The approach was applied to Sentinel-2 imagery acquired on September 2018 in the Brahmaputra River, and Landsat-8/9 images of 2015 and 2022 in the Indus River during flood time to enhance and identify active riverbank erosion hotspots. Precise and timely monitoring of erosion-prone areas can support the control of riverbank erosion and improve soil conservation practices.",
+          keywords: ["Morphology", "Rivers", "Image Enhancement", "Remote Sensing", "Sentinel-2", "Landsat"],
+          doi: "10.1080/2150704X.2023.2275550",
+          status: "Published",
+        },
+        {
+          title: "Marine plastic pollution detection and identification by using remote sensing-meta analysis.",
+          url: "https://doi.org/10.1016/j.marpolbul.2023.115746",
+          year: "2023",
+          authors: "Waqas, M., Wong, M. S., Stocchino, A., Abbas, S., Hafeez, S. & Zhu, R.",
+          journal: "Marine Pollution Bulletin",
+          volume: "197",
+          pages: "115746",
+          citations: 36,
+          abstract: "The persistent plastic litter, originating from different sources and transported from rivers to oceans, has posed serious biological, ecological, and chemical effects on the marine ecosystem, and is considered a global issue. In the past decade, many studies have identified, monitored, and tracked marine plastic debris in coastal and open ocean areas using remote sensing technologies. Compared to traditional surveying methods, high-resolution (spatial and temporal) multispectral or hyperspectral remote sensing data have been substantially used to monitor floating marine macro litter (FMML). In this systematic review, we present an overview of remote sensing data and techniques for detecting FMML, as well as their challenges and opportunities. We reviewed the studies based on different sensors and platforms, spatial and spectral resolution, ground sampling data, plastic detection methods, and accuracy obtained in detecting marine litter. In addition, this study elaborates the usefulness of high-resolution remote sensing data in Visible (VIS), Near-infrared (NIR), and Short-Wave InfraRed (SWIR) range, along with spectral signatures of plastic, in-situ samples, and spectral indices for automatic detection of FMML. Moreover, the Thermal Infrared (TIR), Synthetic aperture radar (SAR), and Light Detection and Ranging (LiDAR) data were introduced and these were demonstrated that could be used as a supplement dataset for the identification and quantification of FMML.",
+          keywords: ["Marine Pollution", "Plastic", "Remote Sensing", "Meta Analysis", "FMML", "Coastal"],
+          doi: "10.1016/j.marpolbul.2023.115746",
+          status: "Published",
+        },
+      ];
+      document.addEventListener("DOMContentLoaded", () => {
+        Publications.renderCitationsChart(document.getElementById("citationsChartContainer"), papers);
+        Publications.render(document.getElementById("publicationsContainer"), papers);
+      });
+    </script>
+    <script>
+      fetch("footer.html")
+        .then((r) => r.text())
+        .then((data) => { document.getElementById("footer").innerHTML = data; });
+    </script>
   </body>
 </html>

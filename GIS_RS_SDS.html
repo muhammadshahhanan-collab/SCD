@@ -3,20 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SCD Smart Sensing Lab - Climate and Development</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      rel="stylesheet"
-    />
+    <title>SCD Smart Sensing Lab - GIS, Remote Sensing & Spatial Data Science Papers</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
     <link rel="icon" href="./images/Logo.jpg" type="image/jpeg" />
     <link rel="stylesheet" href="SCD.css" />
   </head>
   <body>
-    <!-- Floating Pill Navbar -->
     <header class="site-header">
       <div class="site-header__pill" id="siteHeaderPill">
         <nav class="nav nav--pill">
@@ -28,8 +21,8 @@
             <li><a class="nav-pill-link" href="Home.html">Home</a></li>
             <li><a class="nav-pill-link" href="Home.html#about">About</a></li>
             <li><a class="nav-pill-link" href="Home.html#objectives">Work</a></li>
-            <li><a class="nav-pill-link nav-active" href="Projects.html">Projects</a></li>
-            <li><a class="nav-pill-link" href="Research.html">Research</a></li>
+            <li><a class="nav-pill-link" href="Projects.html">Projects</a></li>
+            <li><a class="nav-pill-link nav-active" href="Research.html">Research</a></li>
             <li><a class="nav-pill-link" href="Team.html">People</a></li>
           </ul>
           <a href="Projects.html" class="nav__cta" title="Explore Our Work">Explore</a>
@@ -42,8 +35,8 @@
             <li><a class="nav-pill-link" href="Home.html">Home</a></li>
             <li><a class="nav-pill-link" href="Home.html#about">About</a></li>
             <li><a class="nav-pill-link" href="Home.html#objectives">Work</a></li>
-            <li><a class="nav-pill-link nav-active" href="Projects.html">Projects</a></li>
-            <li><a class="nav-pill-link" href="Research.html">Research</a></li>
+            <li><a class="nav-pill-link" href="Projects.html">Projects</a></li>
+            <li><a class="nav-pill-link nav-active" href="Research.html">Research</a></li>
             <li><a class="nav-pill-link" href="Team.html">People</a></li>
             <li><a class="nav-pill-link nav-pill-link--cta" href="Projects.html">Explore</a></li>
           </ul>
@@ -53,82 +46,14 @@
 
     <section id="projects" class="section">
       <div class="container">
+        <a href="Research.html" class="back-to-research" title="Back to Research"><i class="fas fa-arrow-left"></i> Back to Research</a>
         <div class="section-title">
-          <h2>All Researches</h2>
+          <h2>GIS, Remote Sensing & Spatial Data Science</h2>
+          <p>Publications in geospatial analysis and remote sensing</p>
         </div>
-
-        <div class="row">
-          <div class="col-lg-3 mb-4">
-            <div class="project-card">
-              <div class="project-icon">
-                <img
-                  src="./images/GIS and RS/worlddview.jpg"
-                  ;
-                  style
-                  width="253"
-                  ;
-                  height="200"
-                  alt="Paper"
-                />
-              </div>
-              <br />
-              <h4>
-                <a
-                  href="https://www.mdpi.com/2220-9964/12/4/142"
-                  style="color: black"
-                  >A Comparison of Machine Learning Models for Mapping Tree
-                  Species Using WorldView-2 Imagery in the Agroforestry
-                  Landscape of West Africa.</a
-                >
-              </h4>
-              <p></p>
-              <div class="mt-3" style="margin-top: auto !important">
-                <span class="badge bg-success me-2">Published</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- <div class="col-lg-3 mb-4">
-            <div class="project-card">
-              <div class="project-icon">
-                <img src="./images/veg_paper.jfif" alt="Paper" />
-              </div>
-              <br />
-              <h4>
-                <a href="" style="color: black"
-                  >Evolving Climatic Patterns across Pakistan's Agro-Ecological
-                  Zones: Implications for Adaptation and Sustainability.</a
-                >
-              </h4>
-              <p></p>
-              <div class="mt-3">
-                <span class="badge bg-primary me-2">Agriculture</span>
-                <span class="badge bg-secondary me-2">Soil Monitoring</span>
-                <span class="badge bg-success">Water Management</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 mb-4">
-            <div class="project-card">
-              <div class="project-icon">
-                <img src="./images/veg_paper.jfif" alt="Paper" />
-              </div>
-              <br />
-              <h4>
-                <a href="" style="color: black"
-                  >Evaluating NDVI and GOSIF Responses to Rainfall in Desert
-                  Ecosystems: Implications for Drought Monitoring.</a
-                >
-              </h4>
-              <p></p>
-              <div class="mt-3">
-                <span class="badge bg-primary me-2">Major Revision</span>
-                <span class="badge bg-secondary me-2">Soil Monitoring</span>
-                <span class="badge bg-success">Water Management</span>
-              </div>
-            </div>
-          </div> -->
+        <div class="publications-layout">
+          <div class="publications-list" id="publicationsContainer"></div>
+          <div class="citations-chart" id="citationsChartContainer"></div>
         </div>
       </div>
     </section>
@@ -136,6 +61,20 @@
     <div id="footer"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script src="SCD.js"></script>
+    <script src="publications.js"></script>
+    <script>
+      const papers = [
+        { title: "A Comparison of Machine Learning Models for Mapping Tree Species Using WorldView-2 Imagery in the Agroforestry Landscape of West Africa.", url: "https://doi.org/10.3390/ijgi12040142", year: "2023", authors: "Usman, M., Ejaz, M., Nichol, J. E., Farid, M. S., Abbas, S. & Khan, M. H.", journal: "ISPRS International Journal of Geo-Information", volume: "12", pages: "142", citations: 13, abstract: "Farmland trees are a vital part of the local economy as trees are used by farmers for fuelwood as well as food, fodder, medicines, fibre, and building materials. As a result, mapping tree species is important for ecological, socio-economic, and natural resource management. The study evaluates very high-resolution remotely sensed WorldView-2 (WV-2) imagery for tree species classification in the agroforestry landscape of the Kano Close-Settled Zone (KCSZ), Northern Nigeria. Individual tree crowns extracted by geographic object-based image analysis (GEOBIA) were used to remotely identify nine dominant tree species (Faidherbia albida, Anogeissus leiocarpus, Azadirachta indica, Diospyros mespiliformis, Mangifera indica, Parkia biglobosa, Piliostigma reticulatum, Tamarindus indica, and Vitellaria paradoxa) at the object level. For every tree object in the reference datasets, eight original spectral bands of the WV-2 image, their spectral statistics (minimum, maximum, mean, standard deviation, etc.), spatial, textural, and color-space (hue, saturation), and different spectral vegetation indices (VI) were used as predictor variables for the classification of tree species. Nine different machine learning methods were used for object-level tree species classification. These were Extra Gradient Boost (XGB), Gaussian Naïve Bayes (GNB), Gradient Boosting (GB), K-nearest neighbours (KNN), Light Gradient Boosting Machine (LGBM), Logistic Regression (LR), Multi-layered Perceptron (MLP), Random Forest (RF), and Support Vector Machines (SVM). The two top-performing models in terms of highest accuracies for individual tree species classification were found to be SVM (overall accuracy = 82.1% and Cohen's kappa = 0.79) and MLP (overall accuracy = 81.7% and Cohen's kappa = 0.79) with the lowest numbers of misclassified trees compared to other machine learning methods.", keywords: ["Machine Learning", "WorldView-2", "Tree Species", "Agroforestry", "West Africa"], doi: "10.3390/ijgi12040142", status: "Published" },
+      ];
+      document.addEventListener("DOMContentLoaded", () => {
+        Publications.renderCitationsChart(document.getElementById("citationsChartContainer"), papers);
+        Publications.render(document.getElementById("publicationsContainer"), papers);
+      });
+    </script>
+    <script>
+      fetch("footer.html").then((r) => r.text()).then((data) => { document.getElementById("footer").innerHTML = data; });
+    </script>
   </body>
 </html>
