@@ -119,7 +119,8 @@
                 <span class="team-filters-label">Role</span>
                 <button type="button" class="filter-btn filter-btn-role active" data-role="all" onclick="filterTeam('all', event)">All</button>
                 <button type="button" class="filter-btn filter-btn-role" data-role="phd" onclick="filterTeam('phd', event)">PhD Candidates</button>
-                <button type="button" class="filter-btn filter-btn-role" data-role="assistant" onclick="filterTeam('assistant', event)">Research Asst</button>
+                <button type="button" class="filter-btn filter-btn-role" data-role="associate" onclick="filterTeam('associate', event)">Associates</button>
+                <button type="button" class="filter-btn filter-btn-role" data-role="assistant" onclick="filterTeam('assistant', event)">Assistant</button>
                 <button type="button" class="filter-btn filter-btn-role" data-role="student" onclick="filterTeam('student', event)">Students</button>
               </div>
             </div>
@@ -186,43 +187,55 @@
         document.getElementById("bioModalRole").textContent = person.role || "";
         document.getElementById("bioModalInstitution").textContent = person.institution || "";
         document.getElementById("bioModalInstitution").style.display = person.institution ? "" : "none";
-        document.getElementById("bioModalBio").textContent = person.bio || "";
+
+        const detail = person.id && bioDetailCache[person.id] ? bioDetailCache[person.id] : null;
+        const bioText = (detail && detail.biography) ? detail.biography : (person.bio || "");
+        document.getElementById("bioModalBio").textContent = bioText;
+
         const linkedInEl = document.getElementById("bioModalLinkedIn");
         linkedInEl.href = person.linkedin || "#";
         linkedInEl.style.display = person.linkedin ? "" : "none";
 
-        // Detailed bio (professors & advisors only) — from Team_bio_detail.json
-        const detail = person.id && bioDetailCache[person.id] ? bioDetailCache[person.id] : null;
         const linksEl = document.getElementById("bioModalLinks");
         const detailEl = document.getElementById("bioModalDetail");
 
         if (detail) {
           let linksHtml = "";
           if (detail.google_scholar) linksHtml += `<a href="${detail.google_scholar}" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-sm me-1 mb-1"><i class="fas fa-graduation-cap me-1"></i>Google Scholar</a>`;
+          if (detail.scopus) linksHtml += `<a href="${detail.scopus}" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-sm me-1 mb-1">Scopus</a>`;
           if (detail.orcid) linksHtml += `<a href="${detail.orcid}" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-sm me-1 mb-1"><i class="fab fa-orcid me-1"></i>ORCID</a>`;
           if (detail.science_direct) linksHtml += `<a href="${detail.science_direct}" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-sm me-1 mb-1">Science Direct</a>`;
+          if (detail.researchgate) linksHtml += `<a href="${detail.researchgate}" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-sm me-1 mb-1">ResearchGate</a>`;
+          if (detail.publons) linksHtml += `<a href="${detail.publons}" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-sm me-1 mb-1">Publons</a>`;
+          if (detail.loop) linksHtml += `<a href="${detail.loop}" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-sm me-1 mb-1">Loop</a>`;
+          if (detail.space4water) linksHtml += `<a href="${detail.space4water}" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-sm me-1 mb-1">Space4Water</a>`;
           if (detail.journal) linksHtml += `<a href="${detail.journal}" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-sm me-1 mb-1">Journal</a>`;
           linksEl.innerHTML = linksHtml;
           linksEl.style.display = linksHtml ? "" : "none";
 
           let detailHtml = "";
           if (detail.publication_category) detailHtml += `<p class="bio-detail-category"><strong>Research areas:</strong> ${detail.publication_category}</p>`;
-          if (detail.awards && detail.awards.length) detailHtml += `<p class="bio-detail-awards"><strong>Awards:</strong> ${detail.awards.join("; ")}</p>`;
           if (detail.publications && detail.publications.length) {
-            detailHtml += `<p class="bio-detail-label"><strong>Publications</strong></p><ul class="bio-detail-list">`;
-            detail.publications.forEach(p => {
+            const topPubs = detail.publications.slice(0, 5);
+            detailHtml += `<p class="bio-detail-label"><strong>Top publications</strong></p><ul class="bio-detail-list">`;
+            topPubs.forEach(p => {
               const link = p.url ? `<a href="${p.url}" target="_blank" rel="noopener">${p.title}</a>` : p.title;
               detailHtml += `<li>${link} (${p.year})${p.journal ? " — " + p.journal : ""}</li>`;
             });
             detailHtml += `</ul>`;
           }
-          if (detail.book_chapters && detail.book_chapters.length) {
-            detailHtml += `<p class="bio-detail-label"><strong>Book Chapters</strong></p><ul class="bio-detail-list">`;
-            detail.book_chapters.forEach(b => {
-              const link = b.url ? `<a href="${b.url}" target="_blank" rel="noopener">${b.title}</a>` : b.title;
-              detailHtml += `<li>${link} (${b.year})${b.book ? " in " + b.book : ""}</li>`;
-            });
-            detailHtml += `</ul>`;
+          if (detail.profile_url) {
+            detailHtml += `<a href="${detail.profile_url}" class="btn btn-primary btn-sm mt-2"><i class="fas fa-external-link-alt me-1"></i>View Full Profile</a>`;
+          } else {
+            if (detail.awards && detail.awards.length) detailHtml += `<p class="bio-detail-awards"><strong>Awards:</strong> ${detail.awards.join("; ")}</p>`;
+            if (detail.book_chapters && detail.book_chapters.length) {
+              detailHtml += `<p class="bio-detail-label"><strong>Book Chapters</strong></p><ul class="bio-detail-list">`;
+              detail.book_chapters.forEach(b => {
+                const link = b.url ? `<a href="${b.url}" target="_blank" rel="noopener">${b.title}</a>` : b.title;
+                detailHtml += `<li>${link} (${b.year})${b.book ? " in " + b.book : ""}</li>`;
+              });
+              detailHtml += `</ul>`;
+            }
           }
           detailEl.innerHTML = detailHtml;
           detailEl.style.display = detailHtml ? "" : "none";
@@ -400,8 +413,8 @@
 
       // ─── Load team data ───────────────────────────────────────────────────────
       Promise.all([
-        fetch("Team_data.json").then(r => { if (!r.ok) throw new Error("Team_data.json"); return r.json(); }),
-        fetch("Team_bio_detail.json").then(r => r.ok ? r.json() : {}).catch(() => ({}))
+        fetch("Team_data.json", { cache: "no-store" }).then(r => { if (!r.ok) throw new Error("Team_data.json"); return r.json(); }),
+        fetch("Team_bio_detail.json", { cache: "no-store" }).then(r => r.ok ? r.json() : {}).catch(() => ({}))
       ]).then(([data, bioDetail]) => {
         bioDetailCache = bioDetail || {};
 
