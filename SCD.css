@@ -4939,3 +4939,601 @@ html {
     font-size: 14px;
   }
 }
+
+/* Profile tabs bar */
+.profile-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  background: #f1f5f9;
+  border-radius: 8px;
+  padding: 0.25rem;
+  margin: 1.5rem 0 0;
+  border: 1px solid #e2e8f0;
+}
+.profile-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  color: #475569;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+.profile-tab:hover {
+  color: #334155;
+  background: rgba(255,255,255,0.6);
+}
+.profile-tab i {
+  color: #94a3b8;
+  transition: color 0.2s ease;
+}
+.profile-tab:hover i {
+  color: #64748b;
+}
+.profile-tab--active {
+  background: #fff;
+  color: #334155;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+  border-radius: 6px 6px 0 0;
+  border-bottom: 2px solid #22c55e;
+}
+.profile-tab--active i {
+  color: #22c55e;
+}
+
+/* Profile layout: main content + chart sidebar */
+.profile-layout {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+.profile-chart-sidebar {
+  flex-shrink: 0;
+  width: 360px;
+  position: sticky;
+  top: 1.5rem;
+}
+.profile-chart-sidebar .activity-chart-wrap {
+  max-width: 100%;
+}
+
+/* Research activity chart */
+.scholar-activity-chart {
+  margin-bottom: 2rem;
+}
+.scholar-activity-chart--compact .activity-chart-wrap {
+  max-width: 340px;
+  min-height: 220px;
+  padding: 1.25rem;
+  background: #374151;
+  border-radius: 12px;
+  border: 1px solid #4b5563;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+.scholar-activity-chart .scholar-block-title {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  color: #fff;
+  font-weight: 600;
+}
+.activity-chart-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.scholar-activity-chart--compact .activity-chart-caption {
+  font-size: 0.8rem;
+}
+.activity-chart-wrap {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto 1rem;
+  padding: 1rem;
+}
+.activity-chart-caption {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0;
+}
+.activity-chart-popup {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  padding: 1rem 1.25rem;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+  min-width: 260px;
+  max-width: 320px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s, transform 0.2s;
+  z-index: 100;
+  pointer-events: none;
+}
+.activity-chart-popup.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(10px);
+  pointer-events: auto;
+}
+.activity-popup-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  background: #f1f5f9;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #64748b;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.activity-popup-close:hover {
+  background: #e2e8f0;
+  color: #334155;
+}
+.activity-popup-year {
+  font-weight: 600;
+  color: var(--primary-color, #2c5282);
+  margin-bottom: 0.5rem;
+  padding-right: 2rem;
+}
+.activity-popup-detail {
+  font-size: 0.9rem;
+  color: #475569;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+.activity-popup-link {
+  font-size: 0.85rem;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+.activity-popup-link:hover {
+  text-decoration: underline;
+}
+
+/* Awards section - card grid */
+.scholar-block-icon {
+  margin-right: 0.4rem;
+  color: var(--primary-color);
+  opacity: 0.9;
+}
+.awards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.award-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+.award-card:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 12px rgba(44, 82, 130, 0.08);
+}
+.award-card--featured {
+  background: linear-gradient(135deg, #f0f7ff 0%, #e8f4fc 100%);
+  border-color: rgba(44, 82, 130, 0.25);
+}
+.award-card__icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(44, 82, 130, 0.1);
+  color: var(--primary-color);
+  border-radius: 8px;
+  font-size: 1rem;
+}
+.award-card--featured .award-card__icon {
+  background: var(--primary-color);
+  color: #fff;
+}
+.award-card__content {
+  flex: 1;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #475569;
+}
+.award-card__content strong {
+  color: var(--dark-color);
+}
+
+/* Editorial section - card grid */
+.editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+.editorial-card {
+  padding: 1rem 1.25rem;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+.editorial-card:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 12px rgba(44, 82, 130, 0.08);
+}
+.editorial-card__badge {
+  display: inline-block;
+  padding: 4px 10px;
+  background: rgba(44, 82, 130, 0.12);
+  color: var(--primary-color);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+.editorial-card__content {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #475569;
+}
+.editorial-if {
+  display: inline-block;
+  padding: 2px 6px;
+  background: #f1f5f9;
+  color: #64748b;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  margin-left: 0.25rem;
+}
+
+/* Fingerprint tags */
+.scholar-fingerprint-intro {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 1rem;
+}
+.fingerprint-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.fp-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #334155;
+}
+.fp-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #cbd5e1;
+  flex-shrink: 0;
+}
+.fp-dot-active {
+  background: #22c55e;
+}
+
+/* Full Profile Page (sawaid-abbas.html) - Scholar-style like HKBU */
+.profile-section {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+.scholar-profile-header {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+.scholar-profile-main {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.scholar-photo {
+  flex-shrink: 0;
+  width: 160px;
+  height: 160px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.scholar-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.scholar-info {
+  flex: 1;
+  min-width: 280px;
+}
+.scholar-name {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: var(--dark-color, #1a202c);
+}
+.scholar-title {
+  font-size: 1rem;
+  color: var(--primary-color, #2c5282);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.scholar-org {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+.scholar-org a {
+  color: #555;
+  text-decoration: none;
+}
+.scholar-org a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+.scholar-meta {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+.scholar-orcid {
+  color: #a6ce39;
+  text-decoration: none;
+}
+.scholar-orcid:hover {
+  text-decoration: underline;
+}
+.scholar-sep {
+  margin: 0 0.5rem;
+  color: #ccc;
+}
+.scholar-stats {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+.scholar-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.scholar-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  background: #f1f5f9;
+  color: #475569;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.scholar-link-btn:hover {
+  background: var(--primary-color, #2c5282);
+  color: #fff;
+}
+.scholar-link-btn--active {
+  background: var(--primary-color, #2c5282);
+  color: #fff;
+}
+.scholar-content {
+  max-width: 900px;
+}
+.scholar-block {
+  margin-bottom: 2.5rem;
+}
+.scholar-block-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--dark-color, #1a202c);
+  text-transform: none;
+  letter-spacing: 0;
+}
+.scholar-subtitle {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 1.25rem 0 0.5rem 0;
+  color: #475569;
+}
+.scholar-subtitle:first-of-type {
+  margin-top: 0;
+}
+.scholar-list {
+  margin: 0 0 1rem 0;
+  padding-left: 1.5rem;
+}
+.scholar-list li {
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+.scholar-block p {
+  margin-bottom: 1rem;
+  line-height: 1.65;
+  color: #444;
+}
+.scholar-edu-list {
+  margin-bottom: 1rem;
+}
+.scholar-edu-item {
+  margin-bottom: 0.75rem;
+  padding-left: 0.5rem;
+  border-left: 3px solid #e2e8f0;
+  padding-left: 1rem;
+  line-height: 1.5;
+}
+.scholar-edu-item strong {
+  color: var(--primary-color);
+}
+.scholar-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.scholar-keywords span {
+  display: inline-block;
+  padding: 4px 10px;
+  background: #f1f5f9;
+  color: #475569;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+.scholar-appointments {
+  margin-bottom: 1rem;
+}
+.scholar-app-item {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f1f5f9;
+  line-height: 1.5;
+}
+.scholar-app-item:last-child {
+  border-bottom: none;
+}
+.scholar-app-years {
+  display: block;
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-bottom: 0.25rem;
+}
+.scholar-meta-line {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+.badge-project-status {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+.badge-active {
+  background: #dcfce7;
+  color: #166534;
+}
+.badge-completed {
+  background: #e0e7ff;
+  color: #3730a3;
+}
+.badge-process {
+  background: #fef3c7;
+  color: #92400e;
+}
+.scholar-projects {
+  margin-top: 1rem;
+}
+.scholar-project-item {
+  margin-bottom: 1.25rem;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-color, #2c5282);
+}
+.scholar-project-item h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.4;
+}
+.scholar-project-role {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0;
+}
+.scholar-output-list {
+  margin-top: 0.75rem;
+}
+.scholar-output-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f1f5f9;
+  line-height: 1.5;
+}
+.scholar-output-item:last-child {
+  border-bottom: none;
+}
+.badge-output-type {
+  flex-shrink: 0;
+  padding: 3px 8px;
+  background: #dbeafe;
+  color: #1e40af;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+.badge-output-type.badge-book {
+  background: #e9d5ff;
+  color: #6b21a8;
+}
+.badge-under-review {
+  flex-shrink: 0;
+  padding: 3px 8px;
+  background: #fef3c7;
+  color: #92400e;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .editorial-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 992px) {
+  .profile-layout {
+    flex-direction: column;
+  }
+  .profile-chart-sidebar {
+    width: 100%;
+    max-width: 400px;
+    position: static;
+  }
+  .scholar-activity-chart--compact .activity-chart-wrap {
+    max-width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .scholar-profile-main {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .scholar-photo {
+    width: 140px;
+    height: 140px;
+  }
+  .scholar-links {
+    justify-content: center;
+  }
+  .scholar-output-item {
+    flex-direction: column;
+    gap: 6px;
+  }
+}

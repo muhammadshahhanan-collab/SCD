@@ -1,36 +1,44 @@
 {
   "sawaid_abbas": {
-    "google_scholar": "https://scholar.google.com/citations?user=EXAMPLE",
-    "orcid": "https://orcid.org/0000-0000-0000-0000",
-    "science_direct": "https://www.sciencedirect.com/science/article/example",
-    "journal": "https://example-journal.com/author/sawaid-abbas",
-    "awards": [
-      "Best Researcher Award 2023",
-      "Excellence in Earth Observation"
-    ],
+    "biography": "Sawaid Abbas is an emerging researcher whose work spans earth science, ecology, environment, and climate change, powered by smart sensing, space technologies, and advanced spatial data science. He has conducted extensive research on forest resources mapping across Pakistan, Hong Kong, and Asia, with a strong focus on biomass estimation and carbon stock assessments. His decade-long investigation into tropical and subtropical secondary forest succession has garnered acclaim. He developed Pakistan's first comprehensive forest degradation and deforestation map. NASA's Landsat Science acknowledges his collaborative work on Mangrove Cover Change in South Asia. His work on Smart Sensing Technologies earned an Outstanding Achievement in Technology Transfer award from the Hong Kong Polytechnic University.",
+    "profile_url": "sawaid-abbas.html",
+    "google_scholar": "https://scholar.google.com/citations?user=JEdGce0AAAAJ&hl=en",
+    "scopus": "https://www.scopus.com/authid/detail.uri?authorId=55234716000",
+    "orcid": "https://orcid.org/0000-0003-3417-217X",
+    "science_direct": "https://www.sciencedirect.com/author/55234716000/sawaid-abbas",
+    "researchgate": "https://www.researchgate.net/profile/Sawaid-Abbas",
+    "publons": "https://publons.com/researcher/1238153/sawaid-abbas/",
+    "loop": "https://loop.frontiersin.org/people/1547209/overview",
+    "space4water": "https://www.space4water.org/person/abbas",
     "publications": [
-      {
-        "title": "Earth Observation for Climate Resilience",
-        "year": "2024",
-        "journal": "Remote Sensing of Environment",
-        "url": "https://example.com/paper1"
-      },
-      {
-        "title": "Data Science in Geospatial Analysis",
-        "year": "2023",
-        "journal": "ISPRS Journal",
-        "url": ""
-      }
+      { "title": "Elevation-Dependent Vegetation Greening and Its Responses to Climate Changes in the South Slope of the Himalayas", "year": "2025", "journal": "Geophysical Research Letters", "url": "https://doi.org/10.1029/2024GL113276" },
+      { "title": "Agricultural Intensification and Cropland Expansion in the Semi-Arid Foothills of Kirthar Range", "year": "2024", "journal": "Earth Systems and Environment", "url": "https://doi.org/10.1007/s41748-024-00548-0" },
+      { "title": "Phylogenetic structure and turnover between lowland and montane subtropical forests", "year": "2024", "journal": "Global Ecology and Conservation", "url": "https://doi.org/10.1016/j.gecco.2024.e03229" },
+      { "title": "Monitoring of large-scale forest restoration: Evidence of vegetation recovery in the mountain region of Pakistan", "year": "2023", "journal": "Ecological Informatics", "url": "https://doi.org/10.1016/j.ecoinf.2023.102277" },
+      { "title": "Sinking delta: Quantifying the impacts of saltwater intrusion in the Indus Delta of Pakistan", "year": "2023", "journal": "Science of the Total Environment", "url": "https://doi.org/10.1016/j.scitotenv.2023.163356" },
+      { "title": "Characterizing and Classifying Urban Tree Species using Hyperspectral Images and Deep Learning in Hong Kong", "year": "2021", "journal": "ISPRS Journal of Photogrammetry and Remote Sensing", "url": "https://doi.org/10.1016/j.isprsjprs.2021.05.003" },
+      { "title": "Spatial and environmental constraints on natural forest regeneration", "year": "2021", "journal": "Science of the Total Environment", "url": "https://doi.org/10.1016/j.scitotenv.2020.141760" },
+      { "title": "Approaches of Satellite Remote Sensing for the Assessment of Above-Ground Biomass across Tropical Forests", "year": "2020", "journal": "Remote Sensing", "url": "https://doi.org/10.3390/rs12203351" },
+      { "title": "A 70-year perspective on tropical forest regeneration", "year": "2017", "journal": "Science of the Total Environment", "url": "https://doi.org/10.1016/j.scitotenv.2015.11.171" },
+      { "title": "Distribution and dynamics of mangrove forests of South Asia", "year": "2015", "journal": "Journal of Environmental Management", "url": "https://doi.org/10.1016/j.jenvman.2014.01.020" }
+    ],
+    "publication_category": "Spatial Data Science, Smart Sensing, Earth Observation, Forest Resources Mapping, Biomass & Carbon Assessment, Urban Ecology, Land Cover Change, Drought Monitoring, Machine Learning",
+    "awards": [
+      "Dean's Award for Outstanding Achievement in Technology Transfer, Hong Kong Polytechnic University, 2021",
+      "PhD Fellowship, Hong Kong Research Grants Council, 2013–2016",
+      "Best Paper Award, ESA–MOST Dragon 3 Remote Sensing Training, 2013",
+      "AIT Alumni Association Prize, most outstanding graduate, 2013",
+      "John A. Hrones Prize, Remote Sensing and GIS, AIT Thailand, 2013",
+      "Best Thesis Award, Remote Sensing & GIS, AIT Thailand, 2013",
+      "Japanese Government Scholarship for M.Phil., 2011–2013",
+      "Gold Medal in M.Sc. Space Science (4.0/4.0), University of the Punjab, 2006–2008"
     ],
     "book_chapters": [
-      {
-        "title": "Smart Sensing for Sustainable Development",
-        "year": "2023",
-        "book": "Advances in Geospatial Technology",
-        "url": "https://example.com/chapter1"
-      }
-    ],
-    "publication_category": "Earth Observation, Remote Sensing, Data Science"
+      { "title": "Thermal Infrared Imaging of the Urban Landscape to Understand Urban Microclimate", "year": "2021", "book": "Urban Remote Sensing: Monitoring, Synthesis, and Modeling", "url": "https://doi.org/10.1002/9781119625865.ch17" },
+      { "title": "Optical Remote Sensing", "year": "2021", "book": "Urban Informatics", "url": "https://link.springer.com/book/10.1007/978-981-15-8983-6" },
+      { "title": "Detection and Monitoring of Marine Pollution Using Remote Sensing Technologies", "year": "2018", "book": "Monitoring of Marine Pollution", "url": "https://doi.org/10.5772/intechopen.81657" },
+      { "title": "Status of the Forest Cover Assessment and Monitoring System in Pakistan in the Context of REDD", "year": "2015", "book": "Geospatial Information Systems for Multi-Scale Forest Biomass Assessment", "url": "" }
+    ]
   },
   "janet_nichol": {
     "google_scholar": "",

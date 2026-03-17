@@ -106,7 +106,7 @@
             "photo": "./images/Shah.jpeg",
             "bio": "Geospatial researcher applying remote sensing and GIS for environmental monitoring and climate studies.",
             "linkedin": "https://www.linkedin.com/in/muhammad-shah-hanan-bb8494366",
-            "category": "assistant",
+            "category": "associate",
             "year": 2026
         },
         {
@@ -117,7 +117,7 @@
             "photo": "./images/nawai.png",
             "bio": "Geospatial analyst with expertise in Geospatial Analytics and Spatial Intelligence..",
             "linkedin": "https://www.linkedin.com/in/amna-yaseen-1a832837a/",
-            "category": "assistant",
+            "category": "associate",
             "year": 2026
         },
         {
@@ -128,7 +128,7 @@
             "photo": "./images/on.jfif",
             "bio": "Geospatial analyst with expertise in Geospatial Analytics and Spatial Intelligence..",
             "linkedin": "https://www.linkedin.com/in/amna-yaseen-1a832837a/",
-            "category": "assistant",
+            "category": "associate",
             "year": 2026
         },
         
@@ -140,6 +140,17 @@
             "photo": "./images/Fiza.jpeg",
             "bio": "Spatial Data Specialist advancing climate research and environmental management through cutting-edge geospatial technologies.",
             "linkedin": "",
+            "category": "assistant",
+            "year": 2026
+        },
+        {
+            "id": "20",
+            "name": "Muhammad Abrar",
+            "role": "Research Assistant/Geospatial Developer",
+            "institution": "University of the Punjab, Lahore",
+            "photo": "./images/Raja_Usama.jpg",
+            "bio": "GIS and remote sensing specialist contributing to environmental monitoring research.",
+            "linkedin": "https://www.linkedin.com/in/raja-usama-03b060243/",
             "category": "assistant",
             "year": 2026
         },
@@ -168,12 +179,12 @@
         {
             "id": "11",
             "name": "Amna Yassen",
-            "role": "Research Assistant",
+            "role": "Research Associate",
             "institution": "University of the Punjab, Lahore",
             "photo": "./images/Amna.jpeg",
             "bio": "Geospatial analyst with expertise in Geospatial Analytics and Spatial Intelligence..",
             "linkedin": "https://www.linkedin.com/in/amna-yaseen-1a832837a/",
-            "category": "assistant",
+            "category": "associate",
             "year": 2026
         },
         {
