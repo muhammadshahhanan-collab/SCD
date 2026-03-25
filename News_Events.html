@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News & Events | SCD Smart Sensing Lab</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="icon" href="./images/Logo.jpg" type="image/jpeg" />
+    <link rel="stylesheet" href="SCD.css" />
+  </head>
+  <body>
+    <!-- Floating Pill Navbar -->
+    <header class="site-header">
+      <div class="site-header__pill" id="siteHeaderPill">
+        <nav class="nav nav--pill">
+          <a class="nav__brand" href="Home.html">
+            <img
+              src="./images/logo.jpg"
+              alt="Smart Sensing Lab Logo"
+              height="36"
+              class="nav__brand-img"
+            />
+            <span class="nav__brand-text"
+              >Smart Sensing for Climate &amp; Development</span
+            >
+          </a>
+          <ul class="nav-pill" id="mainNav">
+            <li><a class="nav-pill-link" href="Home.html">Home</a></li>
+            <li>
+              <a class="nav-pill-link" href="Home.html#about">About</a>
+            </li>
+            <li>
+              <a class="nav-pill-link" href="Home.html#objectives">Work</a>
+            </li>
+            <li><a class="nav-pill-link" href="Projects.html">Projects</a></li>
+            <li><a class="nav-pill-link" href="Research.html">Research</a></li>
+            <li>
+              <a class="nav-pill-link nav-active" href="News_Events.html"
+                >News &amp; Events</a
+              >
+            </li>
+            <li><a class="nav-pill-link" href="Team.html">People</a></li>
+          </ul>
+          <a
+            href="Projects.html"
+            class="nav__cta"
+            title="Explore Our Work"
+            >Explore</a
+          >
+          <button
+            class="nav__toggle"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+        </nav>
+        <div class="nav__links collapse" id="navbarNav">
+          <ul class="nav-pill nav-pill--mobile">
+            <li><a class="nav-pill-link" href="Home.html">Home</a></li>
+            <li>
+              <a class="nav-pill-link" href="Home.html#about">About</a>
+            </li>
+            <li>
+              <a
+                class="nav-pill-link"
+                href="Home.html#objectives"
+                >Work</a
+              >
+            </li>
+            <li><a class="nav-pill-link" href="Projects.html">Projects</a></li>
+            <li><a class="nav-pill-link" href="Research.html">Research</a></li>
+            <li>
+              <a
+                class="nav-pill-link nav-active"
+                href="News_Events.html"
+                >News &amp; Events</a
+              >
+            </li>
+            <li><a class="nav-pill-link" href="Team.html">People</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="news-events" class="section">
+        <div class="container">
+          <div class="section-title">
+            <h2>News &amp; Events</h2>
+            <p>Past events with details, plus updated upcoming bulletins.</p>
+          </div>
+
+          <!-- Bulletin ticker (top bar above Past Events) -->
+          <section class="news-bulletin" aria-label="News and events bulletin">
+            <div class="news-bulletin__inner" role="region">
+              <div class="news-bulletin__left">
+                <span class="news-bulletin__icon" aria-hidden="true">
+                  <i class="fas fa-bullhorn"></i>
+                </span>
+                <span class="news-bulletin__label">BULLETIN</span>
+              </div>
+
+              <div
+                class="news-bulletin__marquee"
+                id="newsBulletinMarquee"
+                tabindex="0"
+              >
+                <div class="news-bulletin__track" id="newsBulletinTrack"></div>
+              </div>
+
+              <button
+                type="button"
+                id="newsBulletinDetailsBtn"
+                class="news-bulletin__details btn btn-sm btn-light"
+                title="Open details for the currently visible bulletin item"
+              >
+                Details
+              </button>
+            </div>
+          </section>
+
+          <div class="news-events-block">
+            <h3 class="news-events-subtitle">
+              <i class="fas fa-calendar-days me-2 text-primary"></i>
+              Past Events
+            </h3>
+            <div id="past-events" class="news-events-list"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="SCD.js"></script>
+    <script src="news-events.js"></script>
+  </body>
+</html>
+
