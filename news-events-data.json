@@ -1,0 +1,102 @@
+{
+  "pastEvents": [
+    {
+      "id": "evt-2026-01-15",
+      "title": "Climate Adaptation Sensors Workshop",
+      "date": "2026-01-15",
+      "time": "10:00 AM",
+      "location": "Karachi, Pakistan",
+      "organizer": "Smart Sensing for Climate & Development (SCD)",
+      "type": "Workshop",
+      "summary": "Hands-on session on designing sensor-based monitoring workflows for climate adaptation planning.",
+      "highlights": [
+        "End-to-end workflow: from deployment to analytics",
+        "Calibration basics for low-cost sensor networks",
+        "Data quality checks and uncertainty awareness"
+      ],
+      "tags": ["IoT Sensors", "Climate Adaptation", "Data Quality"],
+      "details": "This workshop brought together researchers and practitioners to discuss practical monitoring systems for climate adaptation. Participants worked through a reference workflow covering sensor selection, deployment planning, calibration/validation, and downstream analytics. We also emphasized data quality checks, uncertainty communication, and reproducible documentation for field-to-model pipelines."
+    },
+    {
+      "id": "evt-2025-11-03",
+      "title": "GeoAI for Early Warning: From Satellites to Alerts",
+      "date": "2025-11-03",
+      "time": "02:00 PM",
+      "location": "Online (Webinar)",
+      "organizer": "SCD Research Group",
+      "type": "Webinar",
+      "summary": "A talk on building GeoAI pipelines that turn remote sensing signals into actionable early warning outputs.",
+      "highlights": [
+        "Feature extraction for drought and stress indicators",
+        "Model evaluation strategies under data gaps",
+        "How to design alert thresholds responsibly"
+      ],
+      "tags": ["GeoAI", "Remote Sensing", "Early Warning"],
+      "details": "The webinar covered end-to-end pipeline design for translating satellite-derived indicators into early warning signals. Speakers discussed robust evaluation when training data is limited, techniques for handling missingness, and practical considerations for choosing alert thresholds that are explainable to stakeholders."
+    },
+    {
+      "id": "evt-2025-09-22",
+      "title": "Water & Hydrology Field Methods Seminar",
+      "date": "2025-09-22",
+      "time": "11:30 AM",
+      "location": "Lahore, Pakistan",
+      "organizer": "SCD & Collaborating Universities",
+      "type": "Seminar",
+      "summary": "Methods seminar focused on river monitoring, hydrology mapping, and field-data alignment for GIS models.",
+      "highlights": [
+        "Sampling strategies and metadata collection",
+        "Aligning field measurements with GIS rasters",
+        "Common pitfalls in hydrology dataset integration"
+      ],
+      "tags": ["Hydrology", "GIS", "Field Methods"],
+      "details": "This seminar focused on practical field methods and how to align measurement outputs with GIS workflows. Attendees learned sampling strategies, how to maintain reliable metadata, and ways to reconcile measurement scales between field instruments and raster datasets. We also discussed integration pitfalls and checklists for ensuring traceability."
+    }
+  ],
+  "upcomingEvents": [
+    {
+      "id": "evt-2026-04-05",
+      "title": "SCD Open Lab Day: Demo of Climate Monitoring Pipelines",
+      "startDate": "2026-04-05",
+      "time": "09:00 AM",
+      "location": "Islamabad, Pakistan",
+      "type": "Open Lab Day",
+      "summary": "Come see live demos of sensor-to-dashboard monitoring pipelines and ask questions.",
+      "tags": ["Demos", "Dashboards", "Sensors"],
+      "details": "The Open Lab Day will feature guided demonstrations of SCD monitoring pipelines, including data ingestion from sensor networks, automated quality checks, and dashboard-ready analytics. Visitors can interact with the team, understand dataset organization practices, and get guidance on potential collaboration topics."
+    },
+    {
+      "id": "evt-2026-04-18",
+      "title": "Biodiversity Mapping Using Multi-Temporal Imagery",
+      "startDate": "2026-04-18",
+      "time": "03:30 PM",
+      "location": "Online (Webinar)",
+      "type": "Training Session",
+      "summary": "A practical training on mapping biodiversity indicators using multi-temporal satellite data.",
+      "tags": ["Biodiversity", "Remote Sensing", "Time Series"],
+      "details": "This training session is designed for researchers and students who want to apply multi-temporal imagery workflows. We will cover preprocessing, change detection concepts, and indicator extraction. The session concludes with practical tips for structuring reproducible experiments."
+    },
+    {
+      "id": "evt-2026-05-09",
+      "title": "SCD Research Roundtable: Water Security & Decision Support",
+      "startDate": "2026-05-09",
+      "time": "01:00 PM",
+      "location": "Karachi, Pakistan",
+      "type": "Roundtable",
+      "summary": "Discussion roundtable to align research outputs with water security decision needs.",
+      "tags": ["Decision Support", "Water Security", "Collaboration"],
+      "details": "The roundtable will connect researchers working on hydrology, remote sensing, and decision-support systems. We will discuss how to translate evidence into decision-ready outputs and how to design evaluation methods that match stakeholder requirements."
+    },
+    {
+      "id": "evt-2026-06-01",
+      "title": "Student Poster Session: Climate Informatics Showcase",
+      "startDate": "2026-06-01",
+      "time": "10:30 AM",
+      "location": "Hybrid",
+      "type": "Poster Session",
+      "summary": "A showcase of student projects in climate informatics, sensors, and GeoAI.",
+      "tags": ["Students", "Posters", "GeoAI"],
+      "details": "Students will present poster projects in climate informatics, sensor-based monitoring, and GeoAI applications. This session encourages constructive peer feedback and supports early-stage collaborations."
+    }
+  ]
+}
+

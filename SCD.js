@@ -118,3 +118,49 @@ fetch("footer.html")
     }, 100);
   });
 })();
+
+// ─────────────────────────────────────────────────────────────
+// Inject "News & Events" into the pill navbar on all pages
+// (works for both desktop and mobile nav lists)
+// ─────────────────────────────────────────────────────────────
+(function () {
+  const href = "News_Events.html";
+  const labelText = "News & Events";
+  const currentPath = (window.location.pathname || "").toLowerCase();
+  const isNewsPage =
+    currentPath.endsWith("/news_events.html") || currentPath.endsWith("news_events.html");
+
+  function hideMobileMenuOnClick() {
+    const collapseEl = document.getElementById("navbarNav");
+    if (collapseEl && typeof bootstrap !== "undefined" && bootstrap.Collapse) {
+      const bsCollapse =
+        bootstrap.Collapse.getInstance(collapseEl) ||
+        new bootstrap.Collapse(collapseEl, { toggle: false });
+      bsCollapse.hide();
+    }
+  }
+
+  function ensureLinkInUl(ul) {
+    if (!ul) return;
+    if (ul.querySelector(`a.nav-pill-link[href="${href}"]`)) return;
+
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    a.className = "nav-pill-link";
+    a.href = href;
+    a.textContent = labelText;
+    a.addEventListener("click", hideMobileMenuOnClick);
+
+    li.appendChild(a);
+    ul.appendChild(li);
+  }
+
+  const navUls = Array.from(document.querySelectorAll("ul.nav-pill"));
+  navUls.forEach(ensureLinkInUl);
+
+  if (isNewsPage) {
+    // Mark active for the injected link only.
+    const link = document.querySelector(`a.nav-pill-link[href="${href}"]`);
+    if (link) link.classList.add("nav-active");
+  }
+})();
