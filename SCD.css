@@ -235,6 +235,25 @@ body:has(.site-header) {
     white-space: nowrap;
 }
 
+/* Explore CTA when it is the current page (Projects / water projects) */
+.site-header .nav__cta.nav-active {
+    box-shadow: 0 0 0 2px rgba(26, 32, 44, 0.45);
+}
+.site-header__pill--scrolled .nav__cta.nav-active {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.9);
+}
+
+/* Mobile menu Explore + current page: keep CTA colors, add ring */
+.site-header .nav-pill-link--cta.nav-active {
+    background: var(--accent-color) !important;
+    color: #1a202c !important;
+    border-color: transparent;
+    box-shadow: 0 0 0 2px rgba(26, 32, 44, 0.45);
+}
+.site-header__pill--scrolled .nav-pill-link--cta.nav-active {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.9);
+}
+
 .site-header .nav__toggle {
     display: none;
     align-items: center;
