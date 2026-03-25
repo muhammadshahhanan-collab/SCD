@@ -155,11 +155,43 @@ fetch("footer.html")
     ul.appendChild(li);
   }
 
-  const navUls = Array.from(document.querySelectorAll("ul.nav-pill"));
-  navUls.forEach(ensureLinkInUl);
+  // Avoid duplicates: patch only the desktop UL when available.
+  // (Mobile UL is injected only on smaller screens.)
+  const desktopUl = document.getElementById("mainNav");
+  const mobileUl = document.querySelector("ul.nav-pill.nav-pill--mobile");
+  const isDesktop = window.innerWidth >= 992;
+
+  if (isDesktop && desktopUl) {
+    ensureLinkInUl(desktopUl);
+    // Cleanup duplicates in other pill ULs (if both desktop+mobile are visible)
+    document.querySelectorAll("ul.nav-pill").forEach((ul) => {
+      if (ul === desktopUl) return;
+      const links = Array.from(ul.querySelectorAll(`a.nav-pill-link[href="${href}"]`));
+      links.forEach((link) => {
+        const li = link.closest("li");
+        if (li) li.remove();
+        else link.remove();
+      });
+    });
+  } else if (!isDesktop && mobileUl) {
+    ensureLinkInUl(mobileUl);
+    // Cleanup duplicates in other pill ULs on mobile
+    document.querySelectorAll("ul.nav-pill").forEach((ul) => {
+      if (ul === mobileUl) return;
+      const links = Array.from(ul.querySelectorAll(`a.nav-pill-link[href="${href}"]`));
+      links.forEach((link) => {
+        const li = link.closest("li");
+        if (li) li.remove();
+        else link.remove();
+      });
+    });
+  } else {
+    // Fallback: patch all pill ULs if structure differs.
+    const navUls = Array.from(document.querySelectorAll("ul.nav-pill"));
+    navUls.forEach(ensureLinkInUl);
+  }
 
   if (isNewsPage) {
-    // Mark active for the injected link only.
     const link = document.querySelector(`a.nav-pill-link[href="${href}"]`);
     if (link) link.classList.add("nav-active");
   }
