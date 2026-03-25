@@ -181,6 +181,8 @@ body:has(.site-header) {
     font-weight: 600;
     color: #1a202c;
     text-decoration: none;
+    white-space: nowrap;
+    word-break: keep-all;
     transition: background 0.2s ease, color 0.3s ease, border 0.2s ease;
 }
 
