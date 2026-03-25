@@ -161,6 +161,16 @@ fetch("footer.html")
   const mobileUl = document.querySelector("ul.nav-pill.nav-pill--mobile");
   const isDesktop = window.innerWidth >= 992;
 
+  // Hard cleanup first: remove any existing injected links everywhere.
+  // (Fixes cases where deployed HTML / cached JS already produced duplicates.)
+  document
+    .querySelectorAll(`a.nav-pill-link[href="${href}"]`)
+    .forEach((link) => {
+      const li = link.closest("li");
+      if (li) li.remove();
+      else link.remove();
+    });
+
   if (isDesktop && desktopUl) {
     ensureLinkInUl(desktopUl);
     // Cleanup duplicates in other pill ULs (if both desktop+mobile are visible)
