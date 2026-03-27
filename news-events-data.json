@@ -1,55 +1,276 @@
 {
   "pastEvents": [
     {
-      "id": "evt-2026-01-15",
-      "title": "Climate Adaptation Sensors Workshop",
-      "date": "2026-01-15",
-      "time": "10:00 AM",
-      "location": "Karachi, Pakistan",
-      "organizer": "Smart Sensing for Climate & Development (SCD)",
-      "type": "Workshop",
-      "summary": "Hands-on session on designing sensor-based monitoring workflows for climate adaptation planning.",
-      "highlights": [
-        "End-to-end workflow: from deployment to analytics",
-        "Calibration basics for low-cost sensor networks",
-        "Data quality checks and uncertainty awareness"
-      ],
-      "tags": ["IoT Sensors", "Climate Adaptation", "Data Quality"],
-      "details": "This workshop brought together researchers and practitioners to discuss practical monitoring systems for climate adaptation. Participants worked through a reference workflow covering sensor selection, deployment planning, calibration/validation, and downstream analytics. We also emphasized data quality checks, uncertainty communication, and reproducible documentation for field-to-model pipelines."
-    },
-    {
-      "id": "evt-2025-11-03",
-      "title": "GeoAI for Early Warning: From Satellites to Alerts",
-      "date": "2025-11-03",
-      "time": "02:00 PM",
-      "location": "Online (Webinar)",
-      "organizer": "SCD Research Group",
-      "type": "Webinar",
-      "summary": "A talk on building GeoAI pipelines that turn remote sensing signals into actionable early warning outputs.",
-      "highlights": [
-        "Feature extraction for drought and stress indicators",
-        "Model evaluation strategies under data gaps",
-        "How to design alert thresholds responsibly"
-      ],
-      "tags": ["GeoAI", "Remote Sensing", "Early Warning"],
-      "details": "The webinar covered end-to-end pipeline design for translating satellite-derived indicators into early warning signals. Speakers discussed robust evaluation when training data is limited, techniques for handling missingness, and practical considerations for choosing alert thresholds that are explainable to stakeholders."
-    },
-    {
-      "id": "evt-2025-09-22",
-      "title": "Water & Hydrology Field Methods Seminar",
-      "date": "2025-09-22",
-      "time": "11:30 AM",
+      "id": "evt-2024-04-meteorological-data-training",
+      "title": "Training on Gridded Meteorological Data for Weather & Climate",
+      "date": "2024-04-01",
+      "time": "",
       "location": "Lahore, Pakistan",
-      "organizer": "SCD & Collaborating Universities",
-      "type": "Seminar",
-      "summary": "Methods seminar focused on river monitoring, hydrology mapping, and field-data alignment for GIS models.",
+      "organizer": "Department of Geography, Kinnaird College for Women",
+      "type": "Training",
+      "summary": "Talk and training on obtaining and processing gridded meteorological data for weather and climate applications.",
       "highlights": [
-        "Sampling strategies and metadata collection",
-        "Aligning field measurements with GIS rasters",
-        "Common pitfalls in hydrology dataset integration"
+        "Data discovery and acquisition workflow",
+        "Processing for weather and climate analyses",
+        "Practical training for applied projects"
       ],
-      "tags": ["Hydrology", "GIS", "Field Methods"],
-      "details": "This seminar focused on practical field methods and how to align measurement outputs with GIS workflows. Attendees learned sampling strategies, how to maintain reliable metadata, and ways to reconcile measurement scales between field instruments and raster datasets. We also discussed integration pitfalls and checklists for ensuring traceability."
+      "tags": ["Meteorology", "Climate", "Training", "Data Processing"],
+      "details": "Delivered a talk and conducted training on obtaining and processing gridded meteorological data for weather and climate applications (April 2024)."
+    },
+    {
+      "id": "evt-2024-04-gis-bim-geotechnics",
+      "title": "International Workshop on GIS Applications in BIM and Geotechnics",
+      "date": "2024-04-01",
+      "time": "",
+      "location": "Lahore, Pakistan",
+      "organizer": "CGIS, University of the Punjab",
+      "type": "Workshop",
+      "summary": "International workshop focused on GIS applications in Building Information Modeling (BIM) and geotechnics.",
+      "highlights": [
+        "GIS integration with BIM",
+        "Geotechnics-focused use cases",
+        "Applied workflow discussions"
+      ],
+      "tags": ["GIS", "BIM", "Geotechnics", "Workshop"],
+      "details": "Organized an international workshop on GIS Applications in Building Information Modeling (BIM) and Geotechnics (April 2024)."
+    },
+    {
+      "id": "evt-2024-03-smart-sensing-nexus",
+      "title": "International Workshop on Smart Sensing Nexus for Forest, Water and Wildlife",
+      "date": "2024-03-01",
+      "time": "",
+      "location": "Lahore, Pakistan",
+      "organizer": "CGIS, University of the Punjab",
+      "type": "Workshop",
+      "summary": "International workshop on smart sensing nexus for forest, water, and wildlife systems.",
+      "highlights": [
+        "Forest-water-wildlife nexus",
+        "Smart sensing applications",
+        "Cross-domain environmental monitoring"
+      ],
+      "tags": ["Smart Sensing", "Forests", "Water", "Wildlife", "Workshop"],
+      "details": "Organized an international workshop on Smart Sensing Nexus for Forest, Water and Wildlife (March 2024)."
+    },
+    {
+      "id": "evt-2024-01-himalaya-vegetation-dynamics",
+      "title": "International Workshop on Vegetation Dynamics of the Himalaya South Slope",
+      "date": "2024-01-01",
+      "time": "",
+      "location": "Lahore, Pakistan",
+      "organizer": "CGIS, University of the Punjab",
+      "type": "Workshop",
+      "summary": "Workshop on recent vegetation dynamics and prediction under climate change scenarios.",
+      "highlights": [
+        "Vegetation dynamics assessment",
+        "Scenario-based climate prediction",
+        "Himalaya south slope case framing"
+      ],
+      "tags": ["Vegetation Dynamics", "Himalaya", "Climate Scenarios", "Workshop"],
+      "details": "Organized an international workshop on vegetation dynamic assessment of the Himalaya south slope in recent two decades and its prediction under different climate change scenarios (Jan 2024)."
+    },
+    {
+      "id": "evt-2023-12-blue-carbon-session-chair",
+      "title": "Session Chair: Asian Blue Carbon Ecosystems",
+      "date": "2023-12-01",
+      "time": "",
+      "location": "Online",
+      "organizer": "3rd Workshop of Asian Young Geographers",
+      "type": "Session Chair",
+      "summary": "Chaired session on advancing methods for preservation of Asian blue carbon ecosystems under climate change.",
+      "highlights": [
+        "Blue carbon ecosystems",
+        "Climate change adaptation framing",
+        "Regional methods and knowledge discussion"
+      ],
+      "tags": ["Blue Carbon", "Session Chair", "Climate Change"],
+      "details": "Chaired a session on Advancing Knowledge and Methods for the Preservation of Asian Blue Carbon Ecosystems in the Face of Climate Change (Dec 2023)."
+    },
+    {
+      "id": "evt-2023-05-ml-cloud-lulc",
+      "title": "Workshop on Machine Learning and Cloud Computing for LULC",
+      "date": "2023-05-01",
+      "time": "",
+      "location": "Lahore, Pakistan",
+      "organizer": "CGIS, University of the Punjab",
+      "type": "Workshop",
+      "summary": "Workshop on machine learning and cloud computing for land cover and land use classification.",
+      "highlights": [
+        "ML-based LULC classification",
+        "Cloud-based processing pipelines",
+        "Operational geospatial workflows"
+      ],
+      "tags": ["Machine Learning", "Cloud Computing", "LULC", "Workshop"],
+      "details": "Organized workshop on Machine Learning and Cloud Computing for Land Cover Land Use Classification (May 2023)."
+    },
+    {
+      "id": "evt-2023-05-forest-services-academy-training",
+      "title": "Training on Forest Resources Mapping using EO and Smart Sensing",
+      "date": "2023-05-01",
+      "time": "",
+      "location": "Ghora Gali, Murree, Pakistan",
+      "organizer": "Forest Services Academy",
+      "type": "Training",
+      "summary": "Delivered talks and training on forest resources mapping using Earth observation, smart sensing, and cloud computing.",
+      "highlights": [
+        "Earth observation for forest resources",
+        "Smart sensing in forestry workflows",
+        "Cloud computing support in analysis"
+      ],
+      "tags": ["Forestry", "Earth Observation", "Smart Sensing", "Training"],
+      "details": "Delivered talks and conducted training on Forest Resources Mapping using Earth Observation Data, Smart Sensing Technologies and Cloud Computing (May 2023)."
+    },
+    {
+      "id": "evt-2023-03-rsgcc-session-chair",
+      "title": "Session Chair at RSGCC-2023",
+      "date": "2023-03-01",
+      "time": "",
+      "location": "Lahore, Pakistan",
+      "organizer": "University of the Punjab",
+      "type": "Session Chair",
+      "summary": "Chaired session at the International Conference on Remote Sensing, GIS and Climate Change Applications.",
+      "highlights": [
+        "Remote sensing and GIS applications",
+        "Climate solutions and strategies",
+        "Research and education focus"
+      ],
+      "tags": ["Remote Sensing", "GIS", "Climate", "Conference"],
+      "details": "Chaired a session at the International Conference on Remote Sensing, GIS and Climate Change Applications, Strategies, Solutions and Education (RSGCC-2023)."
+    },
+    {
+      "id": "evt-2021-03-esri-rs-gis-training",
+      "title": "Training Course on Remote Sensing and GIS Theory and Applications",
+      "date": "2021-03-26",
+      "time": "",
+      "location": "Hong Kong SAR",
+      "organizer": "ESRI China",
+      "type": "Training",
+      "summary": "Conducted training course on remote sensing and GIS theory and applications.",
+      "highlights": [
+        "Remote sensing fundamentals",
+        "GIS theory-to-practice workflow",
+        "Professional training delivery"
+      ],
+      "tags": ["ESRI", "Remote Sensing", "GIS", "Training"],
+      "details": "Conducted a training course on Remote Sensing and Geographic Information System: Theory and Applications (26 March 2021), ESRI China, Hong Kong SAR."
+    },
+    {
+      "id": "evt-2021-03-airflow-analyst",
+      "title": "One-Day Workshop on Airflow Analyst",
+      "date": "2021-03-26",
+      "time": "",
+      "location": "Hong Kong SAR",
+      "organizer": "ESRI China",
+      "type": "Workshop",
+      "summary": "Conducted one-day workshop on Airflow Analyst.",
+      "highlights": [
+        "Airflow Analyst introduction",
+        "Applied workflow demonstrations",
+        "Hands-on guided delivery"
+      ],
+      "tags": ["Airflow Analyst", "Workshop", "ESRI"],
+      "details": "Conducted a one-day workshop on Airflow Analyst (26 March 2021), ESRI China, Hong Kong SAR."
+    },
+    {
+      "id": "evt-2019-12-hyperspectral-training",
+      "title": "3-Day Training on Hyperspectral Data Analysis",
+      "date": "2019-12-16",
+      "time": "",
+      "location": "Hong Kong SAR",
+      "organizer": "Hong Kong Museum of Arts",
+      "type": "Training",
+      "summary": "3-day training on hyperspectral data analysis in non-invasive study of painting.",
+      "highlights": [
+        "Hyperspectral analysis methods",
+        "Non-invasive study workflows",
+        "Cross-disciplinary application"
+      ],
+      "tags": ["Hyperspectral", "Training", "Remote Sensing"],
+      "details": "Conducted a 3-day training course on hyperspectral data analysis in the non-invasive study of painting (16-18 December 2019), Hong Kong Museum of Arts."
+    },
+    {
+      "id": "evt-2017-08-highways-rs-training",
+      "title": "Remote Sensing Theories and Applications Training",
+      "date": "2017-08-03",
+      "time": "",
+      "location": "Hong Kong SAR",
+      "organizer": "Highways Department, Government of Hong Kong SAR",
+      "type": "Training",
+      "summary": "Conducted provisional training on remote sensing theories and applications.",
+      "highlights": [
+        "Theory and applications alignment",
+        "Public-sector training support",
+        "Applied remote sensing skills"
+      ],
+      "tags": ["Remote Sensing", "Training", "Government"],
+      "details": "Conducted provisional training course on Remote Sensing Theories and Applications for the Highways Department, Government of Hong Kong SAR (3-7 August 2017)."
+    },
+    {
+      "id": "evt-2017-06-photogrammetry-training",
+      "title": "Vocational Training on Photogrammetry and Remote Sensing",
+      "date": "2017-06-26",
+      "time": "",
+      "location": "Hong Kong SAR",
+      "organizer": "Planning Department, Government of Hong Kong SAR",
+      "type": "Training",
+      "summary": "Vocational training on photogrammetry, aerial photo interpretation, and remote sensing.",
+      "highlights": [
+        "Photogrammetry training",
+        "Aerial photo interpretation",
+        "Planning-oriented remote sensing practice"
+      ],
+      "tags": ["Photogrammetry", "Aerial Photo Interpretation", "Remote Sensing", "Training"],
+      "details": "Conducted vocational training on Photogrammetry, Aerial Photo Interpretation and Remote Sensing for planning and technical officers (26-27 June 2017)."
+    },
+    {
+      "id": "evt-2010-11-iucn-workshop",
+      "title": "5-Day Workshop on RS and GIS for Natural Resource Management",
+      "date": "2010-11-01",
+      "time": "",
+      "location": "Quetta, Pakistan",
+      "organizer": "IUCN-Quetta",
+      "type": "Workshop",
+      "summary": "Conducted five-day workshop on application of remote sensing and GIS for natural resource management.",
+      "highlights": [
+        "RS-GIS integrated applications",
+        "Natural resource management workflows",
+        "Extended workshop format"
+      ],
+      "tags": ["RS-GIS", "Workshop", "Natural Resource Management", "IUCN"],
+      "details": "Conducted a five-day workshop on Application of Remote Sensing and GIS for Natural Resource Management (1-5 November 2010), organized by IUCN-Quetta."
+    },
+    {
+      "id": "evt-2010-06-cknp-training",
+      "title": "Workshop for CKNP Officials on GIS and Remote Sensing",
+      "date": "2010-06-14",
+      "time": "",
+      "location": "Islamabad, Pakistan",
+      "organizer": "CKNP officials training team",
+      "type": "Training",
+      "summary": "Conducted workshop for CKNP officials on GIS and remote sensing for natural resource management.",
+      "highlights": [
+        "Capacity building for officials",
+        "GIS and remote sensing use in management",
+        "Applied policy-to-practice orientation"
+      ],
+      "tags": ["GIS", "Remote Sensing", "Training", "Natural Resource Management"],
+      "details": "Conducted workshop for a team of CKNP officials on use of GIS and Remote Sensing for Natural Resource Management (14-19 June 2010), Islamabad."
+    },
+    {
+      "id": "evt-2010-05-national-landcover-workshop",
+      "title": "National Workshop on Land Cover Classification Harmonization",
+      "date": "2010-05-31",
+      "time": "",
+      "location": "Islamabad, Pakistan",
+      "organizer": "National workshop organizing team",
+      "type": "Workshop",
+      "summary": "Organized national workshop on harmonization of land cover classification and district-wise forest cover assessment.",
+      "highlights": [
+        "Land cover classification harmonization",
+        "District-wise forest cover assessment",
+        "National-level technical coordination"
+      ],
+      "tags": ["Land Cover", "Forest Cover", "Workshop", "Classification"],
+      "details": "Organized National Workshop on Development and Harmonization of Land Cover Classification and District-wise Forest Cover Assessment of Pakistan (31 May to 4 June 2010)."
     }
   ],
   "upcomingEvents": [
@@ -77,7 +298,7 @@
     },
     {
       "id": "evt-2026-05-09",
-      "title": "SCD Research Roundtable: Water Security & Decision Support",
+      "title": "SCD Research Roundtable: Water Security and Decision Support",
       "startDate": "2026-05-09",
       "time": "01:00 PM",
       "location": "Karachi, Pakistan",
@@ -85,17 +306,6 @@
       "summary": "Discussion roundtable to align research outputs with water security decision needs.",
       "tags": ["Decision Support", "Water Security", "Collaboration"],
       "details": "The roundtable will connect researchers working on hydrology, remote sensing, and decision-support systems. We will discuss how to translate evidence into decision-ready outputs and how to design evaluation methods that match stakeholder requirements."
-    },
-    {
-      "id": "evt-2026-06-01",
-      "title": "Student Poster Session: Climate Informatics Showcase",
-      "startDate": "2026-06-01",
-      "time": "10:30 AM",
-      "location": "Hybrid",
-      "type": "Poster Session",
-      "summary": "A showcase of student projects in climate informatics, sensors, and GeoAI.",
-      "tags": ["Students", "Posters", "GeoAI"],
-      "details": "Students will present poster projects in climate informatics, sensor-based monitoring, and GeoAI applications. This session encourages constructive peer feedback and supports early-stage collaborations."
     }
   ]
 }

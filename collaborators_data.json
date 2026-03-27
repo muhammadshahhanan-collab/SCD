@@ -35,6 +35,51 @@
       "location": "Beijing, China",
       "url": "http://www.aircas.ac.cn/",
       "logo": "./images/Aircas.png"
+    },
+    {
+      "name": "ICIMOD",
+      "fullName": "International Centre for Integrated Mountain Development",
+      "lat": 27.6464,
+      "lng": 85.3235,
+      "location": "Lalitpur, Kathmandu, Nepal",
+      "url": "https://www.icimod.org/",
+      "logo": ""
+    },
+    {
+      "name": "UNESCAP",
+      "fullName": "United Nations Economic and Social Commission for Asia and the Pacific",
+      "lat": 13.7631,
+      "lng": 100.5078,
+      "location": "Bangkok, Thailand",
+      "url": "https://www.unescap.org/",
+      "logo": ""
+    },
+    {
+      "name": "ICRAF",
+      "fullName": "World Agroforestry (ICRAF)",
+      "lat": -1.2366,
+      "lng": 36.8190,
+      "location": "Nairobi, Kenya",
+      "url": "https://www.worldagroforestry.org/",
+      "logo": ""
+    },
+    {
+      "name": "AFCD",
+      "fullName": "Agriculture, Fisheries and Conservation Department, Hong Kong SAR",
+      "lat": 22.3318,
+      "lng": 114.1604,
+      "location": "Kowloon, Hong Kong SAR",
+      "url": "https://www.afcd.gov.hk/",
+      "logo": ""
+    },
+    {
+      "name": "KFBG",
+      "fullName": "Kadoorie Farm and Botanic Garden",
+      "lat": 22.4335,
+      "lng": 114.1181,
+      "location": "Tai Po, Hong Kong SAR",
+      "url": "https://www.kfbg.org/",
+      "logo": ""
     }
   ]
 }
